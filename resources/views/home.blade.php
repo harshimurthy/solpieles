@@ -9,6 +9,7 @@
 	
     <meta name="description" content="Sol Pieles SRL">
     <meta name="author" content="Yismen Jorge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<!-- Sit Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
@@ -18,7 +19,7 @@
 	<!-- Bootstrap Core CSS -->
 	<link href="{{ asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="{{ asset('assets/plugins/startstrap-agency/less/agency.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/plugins/startrap-agency/less/agency.css') }}" rel="stylesheet">
 
 	<!-- Custom Fonts -->
 	<link href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -39,7 +40,7 @@
 <body id="page-top" class="index"  ng-app="APP">
 
 	<!-- Navigation -->
-	<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	{{-- <nav class="navbar navbar-default navbar-fixed-top"> --}}
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -468,25 +469,35 @@
 					    {{-- <a href="{{ route('faq') }}">Frequently Asked Questions</a> --}}
 					</div>
 					<div class="col-md-8 col-md-pull-4">
-						<form name="sentMessage" id="contactForm" novalidate>
+						{!! Form::open(['route'=>['messages.send'], 'method'=>'POST', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off", 'novalidate'=>'novalidate', 'id'=>'contactForm']) !!}		
+								
+							
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+										<select name="subject" id="subject" class="form-control" required="required">
+											<option value="your products">Your Products</option>
+											<option value="your services">Your Services</option>
+											<option value="your business">Doing Business Together</option>
+											<option value="general topics">General Topics</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Your Name *" name="name" id="name" required data-validation-required-message="Please enter your name.">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+										<input type="email" class="form-control" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="Please enter your email address.">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+										<input type="tel" class="form-control" placeholder="Your Phone *" name="phone" id="phone" required data-validation-required-message="Please enter your phone number.">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+										<textarea class="form-control" placeholder="Your Message *" name="message" id="message" required data-validation-required-message="Please enter a message." rows="16"></textarea>
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -496,7 +507,8 @@
 									<button type="submit" class="btn btn-xl">Send Message</button>
 								</div>
 							</div>
-						</form>
+						
+							{!! Form::close() !!}
 					</div>
 				</div>
 			</div>
@@ -736,15 +748,15 @@
 
 	<!-- Plugin JavaScript -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-	<script src="{{ asset('assets/plugins/startstrap-agency/js/classie.js') }}"></script>
-	<script src="{{ asset('assets/plugins/startstrap-agency/js/cbpAnimatedHeader.js') }}"></script>
+	<script src="{{ asset('assets/plugins/startrap-agency/js/classie.js') }}"></script>
+	<script src="{{ asset('assets/plugins/startrap-agency/js/cbpAnimatedHeader.js') }}"></script>
 
 	<!-- Contact Form JavaScript -->
-	<script src="{{ asset('assets/plugins/startstrap-agency/js/jqBootstrapValidation.js') }}"></script>
-	<script src="{{ asset('assets/plugins/startstrap-agency/js/contact_me.js') }}"></script>
+	<script src="{{ asset('assets/plugins/startrap-agency/js/jqBootstrapValidation.js') }}"></script>
+	<script src="{{ asset('assets/plugins/startrap-agency/js/contact_me.js') }}"></script>
 
 	<!-- Custom Theme JavaScript -->
-	<script src="{{ asset('assets/plugins/startstrap-agency/js/agency.js') }}"></script>
+	<script src="{{ asset('assets/plugins/startrap-agency/js/agency.js') }}"></script>
 
 	{{-- AngularJs Dependencies --}}
 	<script src="{{ asset('assets/plugins/angular-1.4.3/angular.min.js') }}"></script>
@@ -755,6 +767,7 @@
 	<script src="{{ asset('assets/angular-app/app.js') }}"></script>
 
 	{{-- Controllers --}}
+	<script src="{{ asset('assets/angular-app/controllers/HomeCtrl.js') }}"></script>
 
 	{{-- Services --}}
 

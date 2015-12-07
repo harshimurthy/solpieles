@@ -12,7 +12,7 @@ app
 		function($routeProvider, API_ROUTE) {
 
 			$routeProvider
-				// .when('/', {templateUrl: '../app/views/dashboard.php'})
+				.when('/send_email', {controller: 'HomeCtrl'})
 				// .otherwise({redirectTo: '/'});
 
 		}]

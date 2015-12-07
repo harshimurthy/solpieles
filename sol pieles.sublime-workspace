@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"uns",
+				"list-unstyled"
+			],
+			[
+				"navbar",
+				"navbar-nav"
+			],
+			[
 				"list-",
 				"list-unstyled"
 			],
@@ -506,14 +514,6 @@
 			[
 				"Fieldin",
 				"Field::integer	INTEGER equivalent to the table"
-			],
-			[
-				"btn",
-				"btn-link"
-			],
-			[
-				"text",
-				"text-decoration"
 			]
 		]
 	},
@@ -523,16 +523,24 @@
 			"file": "resources/views/home.blade.php",
 			"settings":
 			{
-				"buffer_size": 32057,
+				"buffer_size": 32054,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/assets/angular-app/app.js",
+			"file": "public/assets/plugins/startrap-agency/js/cbpAnimatedHeader.js",
 			"settings":
 			{
-				"buffer_size": 3079,
-				"line_ending": "Windows"
+				"buffer_size": 976,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/database.php",
+			"settings":
+			{
+				"buffer_size": 4055,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -1106,16 +1114,18 @@
 		"/F/wamp/www/solpieles/public",
 		"/F/wamp/www/solpieles/public/assets",
 		"/F/wamp/www/solpieles/public/assets/plugins",
-		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency",
-		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less",
+		"/F/wamp/www/solpieles/public/assets/plugins/startrap-agency",
+		"/F/wamp/www/solpieles/public/assets/plugins/startrap-agency/js",
 		"/F/wamp/www/solpieles/resources",
-		"/F/wamp/www/solpieles/resources/views",
-		"/F/wamp/www/solpieles/resources/views/errors"
+		"/F/wamp/www/solpieles/resources/views"
 	],
 	"file_history":
 	[
-		"/F/wamp/www/solpieles/composer.json",
+		"/F/wamp/www/solpieles/public/assets/angular-app/app.js",
+		"/F/wamp/www/solpieles/config/database.php",
+		"/F/wamp/www/solpieles/config/app.php",
 		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/agency.less",
+		"/F/wamp/www/solpieles/composer.json",
 		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/agency.css",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/Nodejs.sublime-settings",
@@ -1238,10 +1248,7 @@
 		"/F/wamp/www/cj27/api/.gitignore",
 		"/F/wamp/www/cj27/api/.gitattributes",
 		"/F/wamp/www/cj27/.git/config",
-		"/F/wamp/www/cj27/app/services/CitiesService.js",
-		"/F/wamp/www/agency/app/views/drivers/show.php",
-		"/F/wamp/www/agency/app/views/drivers/partials/form.php",
-		"/F/wamp/www/agency/assets/plugins/angular/docs/examples/example-radio-input-directive/index-debug.html"
+		"/F/wamp/www/cj27/app/services/CitiesService.js"
 	],
 	"find":
 	{
@@ -1264,6 +1271,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"startstrap",
 			"portfolioModal",
 			"about",
 			"contact",
@@ -1390,8 +1398,7 @@
 			"Todos",
 			"todos",
 			"todo",
-			"Todo",
-			"todo"
+			"Todo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1454,15 +1461,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 32057,
+						"buffer_size": 32054,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								318,
-								318
+								1768,
+								1768
 							]
 						],
 						"settings":
@@ -1473,7 +1480,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 143.0,
+						"translation.y": 380.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1481,34 +1488,65 @@
 				},
 				{
 					"buffer": 1,
-					"file": "public/assets/angular-app/app.js",
+					"file": "public/assets/plugins/startrap-agency/js/cbpAnimatedHeader.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3079,
+						"buffer_size": 976,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								786,
-								786
+								695,
+								695
+							],
+							[
+								806,
+								806
 							]
 						],
 						"settings":
 						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"colorcode": true,
-							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 171.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2056,
+								2056
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 741.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
