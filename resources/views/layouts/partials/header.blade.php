@@ -19,5 +19,5 @@
         {{-- My custom css --}}
         <link rel="stylesheet" href="{{ asset('assets/css/my-style.css') }}">
     </head>
-  <body class="hold-transition skin-purple sidebar-mini sidebar-collapse">
+  <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
     
