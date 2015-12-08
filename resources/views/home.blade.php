@@ -759,15 +759,15 @@
 	<script src="{{ asset('assets/plugins/startrap-agency/js/agency.js') }}"></script>
 
 	{{-- AngularJs Dependencies --}}
-	<script src="{{ asset('assets/plugins/angular-1.4.3/angular.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/angular-1.4.3/angular-route.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/angular-1.4.3/angular-animate.min.js') }}"></script>
+	{{-- <script src="{{ asset('assets/plugins/angular-1.4.3/angular.min.js') }}"></script> --}}
+	{{-- <script src="{{ asset('assets/plugins/angular-1.4.3/angular-route.min.js') }}"></script> --}}
+	{{-- <script src="{{ asset('assets/plugins/angular-1.4.3/angular-animate.min.js') }}"></script> --}}
 	
 	{{-- Angular App Dependencies --}}
-	<script src="{{ asset('assets/angular-app/app.js') }}"></script>
+	{{-- <script src="{{ asset('assets/angular-app/app.js') }}"></script> --}}
 
 	{{-- Controllers --}}
-	<script src="{{ asset('assets/angular-app/controllers/HomeCtrl.js') }}"></script>
+	{{-- <script src="{{ asset('assets/angular-app/controllers/HomeCtrl.js') }}"></script> --}}
 
 	{{-- Services --}}
 

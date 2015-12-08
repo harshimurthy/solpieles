@@ -24,7 +24,7 @@ class MailsController extends Controller
 
         Mail::send('mails.website', ['data' => $requests->all()], function ($message) use ($requests) {
             $message->from($requests->get('email'), $requests->get('name'))
-            	// ->to('cperchaz@hotmail.com', 'Carlos Perez') // Main receiver should be carlos
+            	->to('cperchaz@hotmail.com', 'Carlos Perez') // Main receiver should be carlos
 				->cc('yismen.jorge@gmail.com', 'Yismen Jorge') // Copy me jus tin case
             	->subject(ucwords($requests->get('subject')));
         });
