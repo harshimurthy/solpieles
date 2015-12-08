@@ -716,7 +716,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<span class="copyright">Copyright &copy; Your Website 2014</span>
+					<span class="copyright">Copyright &copy; Solpieles, SRL - {{ date("Y") }}</span>
 				</div>
 				<div class="col-md-4">
 					<ul class="list-inline social-buttons">
@@ -730,9 +730,7 @@
 				</div>
 				<div class="col-md-4">
 					<ul class="list-inline quicklinks">
-						<li><a href="#">Privacy Policy</a>
-						</li>
-						<li><a href="#">Terms of Use</a>
+						<li><a href="{{ url('admin') }}">Admin</a>
 						</li>
 					</ul>
 				</div>

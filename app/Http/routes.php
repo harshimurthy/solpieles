@@ -28,14 +28,50 @@ Route::get('/', ['as'=>'site.route', function () {
 
 // Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
 
-Route::bind('messages', function($id){
-	return App\Message::findOrFail($id);
-});
 
-Route::resource('messages', 'MessagesController');
 
-Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
+/**
+ * This routes will require the user to be authenticated in order
+ * to be able to access them. Otherwise will be redirected to 
+ * the login page
+ */
+Route::group(['middleware' => 'auth', 'prefix'=>'admin', 'except'=>'messages.store'], function(){
+
+	Route::get('messages/search', ['as'=>'admin.messages.search', 'uses'=>'MessagesController@search']);
+
+	Route::bind('messages', function($id){
+		return App\Message::findOrFail($id);
+	});
+
+	Route::resource('messages', 'MessagesController');
 
 	Route::get('/', 'HomeController@dashboard');	
+
+	/**
+	 * ===========================================================
+	 * Contacts
+	 */
+	
+	Route::post('contacts/image/{id}', ['as'=>'admin.contacts.image', 'uses'=>'DriversController@postImage']);
+	Route::bind('contacts', function($id){
+		return App\Contact::
+			whereUserId(auth()->user()->id)
+			->findOrFail($id);
+	});
+
+	Route::resource('contacts', 'ContactsController', []);
+
+	/**
+	 * Todos
+	 */
+
+	Route::get('todos/completar/{id}', ['as'=>'admin.todos.completar', 'uses'=>'TodosController@completar']);
+	Route::get('todos/incompletar/{id}', ['as'=>'admin.todos.incompletar', 'uses'=>'TodosController@incompletar']);
+	
+	Route::bind("todos", function($id){
+		return \App\Todo::whereUserId(Auth::user()->id)->findOrFail($id);
+	});
+	
+	Route::resource('todos', 'TodosController', []);
 
 });

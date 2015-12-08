@@ -23,10 +23,11 @@
               <i class="fa fa-dashboard"></i> <span> Aplicaciones</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-             {{--  <li class="active"><a href="{{ route('admin.drivers.index') }}"><i class="fa fa-circle-o"></i> Choferes</a></li>
+              {{-- <li class="active"><a href="{{ route('admin.drivers.index') }}"><i class="fa fa-circle-o"></i> Choferes</a></li> --}}
               <li class="active"><a href="{{ route('admin.contacts.index') }}"><i class="fa fa-circle-o"></i> Contactos</a></li>
-              <li class="active"><a href="{{ route('admin.drivers.birthdays') }}"><i class="fa fa-circle-o"></i> Cumpleaños</a></li>
-              <li class="active"><a href="{{ route('admin.todos.index') }}"><i class="fa fa-circle-o"></i> Tareas</a></li> --}}
+              {{-- <li class="active"><a href="{{ route('admin.drivers.birthdays') }}"><i class="fa fa-circle-o"></i> Cumpleaños</a></li> --}}
+              <li class="active"><a href="{{ route('admin.todos.index') }}"><i class="fa fa-circle-o"></i> Tareas</a></li>
+              <li class="active"><a href="{{ route('admin.messages.index') }}"><i class="fa fa-circle-o"></i> Mensajes</a></li>
             </ul>
           </li>
           

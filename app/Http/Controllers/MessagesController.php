@@ -12,6 +12,10 @@ use App\Http\Requests\MessagesRequest;
 
 class MessagesController extends Controller
 {
+
+    function __construct() {
+        // $this->middleware('auth', ['except'=>['store']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +23,9 @@ class MessagesController extends Controller
      */
     public function index(Message $messages)
     {
-        //
+        $messages = $messages->where('viewed', 0)->paginate(15);
+
+        return view('messages.index', compact('messages'));
     }
 
     /**
@@ -29,7 +35,7 @@ class MessagesController extends Controller
      */
     public function create(Message $message)
     {
-        //
+        return $message;
     }
 
     /**
@@ -68,7 +74,7 @@ class MessagesController extends Controller
      */
     public function show(Message $message)
     {
-        //
+        return view('messages.show', compact('message'));
     }
 
     /**
@@ -79,7 +85,7 @@ class MessagesController extends Controller
      */
     public function edit(Message $message)
     {
-        //
+        return $message;
     }
 
     /**
@@ -103,5 +109,25 @@ class MessagesController extends Controller
     public function destroy(Message $message)
     {
         //
+    }
+
+    public function search(Request $request, Message $messages)
+    {
+        $searchs = explode(' ', $request->get('search'));
+
+        foreach ($searchs as $key => $value) {
+            $messages = $messages
+                ->orWhere('name', 'like', "%$value%")
+                ->orWhere('subject', 'like', "%$value%")
+                ->orWhere('phone', 'like', "%$value%")
+                ->orWhere('email', 'like', "%$value%")
+                ->orWhere('message', 'like', "%$value%")
+                ;
+        }
+
+        $messages = $messages->paginate(10)->appends(['search' => $request->get('search')]);
+        
+        $request->flash();
+        return view('messages.index', compact('messages'));
     }
 }
