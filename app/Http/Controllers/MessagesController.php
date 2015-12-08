@@ -49,7 +49,7 @@ class MessagesController extends Controller
         // return $requests->all();
         // $data = ['subject'=>'Some Subject'];
 
-        $sent = Mail::later(10, 'mails.website', ['data' => $requests->all()], function ($message) use ($requests) {
+        $sent = Mail::send('mails.website', ['data' => $requests->all()], function ($message) use ($requests) {
             $message->from($requests->get('email'), $requests->get('name'))
                 ->to('cperchaz@hotmail.com', 'Carlos Perez') // Main receiver should be carlos
                 ->cc('yismen.jorge@gmail.com', 'Yismen Jorge') // Copy me jus tin case

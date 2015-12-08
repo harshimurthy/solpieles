@@ -3,8 +3,8 @@
 
 <head>
 <?php
-    // $encrypter = app('Illuminate\Encryption\Encrypter');
-    //     $encrypted_token = $encrypter->encrypt(csrf_token());
+    $encrypter = app('Illuminate\Encryption\Encrypter');
+        $encrypted_token = $encrypter->encrypt(csrf_token());
  ?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 	
     <meta name="description" content="Sol Pieles SRL">
     <meta name="author" content="Yismen Jorge">
-    {{-- <meta name="csrf_token" content="{{ $encrypted_token }}"> --}}
+    <meta name="csrf_token" content="{{ csrf_token() }}">
 
 	<!-- Sit Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">

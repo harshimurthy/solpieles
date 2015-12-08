@@ -1,9 +1,9 @@
 $(function() {
-    // $.ajaxSetup({
-    //     headers: {
-    //         'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
-    //     }
-    // });
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
+        }
+    });
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -13,7 +13,6 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var _token = $("input[name=_token]").val();
             var subject = $("select#subject").val();
             var name = $("input#name").val();
             var email = $("input#email").val();
