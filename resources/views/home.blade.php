@@ -469,7 +469,7 @@
 					    {{-- <a href="{{ route('faq') }}">Frequently Asked Questions</a> --}}
 					</div>
 					<div class="col-md-8 col-md-pull-4">
-						{!! Form::open(['route'=>['messages.send'], 'method'=>'POST', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off", 'novalidate'=>'novalidate', 'id'=>'contactForm']) !!}		
+						{!! Form::open(['route'=>['messages.store'], 'method'=>'POST', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off", 'novalidate'=>'novalidate', 'id'=>'contactForm']) !!}		
 								
 							
 							<div class="row">

@@ -15,11 +15,11 @@ class HomeController extends Controller
     public function dashboard(Request $reuest, Driver $drivers){
     	$user = User::find(auth()->user()->id);
 
-    	$user->birthdaysToday = $drivers->getBirthdaysTodayCount();
-    	$user->birthdaysThisMonth = $drivers->getBirthdaysThisMonthCount();
-    	$user->birthdaysNextMonth = $drivers->getBirthdaysNextMonthCount();
-    	$user->todosCount = $user->todosCount();
-    	$user->driversCount = $drivers->count();
+    	// $user->birthdaysToday = $drivers->getBirthdaysTodayCount();
+    	// $user->birthdaysThisMonth = $drivers->getBirthdaysThisMonthCount();
+    	// $user->birthdaysNextMonth = $drivers->getBirthdaysNextMonthCount();
+    	// $user->todosCount = $user->todosCount();
+    	// $user->driversCount = $drivers->count();
 
     	return view('dashboard.index', compact('user'));
     }

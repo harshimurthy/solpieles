@@ -26,7 +26,13 @@ Route::get('/', ['as'=>'site.route', function () {
     return view('home');
 }]);
 
-Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
+// Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
+
+Route::bind('messages', function($id){
+	return App\Message::findOrFail($id);
+});
+
+Route::resource('messages', 'MessagesController');
 
 Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
 
