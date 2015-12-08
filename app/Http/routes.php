@@ -37,6 +37,8 @@ Route::get('/', ['as'=>'site.route', function () {
  */
 Route::group(['middleware' => 'auth', 'prefix'=>'admin', 'except'=>'messages.store'], function(){
 
+	Route::get('/', ['as'=>'admin.home', 'uses'=>'HomeController@dashboard']);	
+
 	Route::get('messages/search', ['as'=>'admin.messages.search', 'uses'=>'MessagesController@search']);
 
 	Route::bind('messages', function($id){
@@ -45,7 +47,6 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin', 'except'=>'messages.sto
 
 	Route::resource('messages', 'MessagesController');
 
-	Route::get('/', 'HomeController@dashboard');	
 
 	/**
 	 * ===========================================================

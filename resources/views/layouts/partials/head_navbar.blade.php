@@ -1,10 +1,10 @@
 <header class="main-header">
   <!-- Logo -->
-  <a href="/admin" class="logo">
+  <a href="{{ route('admin.home') }}" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>SOL</b>pieles</span>
+    <span class="logo-mini"><b>SOL</b></span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>SOL Pienes</b>SRL</span>
+    <span class="logo-lg"><b>SOL Pieles</b> - SRL</span>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top" role="navigation">
@@ -14,7 +14,7 @@
     </a>
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
-        <li><a href="/">Ir al sitio web</a></li>
+        <li><a href="{{ route('site.route') }}">Ir al sitio web</a></li>
 
 
       </ul>
