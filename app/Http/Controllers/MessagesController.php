@@ -21,9 +21,19 @@ class MessagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Message $messages)
+    public function index(Message $messages, Request $requests)
     {
-        $messages = $messages->where('viewed', 0)->paginate(15);
+        if ($requests->has('status')) {
+            if ($requests->get('status') == 'pending') {
+                $messages = $messages->where('viewed', 0);
+            } elseif ($requests->get('status') == 'viewed') {
+                $messages = $messages->where('viewed', 1);
+            }            
+        } else {
+            $messages = $messages->where('viewed', 0);
+        }
+
+       $messages = $messages->paginate(15)->appends(['status' => $requests->get('status')]);
 
         return view('messages.index', compact('messages'));
     }
@@ -87,7 +97,8 @@ class MessagesController extends Controller
      */
     public function update(Message $message)
     {
-        $message->viewed = 1;
+       $toggle = $message->viewed ? 0 : 1;
+        $message->viewed = $toggle;
         $message->save();
 
         return redirect()->route('admin.messages.index')

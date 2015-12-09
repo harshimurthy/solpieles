@@ -18,7 +18,9 @@
 										<i class="fa fa-search"></i>
 									</button>
 								</div>
-								<div class="input-group-btn"><a href="{{ route('admin.messages.index') }}" class="btn btn-default">Reset</a></div>
+								<div class="input-group-btn">
+									<a href="{{ route('admin.messages.index') }}" class="btn btn-default">Reset</a>
+								</div>
 
 							</div>	
 
@@ -27,6 +29,16 @@
 						</div>
 					{!! Form::close() !!}
 					<!-- /. Buscar -->
+
+					<div class="navbar">
+						<a class="navbar-brand" href="{{ route('admin.messages.index') }}">Default</a>
+						<ul class="nav navbar-nav">
+							<li class="active">
+						<li><a href="?status=all">View all</a></li>
+						<li><a href="?status=pending">View Pending</a></li>
+						<li><a href="?status=viewed">View Viewed</a></li>
+						</ul>
+					</div>
 					
 					@if ($messages->count() > 0)
 						<div class="table-responsive">
@@ -44,7 +56,7 @@
 									@foreach ($messages as $message)
 										<tr>
 											<td>
-												<a href="{{ route('admin.messages.show', $message->id) }}">{{ $message->name }}</a>
+												<a href="{{ route('admin.messages.edit', $message->id) }}">{{ $message->name }}</a>
 											</td>
 											<td>{{ $message->subject }}</td>
 											<td>{{ $message->phone }}</td>
@@ -53,9 +65,13 @@
 													{{ $message->email }}
 												</a>
 											</td>
-											<td class="text-center">
+											<td class="text-center">													
 												<a href="{{ route('admin.messages.edit', $message->id) }}">
-													<i class="fa fa-check-circle"></i>
+													@if ($message->viewed)
+														<span class="text-warning">Viewed</span>
+													@else
+														<span class="text-info">Pending</span>
+													@endif
 												</a>
 											</td>
 										</tr>

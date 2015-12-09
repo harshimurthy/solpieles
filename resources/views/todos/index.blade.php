@@ -21,7 +21,7 @@
 			<div class="table-responsive">
 				@if (count($pending) > 0)
 					
-					<h1 class="page-header text-center">Tus Tareas Pendientes</h1>
+					<h1 class="page-header text-center text-warning">Tus Tareas Pendientes</h1>
 					<table class="table table-condensed table-hover">
 						<thead>
 							<tr>
@@ -50,10 +50,11 @@
 						</tbody>
 					</table>					
 				@endif
-
+				
 				{{-- Completed --}}
 				@if (count($completed) > 0)
-					<h1 class="page-header text-center">Tareas Completadas</h1>
+					<hr>
+					<h1 class="page-header text-center text-info">Tareas Completadas</h1>
 					<table class="table table-condensed table-hover">
 						<thead>
 							<tr>
