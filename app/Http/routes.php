@@ -29,16 +29,10 @@ Route::get('/', ['as'=>'site.route', function () {
 // Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
 
 
-
-/**
- * This routes will require the user to be authenticated in order
- * to be able to access them. Otherwise will be redirected to 
- * the login page
- */
-Route::group(['middleware' => 'auth', 'prefix'=>'admin', 'except'=>'messages.store'], function(){
-
+	
+Route::group(['prefix'=>'admin'], function(){
 	Route::get('/', ['as'=>'admin.home', 'uses'=>'HomeController@dashboard']);	
-
+	
 	Route::get('messages/search', ['as'=>'admin.messages.search', 'uses'=>'MessagesController@search']);
 
 	Route::bind('messages', function($id){
@@ -46,6 +40,16 @@ Route::group(['middleware' => 'auth', 'prefix'=>'admin', 'except'=>'messages.sto
 	});
 
 	Route::resource('messages', 'MessagesController');
+});
+
+/**
+ * This routes will require the user to be authenticated in order
+ * to be able to access them. Otherwise will be redirected to 
+ * the login page
+ */
+Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
+
+	
 
 
 	/**

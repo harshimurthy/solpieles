@@ -744,6 +744,9 @@
 	<!-- jQuery -->
 	<script src="{{ asset('assets/plugins/jQuery/jquery.min.js') }}"></script>
 
+	{{-- Ajax config file --}}
+	<script src="{{ asset('assets/js/ajax_config.js') }}"></script>
+
 	<!-- Bootstrap Core JavaScript -->
 	<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
 

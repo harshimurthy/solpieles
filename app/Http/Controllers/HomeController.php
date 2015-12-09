@@ -8,11 +8,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\User;
-use App\Driver;
 
 class HomeController extends Controller
 {
-    public function dashboard(Request $reuest, Driver $drivers){
+    public function dashboard(Request $reuest){
     	$user = User::find(auth()->user()->id);
 
     	// $user->birthdaysToday = $drivers->getBirthdaysTodayCount();

@@ -13,8 +13,8 @@ use App\Http\Requests\MessagesRequest;
 class MessagesController extends Controller
 {
 
-    function __construct() {
-        // $this->middleware('auth', ['except'=>['store']]);
+    public function __construct() {
+        $this->middleware('auth', ['except'=>['store']]);
     }
     /**
      * Display a listing of the resource.

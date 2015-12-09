@@ -13,6 +13,7 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
+            var _token = $("input[name='_token']").val();
             var subject = $("select#subject").val();
             var name = $("input#name").val();
             var email = $("input#email").val();
@@ -28,6 +29,7 @@ $(function() {
                 url: $("#contactForm").attr('action'),
                 type: "POST",
                 data: {
+                    _token: _token,
                     subject: subject,
                     name: name,
                     phone: phone,
@@ -50,7 +52,7 @@ $(function() {
                     $('#contactForm').trigger("reset");
                 },
                 error: function(response) {
-                    console.log('Errors', response.responseJSON)
+                    console.log('Errors', response)
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
