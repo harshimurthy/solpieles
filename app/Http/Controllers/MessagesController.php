@@ -29,16 +29,6 @@ class MessagesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create(Message $message)
-    {
-        return $message;
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -85,7 +75,7 @@ class MessagesController extends Controller
      */
     public function edit(Message $message)
     {
-        return $message;
+        return view('messages.edit', compact('message'));
     }
 
     /**
@@ -95,20 +85,13 @@ class MessagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Message $message, MessagesRequest $request)
+    public function update(Message $message)
     {
-        //
-    }
+        $message->viewed = 1;
+        $message->save();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Message $message)
-    {
-        //
+        return redirect()->route('admin.messages.index')
+            ->withSuccess("The Message [$message->message] has been marked as viewed. ");
     }
 
     public function search(Request $request, Message $messages)

@@ -6,9 +6,6 @@
 			<div class="row">
 				<div class="well">
 					<h1 class="page-header text-center">Listado de Mensajes
-						<a href="{{ route('admin.messages.create') }}">
-							<span class="fa fa-plus"></span>
-						</a> 
 					</h1>
 					{!! Form::open(['route'=>['admin.messages.search'], 'method'=>'GET', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off"]) !!}		
 						<div class="form-group {{ $errors->has('search') ? 'has-error' : null }}">

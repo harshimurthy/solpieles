@@ -2,28 +2,34 @@
 <html lang="en">
 
 <head>
-
+<?php
+    $encrypter = app('Illuminate\Encryption\Encrypter');
+        $encrypted_token = $encrypter->encrypt(csrf_token());
+ ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    
+    <meta name="description" content="Sol Pieles SRL">
+    <meta name="author" content="Yismen Jorge">
+    <meta name="csrf_token" content="{{ csrf_token() }}">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <!-- Sit Favicon -->
+    <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
+
+    <title>Sol Pieles SRL Main Page</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" type="text/css">
+    <link href="{{ asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ asset('assets/plugins/startrap-agency/less/agency.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ asset('assets/plugins/font-awesome-4.3.0/css/font-awesome.min.css') }}" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/creative/css/animate.min.css') }}" type="text/css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/creative/css/creative.css') }}" type="text/css">
+    <link href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

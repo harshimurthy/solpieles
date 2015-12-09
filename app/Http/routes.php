@@ -23,7 +23,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
 Route::get('/', ['as'=>'site.route', function () {
-    return view('home');
+    return view('website.home');
 }]);
 
 // Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
@@ -31,7 +31,6 @@ Route::get('/', ['as'=>'site.route', function () {
 
 	
 Route::group(['prefix'=>'admin'], function(){
-	Route::get('/', ['as'=>'admin.home', 'uses'=>'HomeController@dashboard']);	
 	
 	Route::get('messages/search', ['as'=>'admin.messages.search', 'uses'=>'MessagesController@search']);
 
@@ -39,7 +38,7 @@ Route::group(['prefix'=>'admin'], function(){
 		return App\Message::findOrFail($id);
 	});
 
-	Route::resource('messages', 'MessagesController');
+	Route::resource('messages', 'MessagesController', ['except'=>['create', 'destroy']]);
 });
 
 /**
@@ -49,6 +48,7 @@ Route::group(['prefix'=>'admin'], function(){
  */
 Route::group(['middleware' => 'auth', 'prefix'=>'admin'], function(){
 
+	Route::get('/', ['as'=>'admin.home', 'uses'=>'HomeController@dashboard']);	
 	
 
 

@@ -8,8 +8,9 @@
 
 
    <!-- /Footer -->
+   @include('layouts.partials-website.botton-bar')
 
-    @include('layouts.partials.footer')
+    @include('layouts.partials-website.footer')
    <!-- /. Footer -->
 </body>
 

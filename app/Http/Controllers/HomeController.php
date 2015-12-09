@@ -11,8 +11,8 @@ use App\User;
 
 class HomeController extends Controller
 {
-    public function dashboard(Request $reuest){
-    	$user = User::find(auth()->user()->id);
+    public function dashboard(Request $reuest, User $user){
+    	$user = $user->find(auth()->user()->id);
 
     	// $user->birthdaysToday = $drivers->getBirthdaysTodayCount();
     	// $user->birthdaysThisMonth = $drivers->getBirthdaysThisMonthCount();
