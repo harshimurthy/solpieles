@@ -14,7 +14,7 @@
     <meta name="author" content="Yismen Jorge">
     <meta name="csrf_token" content="{{ csrf_token() }}">
 
-    <!-- Sit Favicon -->
+    <!-- Site Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
 
     <title>Sol Pieles SRL Main Page</title>

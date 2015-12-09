@@ -3,10 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ruta CJ27 | Sitio Admin</title>
+
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="description" content="Sol Pieles SRL">
+        <meta name="author" content="Yismen Jorge">
+        <meta name="csrf_token" content="{{ csrf_token() }}">
+        
+        <title>SOL Pieles, SRL | Admin Site</title>
         <!-- Bootstrap 3.3.5 -->
+
+        <!-- Sit Favicon -->
+        <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
+    
+
         {{-- <link rel="stylesheet" href="{{ asset('../node_modules/bootstrap/dist/css/bootstrap.min.css') }}"> --}}
         <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/bootstrap.min.css') }}">
         <!-- Font Awesome -->
