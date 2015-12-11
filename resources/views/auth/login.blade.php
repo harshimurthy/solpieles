@@ -56,6 +56,21 @@
 						<div class="form-group">
 							{!! Form::submit("Entrar", ['class'=>'btn btn-primary']) !!}
 						</div>
+
+						<div class="form-group">
+							<span class="pull-left">
+								<a href="{{ url('auth/register') }}">Register 
+									<i class="fa fa-user-plus"></i>
+								</a>	
+							</span>
+							<span class="pull-right">
+								<a href="{{ url('password/email') }}">Forgot Password 
+									<i class="fa fa-undo"></i>
+								</a>
+							</span>
+						</div>
+
+						<div class="clearfix"></div>
 						
 					{!! Form::close() !!}
 				</div>

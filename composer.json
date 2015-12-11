@@ -22,6 +22,9 @@
             "database"
         ],
         "psr-4": {
+            "Jorge\\todospackage\\": "packages/Jorge/todospackage/src",
+            "Jorge\\todospackage\\": "packages/Jorge/todospackage/src",
+            
             "App\\": "app/"
         },
         "files": [

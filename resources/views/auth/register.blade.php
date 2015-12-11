@@ -69,6 +69,9 @@
 							{!! Form::submit("Registrar", ['class'=>'btn btn-primary']) !!}
 						</div>
 						
+						<a href="{{ url('auth/login') }}">Already Registered? Login Form 
+							<i class="fa fa-sign-in"> </i>
+						</a>
 					{!! Form::close() !!}
 				</div>
 			</div>

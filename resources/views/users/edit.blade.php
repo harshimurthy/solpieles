@@ -7,7 +7,8 @@
 				<div class="row">
 
 					<div class="col-sm-12">
-						{!! Form::model($user, ['route'=>['admin.users.update', $user->id], 'method'=>'PUT', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off"]) !!}		
+						{!! Form::model($user, ['route'=>['admin.users.update', $user->id], 'method'=>'PUT', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off"]) !!}
+
 							<div class="form-group text-center">
 								<legend>Editar Datos de User {{ $user->name }}
 									<a href="{{ route('admin.users.index') }}" class="pull-right"><i class="fa fa-list"></i></a>

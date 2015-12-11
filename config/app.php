@@ -151,6 +151,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Jorge\todospackage\todospackageServiceProvider::class,
+
 
     ],
 
