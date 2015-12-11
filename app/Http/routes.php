@@ -58,7 +58,7 @@ Route::group(['prefix'=>'admin'], function(){
 		 * Contacts
 		 */
 		
-		Route::post('contacts/image/{id}', ['as'=>'admin.contacts.image', 'uses'=>'DriversController@postImage']);
+		Route::post('contacts/image/{id}', ['as'=>'admin.contacts.image', 'uses'=>'ContactsController@postImage']);
 		Route::bind('contacts', function($id){
 			return App\Contact::
 				whereUserId(auth()->user()->id)
@@ -79,6 +79,25 @@ Route::group(['prefix'=>'admin'], function(){
 		});
 		
 		Route::resource('todos', 'TodosController', []);
+
+		/**
+		 * Users Management
+		 */
+		Route::get('users/search', ['as'=>'admin.users.search', 'uses'=>'UsersController@search']);
+		Route::bind('users', function($id){
+			return App\User::with('role')->findOrFail($id);
+		});
+
+		Route::resource('users', 'UsersController');
+
+		/**
+		 * Roles
+		 */
+		Route::bind('roles', function($id){
+			return App\Role::with('users')->findOrFail($id);
+		});
+
+		Route::resource('roles', 'RolesController', ['except'=>['create', 'store']]);
 
 	});
 });

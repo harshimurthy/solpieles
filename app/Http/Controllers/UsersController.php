@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\User;
+use App\Http\Requests\UsersRequest;
 use App\Http\Controllers\Controller;
 
 class UsersController extends Controller
@@ -19,9 +20,11 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $users)
     {
-        //
+        $users = $users->with('role')->paginate(10);
+
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -29,7 +32,7 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(User $user)
     {
         //
     }
@@ -40,7 +43,7 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(User $user, Request $request)
     {
         //
     }
@@ -51,9 +54,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('users.show', compact('user'));
     }
 
     /**
@@ -62,9 +65,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -74,9 +77,13 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        // return $request->all();
+        $user->update($request->all());
+
+        return redirect()->route('admin.users.index')
+            ->withSuccess("User $user->name has been updated!");
     }
 
     /**
@@ -85,8 +92,27 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
         //
+    }
+
+
+
+    public function search(Request $request, User $users)
+    {
+        $searchs = explode(' ', $request->get('search'));
+
+        foreach ($searchs as $key => $value) {
+            $users = $users
+                ->orWhere('name', 'like', "%$value%")
+                ->orWhere('email', 'like', "%$value%")
+                ;
+        }
+
+        $users = $users->paginate(10)->appends(['search' => $request->get('search')]);
+        
+        $request->flash();
+        return view('users.index', compact('users'));
     }
 }

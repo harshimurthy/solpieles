@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'email', 'password', 'role_id'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -78,6 +78,11 @@ class User extends Model implements AuthenticatableContract,
      * ====================================================================
      * Methods
      */
+    public function getRolesListAttribute()
+    {
+        return $this->role->lists('role', 'id');
+    }
+
     public function todosCount()
     {
         return $this->todos()->whereDone(0)->count();

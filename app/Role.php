@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    protected $fillable = ['role'];
+    protected $fillable = ['role', 'description'];
 
     /**
      * ============================================
@@ -17,4 +17,12 @@ class Role extends Model
     {
     	return $this->hasMany(User::class);
     }
+
+    /**
+     * Accessor
+     */
+    // public function getRoleAttribute($role)
+    // {
+    // 	return ucwords($role);
+    // }
 }

@@ -141,6 +141,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
+        JeroenG\Packager\PackagerServiceProvider::class,
+
         /*
          * Application Service Providers...
          */

@@ -26,8 +26,10 @@
               {{-- <li class="active"><a href="{{ route('admin.drivers.index') }}"><i class="fa fa-circle-o"></i> Choferes</a></li> --}}
               <li class="active"><a href="{{ route('admin.contacts.index') }}"><i class="fa fa-circle-o"></i> Contactos</a></li>
               {{-- <li class="active"><a href="{{ route('admin.drivers.birthdays') }}"><i class="fa fa-circle-o"></i> Cumpleaños</a></li> --}}
-              <li class="active"><a href="{{ route('admin.todos.index') }}"><i class="fa fa-circle-o"></i> Tareas</a></li>
               <li class="active"><a href="{{ route('admin.messages.index') }}"><i class="fa fa-circle-o"></i> Mensajes</a></li>
+              <li class="active"><a href="{{ route('admin.roles.index') }}"><i class="fa fa-circle-o"></i> Roles</a></li>
+              <li class="active"><a href="{{ route('admin.todos.index') }}"><i class="fa fa-circle-o"></i> Tareas</a></li>
+              <li class="active"><a href="{{ route('admin.users.index') }}"><i class="fa fa-circle-o"></i> Users</a></li>
             </ul>
           </li>
           
