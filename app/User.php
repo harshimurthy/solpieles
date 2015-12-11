@@ -44,6 +44,11 @@ class User extends Model implements AuthenticatableContract,
      * Relationships
      */
     
+    public function role()
+    {
+        return $this->belongsTo("App\Role");
+    }
+    
     public function todos()
     {
         return $this->hasMany("App\Todo");
@@ -76,5 +81,19 @@ class User extends Model implements AuthenticatableContract,
     public function todosCount()
     {
         return $this->todos()->whereDone(0)->count();
+    }
+
+    public function hasRole($role = null)
+    {
+        if( $role ) {
+            return $this->getRole() == $role;
+        }
+
+        return !! $this->role;
+    }
+
+    public function getRole()
+    {
+        return $this->role->role;
     }
 }

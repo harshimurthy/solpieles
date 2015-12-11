@@ -76,7 +76,7 @@
 						</a>
 						<div class="portfolio-caption">
 							<h4>Split Wet Blue</h4>
-							<p class="text-muted">Lorem ipsum</p>
+							<p class="text-muted">Split Wet Blue</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 portfolio-item">

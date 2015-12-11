@@ -41,7 +41,7 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2 text-center">
-						<p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+						<p class="large text-muted">We are goald oriented team, focused on your satisfaction, providing products and services that will help your business to succeed.</p>
 					</div>
 				</div>
 			</div>

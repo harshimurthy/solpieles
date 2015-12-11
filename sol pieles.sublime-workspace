@@ -4,6 +4,74 @@
 		"selected_items":
 		[
 			[
+				"check",
+				"checkRole"
+			],
+			[
+				"get",
+				"getRole()	mixed"
+			],
+			[
+				"Fielstr",
+				"Field::string	VARCHAR equivalent with a length (optional)"
+			],
+			[
+				"part",
+				"partials-website"
+			],
+			[
+				"web",
+				"website"
+			],
+			[
+				"mail",
+				"mailto:cperchaz@hotmail	(home.blade.php)"
+			],
+			[
+				"attr",
+				"attr	.attr() - single"
+			],
+			[
+				"Message",
+				"MessagesRequest	(MessagesRequest.php)"
+			],
+			[
+				"Fields",
+				"Field::string	VARCHAR equivalent with a length (optional)"
+			],
+			[
+				"Fieldstri",
+				"Field::string	VARCHAR equivalent with a length (optional)"
+			],
+			[
+				"Fieldstring",
+				"Field::string	VARCHAR equivalent with a length (optional)"
+			],
+			[
+				"explod",
+				"explode()	standard Function"
+			],
+			[
+				"nl2br",
+				"nl2br()	standard Function"
+			],
+			[
+				"each",
+				"each	$.each()"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
+				"send",
+				"sendEmail	(MailsController.php)"
+			],
+			[
+				"backc",
+				"background-color"
+			],
+			[
 				"uns",
 				"list-unstyled"
 			],
@@ -24,10 +92,6 @@
 				"array_push()	standard Function"
 			],
 			[
-				"if",
-				"ifelse	if … else …"
-			],
-			[
 				"lay",
 				"layouts"
 			],
@@ -42,10 +106,6 @@
 			[
 				"conta",
 				"contact"
-			],
-			[
-				"Fields",
-				"Field::string	VARCHAR equivalent with a length (optional)"
 			],
 			[
 				"Field",
@@ -130,10 +190,6 @@
 			[
 				"compa",
 				"compact()	standard Function"
-			],
-			[
-				"Fieldstring",
-				"Field::string	VARCHAR equivalent with a length (optional)"
 			],
 			[
 				"Formte",
@@ -232,10 +288,6 @@
 				"Route-group	Route-group"
 			],
 			[
-				"Fieldstri",
-				"Field::string	VARCHAR equivalent with a length (optional)"
-			],
-			[
 				"Sche",
 				"Schema-create	Schema-create"
 			],
@@ -290,10 +342,6 @@
 			[
 				"Inpua",
 				"Input-ajax	Input-ajax"
-			],
-			[
-				"get",
-				"get	.get()"
 			],
 			[
 				"plugin",
@@ -466,80 +514,40 @@
 			[
 				"las",
 				"last_name"
-			],
-			[
-				"position",
-				"position_id	(_form.blade.php)"
-			],
-			[
-				"Sch",
-				"Schema-drop	Schema-drop"
-			],
-			[
-				"Schemaal",
-				"Schema::table	Update an existing table"
-			],
-			[
-				"cas",
-				"cascade"
-			],
-			[
-				"depart",
-				"department_id"
-			],
-			[
-				"Hom",
-				"HomeController"
-			],
-			[
-				"col-sm-",
-				"col-sm-offset-4"
-			],
-			[
-				"fai",
-				"fail(actual, expected, message, operator)	chai.js"
-			],
-			[
-				"has",
-				"has_kids"
-			],
-			[
-				"Fielf",
-				"Field::foreign	Add a Foreign Key to a table"
-			],
-			[
-				"Fieldfore",
-				"Field::foreign	Add a Foreign Key to a table"
-			],
-			[
-				"Fieldin",
-				"Field::integer	INTEGER equivalent to the table"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "resources/views/home.blade.php",
+			"file": "app/Http/Middleware/Authorization.php",
 			"settings":
 			{
-				"buffer_size": 32054,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/assets/plugins/startrap-agency/js/cbpAnimatedHeader.js",
-			"settings":
-			{
-				"buffer_size": 976,
+				"buffer_size": 964,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config/database.php",
+			"file": "app/Http/Controllers/MessagesController.php",
 			"settings":
 			{
-				"buffer_size": 4055,
+				"buffer_size": 3920,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/User.php",
+			"settings":
+			{
+				"buffer_size": 2255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/routes.php",
+			"settings":
+			{
+				"buffer_size": 2444,
 				"line_ending": "Unix"
 			}
 		}
@@ -567,10 +575,70 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 109.0,
-		"last_filter": "Package Control: inst",
+		"height": 392.0,
+		"last_filter": "Snippet: navb",
 		"selected_items":
 		[
+			[
+				"Snippet: navb",
+				"Snippet: bs3-navbar-basic"
+			],
+			[
+				"Snippet: nav",
+				"Snippet: bs3-navbar-links"
+			],
+			[
+				"Snippet: ife",
+				"Snippet: blade-if_else"
+			],
+			[
+				"Snippet: panel",
+				"Snippet: bs3-panel-table"
+			],
+			[
+				"Snippet: list",
+				"Snippet: bs3-list-group"
+			],
+			[
+				"Snippet: yview",
+				"Snippet: my_blade_view"
+			],
+			[
+				"Snippet: myfor",
+				"Snippet: my_blade_form_open"
+			],
+			[
+				"Snippet: myadd",
+				"Snippet: my_blade_form_input_addon"
+			],
+			[
+				"Snippet: addon",
+				"Snippet: bs3-input-group-addon-text"
+			],
+			[
+				"Snippet: constru",
+				"Snippet: function __construct"
+			],
+			[
+				"Snippet: forea",
+				"Snippet: blade-foreach"
+			],
+			[
+				"Snippet: myview",
+				"Snippet: my_blade_view"
+			],
+			[
+				"Snippet: view",
+				"Snippet: Angular ngView"
+			],
+			[
+				"Snippet: bs3se",
+				"Snippet: bs3-select"
+			],
+			[
+				"Snippet: myform",
+				"Snippet: my_blade_form_open"
+			],
 			[
 				"Package Control: inst",
 				"Package Control: Install Package"
@@ -604,10 +672,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"Snippet: myview",
-				"Snippet: my_blade_view"
-			],
-			[
 				"Snippet: myre",
 				"Snippet: my_redirect_to_route"
 			],
@@ -622,10 +686,6 @@
 			[
 				"Snippet: bs-input",
 				"Snippet: bs3-input-radio"
-			],
-			[
-				"Snippet: myadd",
-				"Snippet: my_blade_form_input_addon"
 			],
 			[
 				"Snippet: myad",
@@ -648,10 +708,6 @@
 				"Snippet: bs3-table-condensed"
 			],
 			[
-				"Snippet: forea",
-				"Snippet: Blade @foreach"
-			],
-			[
 				"Snippet: if",
 				"Snippet: blade-if_else"
 			],
@@ -668,20 +724,12 @@
 				"Snippet: my_blade_view"
 			],
 			[
-				"Snippet: panel",
-				"Snippet: bs3-panel-primary"
-			],
-			[
 				"Snippet: bsima",
 				"Snippet: bs3-image"
 			],
 			[
 				"Snippet: bsche",
 				"Snippet: bs3-input-checkbox"
-			],
-			[
-				"Snippet: myfor",
-				"Snippet: my_blade_form_open"
 			],
 			[
 				"Snippet: bsin",
@@ -724,16 +772,8 @@
 				"Snippet: my_blade_form_input_addon"
 			],
 			[
-				"Snippet: addon",
-				"Snippet: bs3-input-group-addon-text"
-			],
-			[
 				"Snippet: myerror",
 				"Snippet: my_blade_error_message_div"
-			],
-			[
-				"Snippet: myform",
-				"Snippet: my_blade_form_open"
 			],
 			[
 				"Snippet: ifel",
@@ -940,14 +980,6 @@
 				"Snippet: bs3-tabs"
 			],
 			[
-				"Snippet: nav",
-				"Snippet: bs3-navbar-basic"
-			],
-			[
-				"Snippet: navb",
-				"Snippet: bs3-navbar-responsive"
-			],
-			[
 				"Snippet: unless",
 				"Snippet: blade-unless"
 			],
@@ -1028,10 +1060,6 @@
 				"Snippet: bs3-list-group-linked"
 			],
 			[
-				"Snippet: list",
-				"Snippet: bs3-list-group-badges"
-			],
-			[
 				"Snippet: lisg",
 				"Snippet: bs3-list-group-linked"
 			],
@@ -1062,29 +1090,9 @@
 			[
 				"Snippet: forei",
 				"Snippet: Add a Foreign Key to a table"
-			],
-			[
-				"Snippet: includ",
-				"Snippet: blade-include"
-			],
-			[
-				"Snippet: myim",
-				"Snippet: my_blade_form_input"
-			],
-			[
-				"Snippet: myblade",
-				"Snippet: my_blade_form_input"
-			],
-			[
-				"Snippet: myfrom",
-				"Snippet: my_blade_form_open"
-			],
-			[
-				"Snippet: bs3modal",
-				"Snippet: bs3-modal"
 			]
 		],
-		"width": 246.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -1111,21 +1119,88 @@
 	"expanded_folders":
 	[
 		"/F/wamp/www/solpieles",
-		"/F/wamp/www/solpieles/public",
+		"/F/wamp/www/solpieles/app",
+		"/F/wamp/www/solpieles/app/Http",
+		"/F/wamp/www/solpieles/app/Http/Controllers",
+		"/F/wamp/www/solpieles/database",
 		"/F/wamp/www/solpieles/public/assets",
+		"/F/wamp/www/solpieles/public/assets/angular-app",
+		"/F/wamp/www/solpieles/public/assets/js",
 		"/F/wamp/www/solpieles/public/assets/plugins",
+		"/F/wamp/www/solpieles/public/assets/plugins/admin-lte/dist/css",
+		"/F/wamp/www/solpieles/public/assets/plugins/admin-lte/dist/css/skins",
 		"/F/wamp/www/solpieles/public/assets/plugins/startrap-agency",
 		"/F/wamp/www/solpieles/public/assets/plugins/startrap-agency/js",
 		"/F/wamp/www/solpieles/resources",
-		"/F/wamp/www/solpieles/resources/views"
+		"/F/wamp/www/solpieles/resources/views",
+		"/F/wamp/www/solpieles/resources/views/website"
 	],
 	"file_history":
 	[
-		"/F/wamp/www/solpieles/public/assets/angular-app/app.js",
-		"/F/wamp/www/solpieles/config/database.php",
-		"/F/wamp/www/solpieles/config/app.php",
-		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/agency.less",
 		"/F/wamp/www/solpieles/composer.json",
+		"/F/wamp/www/solpieles/database/seeds/DatabaseSeeder.php",
+		"/F/wamp/www/solpieles/database/migrations/2015_12_10_131546_create_roles_table.php",
+		"/F/wamp/www/solpieles/app/Http/Middleware/Authenticate.php",
+		"/F/wamp/www/solpieles/database/migrations/2015_12_10_132035_add_rolesid_to_users_table.php",
+		"/F/wamp/www/solpieles/app/Http/Kernel.php",
+		"/F/wamp/www/solpieles/database/seeds/TodosTableSeeder.php",
+		"/F/wamp/www/solpieles/database/seeds/RolesTableSeeder.php",
+		"/F/wamp/www/solpieles/app/Role.php",
+		"/F/wamp/www/solpieles/app/User.php",
+		"/F/wamp/www/solpieles/app/Http/Controllers/HomeController.php",
+		"/F/wamp/www/solpieles/app/Todo.php",
+		"/F/wamp/www/solpieles/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/F/wamp/www/solpieles/app/Http/Controllers/MessagesController.php",
+		"/F/wamp/www/solpieles/resources/views/website/_contact.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/home.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_about.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_contact-info.blade.php",
+		"/F/wamp/www/solpieles/resources/views/messages/edit.blade.php",
+		"/F/wamp/www/solpieles/resources/views/messages/index.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials/header.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/header.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials/footer.blade.php",
+		"/F/wamp/www/solpieles/resources/views/todos/index.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/website.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/botton-bar.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_services.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_portfolio.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_modals.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/footer.blade.php",
+		"/F/wamp/www/solpieles/resources/views/home.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_map.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_clients.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_team.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_timeline.blade.php",
+		"/F/wamp/www/solpieles/resources/views/website/_head.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/navbar.blade.php",
+		"/F/wamp/www/solpieles/app/Http/routes.php",
+		"/F/wamp/www/solpieles/resources/views/messages/show.blade.php",
+		"/F/wamp/www/solpieles/public/assets/plugins/startrap-agency/js/contact_me.js",
+		"/F/wamp/www/solpieles/public/assets/js/ajax_config.js",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials/left-navbar.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials/head_navbar.blade.php",
+		"/F/wamp/www/solpieles/.gitignore",
+		"/F/wamp/www/solpieles/sol pieles.sublime-project",
+		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/snippets/my_blade_form_input_addon.sublime-snippet",
+		"/F/wamp/www/solpieles/app/Message.php",
+		"/F/wamp/www/solpieles/database/migrations/2015_12_07_204645_create_messsages_table.php",
+		"/F/wamp/www/solpieles/app/Http/Controllers/MailsController.php",
+		"/F/wamp/www/solpieles/config/app.php",
+		"/F/wamp/www/solpieles/app/Http/Requests/MessagesRequest.php",
+		"/F/wamp/www/solpieles/resources/views/dashboard/index.blade.php",
+		"/F/wamp/www/solpieles/resources/views/mails/website.blade.php",
+		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/PHP Companion.sublime-settings",
+		"/F/wamp/www/solpieles/public/assets/plugins/startrap-agency/js/cbpAnimatedHeader.js",
+		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/snippets/my_blade_view.sublime-snippet",
+		"/F/wamp/www/solpieles/public/assets/angular-app/controllers/HomeCtrl.js",
+		"/F/wamp/www/solpieles/public/assets/angular-app/app.js",
+		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/snippets/my_redirect_to_route.sublime-snippet",
+		"/F/wamp/www/solpieles/.env",
+		"/F/wamp/www/solpieles/config/mail.php",
+		"/F/wamp/www/solpieles/config/database.php",
+		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/agency.less",
 		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/agency.css",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/Nodejs.sublime-settings",
@@ -1133,7 +1208,6 @@
 		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/variables.less",
 		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/mixins.less",
 		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/variables-m.less",
-		"/F/wamp/www/solpieles/resources/views/home.blade.php",
 		"/F/wamp/www/solpieles/public/assets/plugins/startstrap-agency/less/agency-o.less",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/Less2Css/less2css.sublime-settings",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/LESS/LESS.sublime-settings",
@@ -1143,15 +1217,9 @@
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/ColorPicker.sublime-settings",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/CSS Color Converter/colorconvert.sublime-settings",
 		"/F/wamp/www/dainsys/public/plugins/startstrap-agency/index.html",
-		"/F/wamp/www/solpieles/resources/views/layouts/website.blade.php",
 		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/body.blade.php",
-		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/footer.blade.php",
-		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/header.blade.php",
-		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/navbar.blade.php",
-		"/F/wamp/www/solpieles/app/Http/routes.php",
 		"/F/wamp/www/dainsys/public/plugins/creative/index.html",
 		"/F/wamp/www/solpieles/resources/views/website.blade.php",
-		"/F/wamp/www/solpieles/.env",
 		"/F/wamp/www/ruta-cj27/app/Http/Controllers/ContactsController.php",
 		"/F/wamp/www/ruta-cj27/app/Todo.php",
 		"/F/wamp/www/ruta-cj27/app/Http/helpers.php",
@@ -1196,59 +1264,7 @@
 		"/F/wamp/www/ruta-cj27/database/seeds/UsersTableSeeder.php",
 		"/F/wamp/www/ruta-cj27/resources/views/drivers/show.blade.php",
 		"/F/wamp/www/ruta-cj27/resources/views/drivers/create.blade.php",
-		"/F/wamp/www/ruta-cj27/resources/views/welcome.blade.php",
-		"/F/wamp/www/ruta-cj27/resources/views/auth/login.blade.php",
-		"/F/wamp/www/ruta-cj27/database/migrations/2015_11_26_234705_create_drivers_table.php",
-		"/F/wamp/www/ruta-cj27/app/Http/Requests/DriversRequest.php",
-		"/F/wamp/www/ruta-cj27/config/app.php",
-		"/F/wamp/www/ruta-cj27/resources/views/drivers/_form.blade.php",
-		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/my_blade_form_input_addon.sublime-snippet",
-		"/F/wamp/www/ruta-cj27/public/assets/plugins/bootstrap/bootstrap.min.css",
-		"/F/wamp/www/ruta-cj27/database/migrations/2015_11_27_001740_create_avatars_table.php",
-		"/F/wamp/www/ruta-cj27/artisan",
-		"/F/wamp/www/ruta-cj27/database/migrations/2015_11_26_234616_create_drivers_table.php",
-		"/F/wamp/www/ruta-cj27/database/migrations/2015_11_26_234533_create_drivers_table.php",
-		"/F/wamp/www/ruta-cj27/composer.json",
-		"/F/wamp/www/ruta-cj27/resources/assets/js/destroy-confirmation.js",
-		"/F/wamp/www/ruta-cj27/resources/views/layouts/partials/messages.blade.php",
-		"/F/wamp/www/ruta-cj27/resources/assets/js/message_hidder.js",
-		"/F/wamp/www/ruta-cj27/.env",
-		"/F/wamp/www/ruta-cj27/admin/app/Http/routes.php",
-		"/F/wamp/www/ruta-cj27/admin/resources/views/auth/login.blade.php",
-		"/F/wamp/www/ruta-cj27/admin/public/.htaccess",
-		"/F/wamp/www/ruta-cj27/admin/composer.json",
-		"/F/wamp/www/ruta-cj27/admin/resources/views/layouts/admin.blade.php",
-		"/F/wamp/www/ruta-cj27/admin/resources/views/layouts/partials/footer.blade.php",
-		"/F/wamp/www/ruta-cj27/admin/resources/views/layouts/partials/body.blade.php",
-		"/F/wamp/www/ruta-cj27/admin/resources/views/layouts/partials/header.blade.php",
-		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/laravel-blade.sublime-settings",
-		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/my_blade_view.sublime-snippet",
-		"/F/wamp/www/ruta-cj27/admin/config/app.php",
-		"/F/wamp/www/cj27/app/controllers/ContactsController.js",
-		"/F/wamp/www/cj27/app/services/ContactsService.js",
-		"/F/wamp/www/cj27/app/controllers/DashboardController.js",
-		"/F/wamp/www/cj27/admin/index.html",
-		"/F/wamp/www/cj27/app/directives/Pagination.js",
-		"/F/wamp/www/cj27/api/database/seeds/DatabaseSeeder.php",
-		"/F/wamp/www/cj27/app/app.js",
-		"/F/wamp/www/cj27/app/views/contacts/create2.php",
-		"/F/wamp/www/cj27/app/views/contacts/create.php",
-		"/F/wamp/www/cj27/app/views/drivers/create.php",
-		"/F/wamp/www/cj27/app/controllers/DriverController.js",
-		"/F/wamp/www/cj27/app/controllers/TodosController.js",
-		"/F/wamp/www/cj27/app/views/dashboard.php",
-		"/F/wamp/www/cj27/app/views/contacts/_navbar.php",
-		"/F/wamp/www/cj27/api/database/seeds/ContactTableSeeder.php",
-		"/F/wamp/www/cj27/app/controllers/AuthController.js",
-		"/F/wamp/www/cj27/app/services/SessionService.js",
-		"/F/wamp/www/cj27/app/services/AuthService.js",
-		"/F/wamp/www/cj27/api/.gitignore",
-		"/F/wamp/www/cj27/api/.gitattributes",
-		"/F/wamp/www/cj27/.git/config",
-		"/F/wamp/www/cj27/app/services/CitiesService.js"
+		"/F/wamp/www/ruta-cj27/resources/views/welcome.blade.php"
 	],
 	"find":
 	{
@@ -1271,6 +1287,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lg",
+			".messages",
+			".contacts",
+			"$contact",
+			"Contacto",
+			"drivers",
+			"input-group-addon",
+			"messages",
+			"$contact",
+			"$contacts",
+			".contacts",
+			"contacts",
+			"Contacts",
+			"contacts",
+			"Contactos",
+			"contact",
+			"contacts",
+			"name",
+			"email",
+			"contactf",
+			"contactFrom",
+			"message",
+			"responseJSON",
+			"contact",
+			"contactFrom",
+			"$request",
+			"$m",
+			"contac",
 			"startstrap",
 			"portfolioModal",
 			"about",
@@ -1370,35 +1414,7 @@
 			"route",
 			"*/\n",
 			"route",
-			"admin",
-			"drivers.",
-			"route",
-			"admin",
-			"todos.",
-			"route",
-			"todos.",
-			"<form",
-			"form",
-			"update",
-			",",
-			"sm",
-			"form-control",
-			"7",
-			"$todo",
-			"name",
-			"todo",
-			"todos",
-			"../resources/",
-			"../resources/a",
-			"$id",
-			"Request ",
-			"time",
-			"Y-m-d H:m:s\"",
-			"time",
-			"Todos",
-			"todos",
-			"todo",
-			"Todo"
+			"admin"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1452,88 +1468,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/home.blade.php",
+					"file": "app/Http/Middleware/Authorization.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 32054,
+						"buffer_size": 964,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1768,
-								1768
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"colorcode": true,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 380.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/assets/plugins/startrap-agency/js/cbpAnimatedHeader.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 976,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								695,
-								695
-							],
-							[
-								806,
-								806
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 171.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config/database.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4055,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2056,
-								2056
+								299,
+								299
 							]
 						],
 						"settings":
@@ -1543,10 +1495,105 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 741.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/Controllers/MessagesController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								857,
+								857
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2239,
+								2239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 513.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2440,
+								2440
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1083.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1569,11 +1616,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.776362547468,
 			1.0
 		],
 		"rows":
@@ -2145,7 +2199,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 363.0,
+	"side_bar_width": 379.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
