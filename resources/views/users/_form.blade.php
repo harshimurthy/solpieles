@@ -13,7 +13,7 @@
 	{!! Form::label('role_id', 'User Role:', ['class'=>'']) !!}
 	<div class="input-group">
 		<div class="input-group-addon"><i class="fa fa-key"></i></div>
-		{!! Form::select('role_id', $user->rolesList, $user->role->id, ['class'=>'form-control input-sm']) !!}
+		{!! Form::select('role_id', $user->rolesList, null, ['class'=>'form-control input-sm']) !!}
 	</div>
 </div>
 <!-- /. User Role -->

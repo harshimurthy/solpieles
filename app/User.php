@@ -80,7 +80,7 @@ class User extends Model implements AuthenticatableContract,
      */
     public function getRolesListAttribute()
     {
-        return $this->role->lists('role', 'id');
+        return \App\Role::lists('role', 'id');
     }
 
     public function todosCount()
@@ -99,6 +99,10 @@ class User extends Model implements AuthenticatableContract,
 
     public function getRole()
     {
+        if (!isset($this->role->role)) {
+            return null;
+        };
+
         return $this->role->role;
     }
 }

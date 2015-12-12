@@ -52,11 +52,13 @@
 													{{ $user->email }}
 												</a>
 											</td>
-											<th>
-												<a href="{{ route('admin.roles.show', $user->role->id) }}">
-													{{ ucwords(camel_case($user->role->role)) }}
-												</a>
-											</th>
+											<td>
+												@if ($user->role)
+													<a href="{{ route('admin.roles.show', $user->role->id) }}">
+														{{ ucwords(camel_case($user->role->role)) }}
+													</a>
+												@endif
+											</td>
 											<td class="text-center">													
 												<a href="{{ route('admin.users.edit', $user->id) }}">
 													<i class="fa fa-pencil"></i>
@@ -71,7 +73,9 @@
 					@else
 						<h3>No hay Usuarios registrados con el criterio de búsquda especificado..</h3>
 					@endif
+					
 
+					<a href="{{ route('admin.roles.index') }}">Go to Roles Amin</a>
 				</div>
 			</div>
 		</div>
