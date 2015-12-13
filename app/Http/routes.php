@@ -81,6 +81,7 @@ Route::group(['prefix'=>'admin'], function(){
 
 		Route::get('todos/completar/{id}', ['as'=>'admin.todos.completar', 'uses'=>'TodosController@completar']);
 		Route::get('todos/incompletar/{id}', ['as'=>'admin.todos.incompletar', 'uses'=>'TodosController@incompletar']);
+		Route::delete('todos/remove_done_tasks', ['as'=>'admin.todos.remove_done_tasks', 'uses'=>'TodosController@removeDoneTasks']);
 		
 		Route::bind("todos", function($id){
 			return \App\Todo::whereUserId(Auth::user()->id)->findOrFail($id);

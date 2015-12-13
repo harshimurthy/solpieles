@@ -12,7 +12,9 @@
 						<div class="col-xs-offset-1">
 							<p>{{ $role->description }}</p>
 						</div>
-
+						<div class="form-group">
+							<a href="{{ route('admin.roles.edit', $role->id) }}" class="btn btn-warning"> Editar <i class="fa fa-pencil"></i></a>
+						</div>
 						@if ($role->users->count())
 							<div class="panel panel-primary">
 							  <!-- Default panel contents -->
@@ -42,10 +44,8 @@
 					</div>
 						{{-- {{ $role }} --}}
 					<hr>
-
-					<div class="col-sm-8 col-sm-offset-2">
+					<div class="col-sm-12 form-group">
 						<a href="{{ route('admin.roles.index') }}" class="pull-left"><i class="fa fa-arrow-circle-left"></i> Regresar </a>
-						<a href="{{ route('admin.roles.edit', $role->id) }}" class="btn btn-warning pull-right"> Editar <i class="fa fa-pencil"></i></a>
 					</div>
 				</div>
 			</div>

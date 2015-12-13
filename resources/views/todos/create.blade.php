@@ -23,6 +23,20 @@
 		<div class="form-group">
 			<button class="form-control btn btn-primary" type="submit">Agregar Tarea <i class="fa fa-plus"></i></button>
 		</div>
-	
+
 	{!! Form::close() !!}
+
+	<hr>
+		{!! delete_button('admin.todos.remove_done_tasks', null,
+			[
+				'class'        => 'btn btn-danger',
+				'label'        => "Remove Done Tasks",
+				'method'       => 'DELETE',
+				'form_name'    => 'delete_form', 
+				'form_display' => '',
+				'style' => '',
+				'name'         => 'deleteBtn',
+				'type'         => 'submit', 
+			]) !!}
+
 </div>
