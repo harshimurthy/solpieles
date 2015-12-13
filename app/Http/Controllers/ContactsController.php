@@ -147,7 +147,7 @@ class ContactsController extends Controller
         $contact = $contact->find($id);
 
         $file = $request->file('photo');
-        $localPath = '../resources/assets/images/contacts/'; // local folder where the image will be loaded to
+        $localPath = 'images/contacts/'; // local folder where the image will be loaded to
         $fileName = sha1($contact->id . $contact->name); // $fileName = str_random(40); //username sha1ed, so it is unique
         $extension = "." . $file->getClientOriginalExtension(); // $fileName = str_random(40); //username sha1ed, so it is unique
         $extendedName = $localPath . $fileName . $extension;
