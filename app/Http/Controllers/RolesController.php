@@ -47,7 +47,7 @@ class RolesController extends Controller
     {
         $this->validate($request, [
             'role'        => 'required|min:3|max:80',
-            'description' => 'min:8|max:80',
+            'description' => 'min:8|max:480',
             ]);
         
         $role->create($request->all());
@@ -89,7 +89,7 @@ class RolesController extends Controller
     {
         $this->validate($request, [
             'role'        => 'required|min:3|max:80',
-            'description' => 'min:8|max:80',
+            'description' => 'min:8|max:480',
             ]);
         
         $role->update($request->all());
