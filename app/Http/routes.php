@@ -55,7 +55,6 @@ Route::group(['prefix'=>'admin'], function(){
 	 * the login page
 	 */
 	Route::group(['middleware' => 'auth'], function(){
-
 		/**
 		 * Admin Home Page
 		 */
