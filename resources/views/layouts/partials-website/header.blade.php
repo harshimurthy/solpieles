@@ -10,14 +10,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Sol Pieles SRL">
+    <meta name="description" content="Wet Salted and Wet Blue Raw Hides">
     <meta name="author" content="Yismen Jorge">
+    <meta name="keywords" content="raw,hides,wet salted,wet blue,belly,tanning">
+    
     <meta name="csrf_token" content="{{ csrf_token() }}">
 
     <!-- Site Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
 
-    <title>Sol Pieles SRL Main Page</title>
+    <title>Sol Pieles SRL | Wet Salted and Wet Blue Raw Hides</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
