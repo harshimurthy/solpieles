@@ -15,7 +15,6 @@
 		                
 		                <p class="text-muted">What are our mission and vision?</p>
 		                
-		                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quibusdam? Dolorum rerum eos amet molestiae, laudantium, aliquam delectus animi soluta voluptate, repellendus accusantium nihil quidem, commodi eveniet dicta dolor saepe est quis deserunt! Et expedita porro deleniti culpa esse atque. Saepe expedita corrupti sequi consectetur, distinctio, atque nemo laboriosam iusto?</p>
 		                <p class="text-muted">Whats Our main streng?</p>
 		                
 		                <p class="text-muted">Whats our target market?</p>

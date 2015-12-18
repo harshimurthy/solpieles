@@ -22,9 +22,7 @@
     <title>Sol Pieles SRL | Wet Salted and Wet Blue Raw Hides</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="{{ asset('assets/plugins/startrap-agency/less/agency.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/all.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">

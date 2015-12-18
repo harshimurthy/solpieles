@@ -12,15 +12,27 @@ class Contact extends Model {
 
 	protected $dates = ['dob'];
 
+    /**
+     * =================================================================
+     * Relationships
+     */
+
 	public function user()
 	{
 		return $this->belongsTo('App\User');
 	}
 
+    /**
+     * =======================================================================
+     * Scopes
+     */
+
 	public function scopeCurrentuser( $query )
 	{
-		$query->whereUsername(\Auth::user()->username);
+		$query->whereUserId(auth()->user()->id);
 	}
+
+    
 
 	 /**
      * ====================================================================
@@ -41,6 +53,25 @@ class Contact extends Model {
         $format = 'Y-m-d';
         $time = Carbon::parse($time)->format($format); 
         return $this->attributes['dob'] = Carbon::createFromFormat($format, $time);
+    }
+
+    /**
+     * ====================================================================
+     * Methods
+     */
+    
+    public function ownedOrPublic()
+    {
+        if ($this->user_id == auth()->user()->id) {
+            return true;
+        }
+
+
+        if ($this->public == 1) {
+            return true;
+        }
+
+        return false;
     }
 
 }

@@ -62,7 +62,9 @@
 												</a>
 											</td>
 											<td>
-												<a href="{{ route('admin.contacts.edit', $contact->id) }}"><i class="fa fa-pencil"></i></a>
+												@if($contact->user->id == auth()->user()->id)
+													<a href="{{ route('admin.contacts.edit', $contact->id) }}"><i class="fa fa-pencil"></i></a>				
+												@endif
 											</td>
 										</tr>
 									@endforeach

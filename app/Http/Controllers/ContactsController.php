@@ -60,6 +60,8 @@ class ContactsController extends Controller
      */
     public function show(Contact $contact)
     {
+        $this->checkAuthorization($contact);
+
         return view('contacts.show', compact('contact'));
         //
     }
@@ -72,6 +74,8 @@ class ContactsController extends Controller
      */
     public function edit(Contact $contact)
     {
+        
+        $this->checkAuthorization($contact);
         // return  $contact;
         return view('contacts.edit', compact('contact'));
         //
@@ -86,6 +90,7 @@ class ContactsController extends Controller
      */
     public function update(Contact $contact, ContactsRequest $request)
     {
+        $this->checkAuthorization($contact);
         // return $contact;
         $contact->update($request->all());
 
@@ -101,6 +106,7 @@ class ContactsController extends Controller
      */
     public function destroy(Contact $contact)
     {
+        $this->checkAuthorization($contact);
         $contact->delete();
 
         return redirect()->route('admin.contacts.index')
@@ -174,5 +180,16 @@ class ContactsController extends Controller
 
         return redirect()->route('admin.contacts.edit', $contact->id)
             ->withSuccess("Main image updated...");
+    }
+
+    public function checkAuthorization($contact)
+    {
+        if (!$contact->ownedOrPublic()) {
+              return redirect()->route('contacts.index')
+                  ->withDanger("asfa asdfasdf");
+        }
+
+        return true;  
+
     }
 }

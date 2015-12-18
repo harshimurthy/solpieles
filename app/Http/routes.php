@@ -68,8 +68,8 @@ Route::group(['prefix'=>'admin'], function(){
 		Route::post('contacts/image/{id}', ['as'=>'admin.contacts.image', 'uses'=>'ContactsController@postImage']);
 		Route::bind('contacts', function($id){
 			return App\Contact::
-				whereUserId(auth()->user()->id)
-				->findOrFail($id);
+				// whereUserId(auth()->user()->id)
+				findOrFail($id);
 		});
 
 		Route::resource('contacts', 'ContactsController', []);

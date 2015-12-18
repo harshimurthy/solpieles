@@ -1,7 +1,7 @@
 
 		<!-- Header -->
 		<header>
-			<div class="blurs">
+			<div class="blur">
 				<div class="container">
 					<div class="intro-text">
 						<div class="intro-lead-in">We deliver quality!</div>
