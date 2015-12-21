@@ -9,7 +9,7 @@
     {{-- <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script> --}}
 
     <!-- Plugin JavaScript -->
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     {{-- <script src="{{ asset('assets/plugins/startrap-agency/js/classie.js') }}"></script> --}}
     {{-- <script src="{{ asset('assets/plugins/startrap-agency/js/cbpAnimatedHeader.js') }}"></script> --}}
 

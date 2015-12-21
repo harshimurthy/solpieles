@@ -5,13 +5,13 @@
         <!-- jQuery 2.1.4 -->
     {{-- <script src="{{ asset('assets/plugins/jQuery/jquery.min.js') }}"></script> --}}
     {{-- jQuery UI 1.11.4 --}}
-    {{-- <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> --}}
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 
 
     {{-- Ajax config file --}}
     {{-- <script src="{{ asset('assets/js/ajax_config.js') }}"></script> --}}
     <script src="{{ asset('assets/js/admin/all.js') }}"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     
     <script>
       $.widget.bridge('uibutton', $.ui.button);
@@ -24,7 +24,8 @@
     {{-- <script src="{{ asset('assets/js/destroy-confirmation.js') }}"></script> --}}
 
     <!-- bootbox -->
-    {{-- <script src="{{ asset('assets/plugins/bootbox/bootbox.min.js') }}"></script> --}}
+    <script src="{{ asset('assets/js/bootbox.min.js') }}"></script>
+
 
 
     <!-- AdminLTE App -->

@@ -16,7 +16,7 @@
 		    {	       
 				if (result == true) {
 					
-					$(parentForm).submit();				
+					$(parentForm).submit();			
 					// bootbox.confirm('Last confirmation. Are you realy sure you want to remove this record from the database?', function( result ){
 					// 	if ( result == true) {
 					// 		$(parentForm).submit();

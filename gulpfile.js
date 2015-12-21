@@ -63,27 +63,26 @@ elixir(function(mix) {
         'jquery-ui.js',
         'bootstrap.js',
         'ajax_config.js',
-        'destroy-confirmation.js',
-        'message_hidder.js',
-        'bootbox.js',
         'app.js',
+        'message_hidder.js',
+        'destroy-confirmation.js',
+        // 'bootbox.js',
     ], 'public/assets/js/admin');
 });
 
 elixir(function(mix) {
     mix.scripts([
         'jquery.js',
-        'ajax_config.js',
-        'bootstrap.js',
         'jquery-ui.js',
+        'bootstrap.js',
+        'ajax_config.js',
         'classie.js',
         'cbpAnimatedHeader.js',
         'jqBootstrapValidation.js',
         'contact_me.js',
         'agency.js',
-
-        'destroy-confirmation.js',
-        'message_hidder.js',
         'bootbox.js',
+        'message_hidder.js',
+        'destroy-confirmation.js',
     ], 'public/assets/js');
 });

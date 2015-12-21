@@ -44,6 +44,16 @@ class User extends Model implements AuthenticatableContract,
      * Relationships
      */
     
+    public function contacts()
+    {
+        return $this->hasMany("App\Contact");
+    }
+
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
     public function role()
     {
         return $this->belongsTo("App\Role");
@@ -52,12 +62,7 @@ class User extends Model implements AuthenticatableContract,
     public function todos()
     {
         return $this->hasMany("App\Todo");
-    }
-
-    public function contacts()
-    {
-        return $this->hasMany("App\Contact");
-    }
+    }    
 
     /**
      * ====================================================================

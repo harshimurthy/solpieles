@@ -75,6 +75,19 @@ Route::group(['prefix'=>'admin'], function(){
 		Route::resource('contacts', 'ContactsController', []);
 
 		/**
+		 * ===========================================================
+		 * Profiles
+		 */
+		Route::post('profiles/image/{id}', ['as'=>'admin.profiles.image', 'uses'=>'ProfilesController@postImage']);
+		Route::bind('profiles', function($id){
+			return App\Profile::
+				// whereUserId(auth()->user()->id)
+				findOrFail($id);
+		});
+
+		Route::resource('profiles', 'ProfilesController', ['except' => 'destroy']);		
+
+		/**
 		 * Todos
 		 */
 

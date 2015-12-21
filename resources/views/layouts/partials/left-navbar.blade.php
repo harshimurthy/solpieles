@@ -6,7 +6,11 @@
        
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="{{ asset('assets/plugins/admin-lte/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+              @if (auth()->user()->profile && file_exists(auth()->user()->profile->photo))       
+                <img src="{{ asset(auth()->user()->profile->photo) }}" class="img-responsive img-circle center-block" alt="Image">
+              @else       
+                <img src="http://placehold.it/40x40" class="img-responsive img-circle center-block" alt="Image">
+              @endif    
           </div>
           <div class="pull-left info">
             {{-- <p>{{ currentUser.name | uppercase }}</p> --}}
@@ -26,6 +30,7 @@
             <ul class="treeview-menu">
               <li class=""><a href="{{ route('admin.contacts.index') }}"><i class="fa fa-circle-o"></i> Contacts</a></li>
               <li class=""><a href="{{ route('admin.messages.index') }}"><i class="fa fa-circle-o"></i> Menssages</a></li>
+              <li class=""><a href="{{ route('admin.profiles.index') }}"><i class="fa fa-circle-o"></i> Profile</a></li>
               <li class=""><a href="{{ route('admin.todos.index') }}"><i class="fa fa-circle-o"></i> Tasks</a></li>
             </ul>
           </li>

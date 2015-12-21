@@ -12,7 +12,9 @@ use App\User;
 class HomeController extends Controller
 {
     public function dashboard(Request $reuest, User $user){
-    	$user = $user->with('role')->find(auth()->user()->id);
+    	$user = $user->with('role')
+    				->with('profile')
+    				->find(auth()->user()->id);
 
     	// $user->birthdaysToday = $drivers->getBirthdaysTodayCount();
     	// $user->birthdaysThisMonth = $drivers->getBirthdaysThisMonthCount();
