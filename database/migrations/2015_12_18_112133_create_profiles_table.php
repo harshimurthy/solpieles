@@ -18,8 +18,8 @@ class CreateProfilesTable extends Migration
             // $table->string('name', 100);
             $table->enum('gender', ['male', 'female']);
             $table->string('bio', 5000)->nullable();
+            $table->string('phone', 300)->nullable();
             $table->string('photo', 500)->nullable();
-            $table->string('other', 300)->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')

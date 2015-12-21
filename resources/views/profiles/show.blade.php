@@ -50,6 +50,8 @@
 							<thead>
 								<tr>
 									<th>Name:</th>
+									<th>Email:</th>
+									<th>Phone:</th>
 									<th>Gender:</th>
 									<th>Photo:</th>
 									<th>Action:</th>
@@ -60,6 +62,13 @@
 									<tr>
 										<td>
 											<a href="{{ route('admin.profiles.show', $profile->id) }}">{{ $profile->user->name }}</a>
+										</td>
+										<td>
+											<a href="mailto:{{ $profile->user->email }}" target="_new"><i class="fa fa-envelope"></i>
+											</a>
+										</td>
+										<td>
+											{{ $profile->phone }}
 										</td>
 										<td>
 											{{ ucwords($profile->gender) }}

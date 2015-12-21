@@ -15,7 +15,7 @@
         <div class="pull-right hidden-xs">
           <b><a href="mailto:yismen.jorge@gmail.com" target="_new">Yismen Jorge</a></b> Contact Me!
         </div>
-        <strong>Copyright &copy; {{ date("Y") }} <a href="">Ruta CJ27</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; {{ date("Y") }} <a href="">Sol Pieles</a>.</strong> All rights reserved.
       </footer>
 
     </div><!-- ./wrapper -->

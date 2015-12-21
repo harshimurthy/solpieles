@@ -1,4 +1,4 @@
-<div class="col-sm-6">
+<div class="col-sm-12">
 
 	<div class="form-group {{ $errors->has('name') ? 'has-error' : null }}">
 		{!! Form::label('name', 'Your Name:', ['class'=>'']) !!}
@@ -9,8 +9,7 @@
 	</div>
 	<!-- /. Your Name -->	
 </div>
-<div class="col-sm-6">
-	
+<div class="col-sm-6">	
 
 	<div class="form-group {{ $errors->has('gender') ? 'has-error' : null }}">
 		{!! Form::label('gender', 'Your Gender:', ['class'=>'']) !!}
@@ -24,6 +23,18 @@
 		</div>
 	</div>
 	<!-- /. Gender -->
+</div>
+<div class="col-sm-6">	
+
+	<div class="form-group {{ $errors->has('phone') ? 'has-error' : null }}">
+		{!! Form::label('phone', 'Phone Number:', ['class'=>'']) !!}
+		<div class="input-group">
+			<div class="input-group-addon"><i class="fa fa-phone"></i></div>
+			{!! Form::input('text', 'phone', null, ['class'=>'form-control', 'placeholder'=>'Phone Number']) !!}
+		</div>
+	</div>
+	<!-- /. Phone Number -->
+	
 </div>
 
 <div class="row">
