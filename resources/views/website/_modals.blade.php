@@ -14,8 +14,11 @@
 								<!-- Project Details Go Here -->
 								<h2>100% Machine Flayed Wet Salted Hides</h2>
 								<p class="item-intro text-muted">100% Machine Flayed Wet Salted Hides</p>
-								{{-- <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt=""> --}}					
-								<div class="col-sm-6">
+								{{-- <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt=""> --}}		
+								<div class="col-sm-6 col-sm-push-6">
+									<img src="{{ asset('images/main_page/raw-hides-machine.jpg') }}" class="img-responsive" alt="">
+								</div>				
+								<div class="col-sm-6 col-sm-pull-6">
 									<h4>Description</h4>
 									<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
 									<p>
@@ -36,9 +39,7 @@
 										<li><strong>Capacity: </strong>8 ontainers/month</li>
 									</ul>
 								</div>
-								<div class="col-sm-6">
-									<img src="{{ asset('images/main_page/raw-hides-machine.jpg') }}" class="img-responsive" alt="">
-								</div>		
+									
 								<div class="row">
 									
 									<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Product Details</button>

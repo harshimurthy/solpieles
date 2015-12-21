@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\TodosRequest;
+// use Toastr;
 use App\Http\Controllers\Controller;
 
 use App\Todo;
@@ -112,6 +113,8 @@ class TodosController extends Controller
 
         $todo->save();
 
+        // Toastr::warning("La tarea [$todo->name] ha sido marcada como completada", "Success");
+
         return redirect()->back()
              ->withSuccess("La tarea [$todo->name] ha sido marcada como completada"); 
 
@@ -131,6 +134,7 @@ class TodosController extends Controller
 
         $todo->save();
 
+        // Toastr::warning("La tarea [$todo->name] ha sido marcada como completada", "Success");
         return redirect()->back()
              ->withSuccess("La tarea [$todo->name] ha sido marcada como pendiente"); 
     }

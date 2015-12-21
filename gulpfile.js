@@ -42,6 +42,7 @@ elixir(function(mix) {
         'admin-lte.css',
         '_all-skins.css',
         'my-style.css',
+        'toastr.css'
     ], 'public/assets/css/admin');
 });
 
@@ -52,6 +53,7 @@ elixir(function(mix) {
         'bootstrap.css',
         'agency.css',
         'my-style.css',
+        'toastr.css'
     ], 'public/assets/css');
 });
 
@@ -66,6 +68,7 @@ elixir(function(mix) {
         'app.js',
         'message_hidder.js',
         'destroy-confirmation.js',
+        'toastr.js'
         // 'bootbox.js',
     ], 'public/assets/js/admin');
 });
@@ -84,5 +87,6 @@ elixir(function(mix) {
         'bootbox.js',
         'message_hidder.js',
         'destroy-confirmation.js',
+        'toastr.js'
     ], 'public/assets/js');
 });
