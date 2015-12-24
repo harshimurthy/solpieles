@@ -5,7 +5,7 @@
 		<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
 			<div class="row">
 				<div class="well">
-					<h1 class="page-header text-center">Listado de Contactos
+					<h1 class="page-header text-center animated rollIn">Listado de Contactos
 						<a href="{{ route('admin.contacts.create') }}">
 							<span class="fa fa-plus"></span>
 						</a> 

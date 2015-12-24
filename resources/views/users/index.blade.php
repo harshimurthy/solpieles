@@ -75,7 +75,7 @@
 					@endif
 					
 
-					<a href="{{ route('admin.roles.index') }}">Go to Roles Amin</a>
+					<a href="{{ route('admin.roles.index') }}"><i class="fa fa-cog"> </i> In order to manage Roles, go to Roles Admin</a>
 				</div>
 			</div>
 		</div>

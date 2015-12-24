@@ -43,6 +43,7 @@ elixir(function(mix) {
         '_all-skins.css',
         'my-style.css',
         'animate.css',
+        'font-awesome.css',
         'toastr.css'
     ], 'public/assets/css/admin');
 });
@@ -55,40 +56,41 @@ elixir(function(mix) {
         'agency.css',
         'my-style.css',
         'animate.css',
+        'font-awesome.css',
         'toastr.css'
     ], 'public/assets/css');
 });
 
 // JS
 
-elixir(function(mix) {
-    mix.scripts([
-        'jquery.js',
-        'jquery-ui.js',
-        'bootstrap.js',
-        'ajax_config.js',
-        'app.js',
-        'message_hidder.js',
-        'destroy-confirmation.js',
-        'toastr.js'
-        // 'bootbox.js',
-    ], 'public/assets/js/admin');
-});
+// elixir(function(mix) {
+//     mix.scripts([
+//         'jquery.js',
+//         'jquery-ui.js',
+//         'bootstrap.js',
+//         'ajax_config.js',
+//         'app.js',
+//         'message_hidder.js',
+//         'destroy-confirmation.js',
+//         'toastr.js'
+//         // 'bootbox.js',
+//     ], 'public/assets/js/admin');
+// });
 
-elixir(function(mix) {
-    mix.scripts([
-        'jquery.js',
-        'jquery-ui.js',
-        'bootstrap.js',
-        'ajax_config.js',
-        'classie.js',
-        'cbpAnimatedHeader.js',
-        'jqBootstrapValidation.js',
-        'contact_me.js',
-        'agency.js',
-        'bootbox.js',
-        'message_hidder.js',
-        'destroy-confirmation.js',
-        'toastr.js'
-    ], 'public/assets/js');
-});
+// elixir(function(mix) {
+//     mix.scripts([
+//         'jquery.js',
+//         'jquery-ui.js',
+//         'bootstrap.js',
+//         'ajax_config.js',
+//         'classie.js',
+//         'cbpAnimatedHeader.js',
+//         'jqBootstrapValidation.js',
+//         'contact_me.js',
+//         'agency.js',
+//         'bootbox.js',
+//         'message_hidder.js',
+//         'destroy-confirmation.js',
+//         'toastr.js'
+//     ], 'public/assets/js');
+// });
