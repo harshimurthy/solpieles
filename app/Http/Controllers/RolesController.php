@@ -151,7 +151,7 @@ class RolesController extends Controller
         $roles = $roles->with('users')->paginate(15)->appends(['search' => $request->get('search')]);
         $usersWithoutRoles = $users->whereRoleId(null)->get();
         
-        $request->flash();
-        return view('roles.index', compact('roles', 'usersWithoutRoles'));
+        // $request->flash();
+        return view('roles.index', compact('roles', 'usersWithoutRoles'))->withInput($request->flash());
     }
 }
