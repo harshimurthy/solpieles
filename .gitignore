@@ -1,7 +1,7 @@
 /vendor
 /node_modules
+/.phpintel
+/bower_components
 Homestead.yaml
 Homestead.json
 .env
-/.phpintel
-/bower_components

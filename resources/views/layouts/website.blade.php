@@ -12,6 +12,10 @@
 
     @include('layouts.partials-website.footer')
    <!-- /. Footer -->
+
+   
+
+	@yield('scripts')
 </body>
 
 </html>

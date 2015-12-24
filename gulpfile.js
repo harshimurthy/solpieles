@@ -42,6 +42,7 @@ elixir(function(mix) {
         'admin-lte.css',
         '_all-skins.css',
         'my-style.css',
+        'animate.css',
         'toastr.css'
     ], 'public/assets/css/admin');
 });
@@ -53,6 +54,7 @@ elixir(function(mix) {
         'bootstrap.css',
         'agency.css',
         'my-style.css',
+        'animate.css',
         'toastr.css'
     ], 'public/assets/css');
 });

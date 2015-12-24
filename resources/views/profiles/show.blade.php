@@ -12,24 +12,28 @@
 	.profile-bio p{
 		padding: 20px;
 	}
+
+	.profile-img {
+		border: solid 10px #ffffff;
+	}
 </style>
 @extends('layouts.admin')
 
 @section('content')
 	<div class="profile-header">
 		<div class="">			
-			<div class="center-block">	
+			<div class="center-block ">	
 				@if (file_exists($profile->photo))				
-					<img src="{{ asset($profile->photo) }}" height="150px" class="img-responsive img-circle center-block" alt="Image">
+					<img src="{{ asset($profile->photo) }}" height="150px" class="img-responsive img-circle center-block profile-img animated rotateIn" alt="Image">
 				@else				
-					<img src="http://placehold.it/150x150" height="150px" class="img-responsive img-circle center-block" alt="Image">
+					<img src="http://placehold.it/150x150" height="150px" class="img-responsive img-circle center-block profile-img animated rotateIn" alt="Image">
 				@endif			
 			</div>
-			<h1 class="text-center profile-name">
+			<h1 class="text-center profile-name animated rotateInDownRight">
 				{{ strtoupper($profile->user->name) }}
 				 <i class="fa fa-{{ $profile->gender }}"></i>
 			</h1>
-			<h5 class="text-center">
+			<h5 class="text-center animated fadeInDown">
 				@if (auth()->user()->id == $profile->user_id)
 					<a class="btn btn-warning" href="{{ route('admin.profiles.edit', $profile->id) }}"><i class="fa fa-pencil"></i> Edit Your Profile</a>
 				@endif

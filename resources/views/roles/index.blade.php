@@ -23,7 +23,7 @@
 									{!! Form::input('search', 'search', null, ['class'=>'form-control', 'placeholder'=>'Search User']) !!}
 									<div class="input-group-btn">
 										<button type="submit" class="btn btn-default">
-											<i class="fa fa-search"></i>
+											<i class="fa fa-search"> </i>
 										</button>
 									</div>
 									<div class="input-group-btn">
@@ -68,9 +68,10 @@
 												</a> {{-- Edit User --}}
 												<a href="{{ route('admin.roles.detatch_user',[ $user->id, $role->id]) }}" 
 													class="link pull-right"
+													id="detatch_user"
 													data-toggle="tooltip" data-placement="bottom" title="Detatch this User">
 
-													<i class="fa fa-scissors"></i>
+													<i class="fa fa-scissors"> </i>
 						
 												</a> {{-- Remove User --}}
 											</li>
@@ -126,6 +127,38 @@
 			</div>
 		</div>
 	</div>
-
 	
+@endsection
+
+
+@section('scripts')
+<script>
+  $(document).ready(function($) {   
+    $(document).on('click', "#detatch_user", function(e) {
+      e.preventDefault();
+
+      elem = $(this);
+
+      console.log(elem.attr('href'));
+
+      bootbox.confirm({
+        title: 'Peligro, Alerta!!!',
+        message: 'Do you surely want to detach this users from this role group?',
+        buttons: {
+            'confirm': {
+                label: 'Please Confirm',
+                className: 'btn-danger'
+            }
+        },
+        callback: function(result) {        
+          if (result == true) {
+            
+            window.location.replace(elem.attr('href'));
+          } 
+        }
+      }); 
+
+    });
+  });
+</script>
 @endsection

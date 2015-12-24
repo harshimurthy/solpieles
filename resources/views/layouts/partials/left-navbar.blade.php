@@ -35,7 +35,7 @@
             </ul>
           </li>
 
-          @if (auth()->user()->role->role == 'admin')
+          @if (auth()->user()->role && auth()->user()->role->role == 'admin')
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-cogs"></i> <span> Admin Section</span> <i class="fa fa-angle-left pull-right"></i>

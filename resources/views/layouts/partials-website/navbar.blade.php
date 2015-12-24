@@ -3,7 +3,7 @@
     {{-- <nav class="navbar navbar-default navbar-fixed-top"> --}}
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
+            <div class="navbar-header page-scroll ">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 {{-- <a class="navbar-brand page-scroll" href="#page-top">Sol Pieles</a> --}}
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll animated  tada" href="#page-top">
                     <img src="{{ asset('images/solpieles.png') }}" class="img-responsives pull-left" height="30px" alt="Image">
                      <span class="pull-right">
                         Sol Pieles - 

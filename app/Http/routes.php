@@ -115,6 +115,8 @@ Route::group(['prefix'=>'admin'], function(){
 		 * Roles
 		 */
 		Route::get('roles/detatch_user/{user}/role/{role}', ['as'=>'admin.roles.detatch_user', 'uses'=>'RolesController@detatchUser']);
+		
+		Route::get('roles/search', ['as'=>'admin.roles.search', 'uses'=>'RolesController@search']);
 		Route::bind('roles', function($id){
 			return App\Role::with('users')->findOrFail($id);
 		});

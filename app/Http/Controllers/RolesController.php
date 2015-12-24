@@ -122,6 +122,11 @@ class RolesController extends Controller
     public function detatchUser($user, $role, User $users, Role $roles)
     {
         $user = $users->findOrFail($user);
+
+        if (auth()->user()->id == $user->id) {
+            return redirect()->back()
+                ->withDanger("Detaching your own user is not allowed. This needs to be done manually, contact admin...");
+        }
         $role = $roles->findOrFail($role);
 
         $user->role_id = null;
@@ -129,5 +134,24 @@ class RolesController extends Controller
 
         return redirect()->route('admin.roles.index')
             ->withSuccess("User $user->name no longer has the role $role->role.");
+    }
+
+    public function search(Request $request, Role $roles, User $users)
+    {
+        $searchs = explode(' ', $request->get('search'));
+
+        foreach ($searchs as $key => $value) {
+            $roles = $roles
+                ->orWhere('role', 'like', "%$value%")
+                ->orWhere('description', 'like', "%$value%")
+                ;
+        }
+
+        // $roles = $roles->paginate(10)->appends(['search' => $request->get('search')]);
+        $roles = $roles->with('users')->paginate(15)->appends(['search' => $request->get('search')]);
+        $usersWithoutRoles = $users->whereRoleId(null)->get();
+        
+        $request->flash();
+        return view('roles.index', compact('roles', 'usersWithoutRoles'));
     }
 }

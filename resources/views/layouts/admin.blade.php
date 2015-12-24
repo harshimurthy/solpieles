@@ -30,3 +30,5 @@
 {{-- @yield('scripts') --}}
 
 @include('layouts.partials.footer')
+
+@yield('scripts')
