@@ -33,7 +33,7 @@
 				{{ strtoupper($profile->user->name) }}
 				 <i class="fa fa-{{ $profile->gender }}"></i>
 			</h1>
-			<h5 class="text-center animated fadeInDown">
+			<h5 class="text-center animated rotateInUpLeft">
 				@if (auth()->user()->id == $profile->user_id)
 					<a class="btn btn-warning" href="{{ route('admin.profiles.edit', $profile->id) }}"><i class="fa fa-pencil"></i> Edit Your Profile</a>
 				@endif

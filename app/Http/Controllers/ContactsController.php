@@ -150,6 +150,7 @@ class ContactsController extends Controller
         $this->validate($request, [
             'photo' => 'required|image|max:4000',
         ]);
+        
         $contact = $contact->find($id);
 
         $file = $request->file('photo');

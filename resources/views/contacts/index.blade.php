@@ -45,7 +45,7 @@
 								</thead>
 								<tbody>
 									@foreach ($contacts as $contact)
-										<tr>
+										<tr class="animated fadeInRight">
 											<td>
 												<a href="{{ route('admin.contacts.show', $contact->id) }}">{{ $contact->name }}</a>
 											</td>

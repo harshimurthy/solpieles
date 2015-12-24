@@ -22,7 +22,7 @@
 				@if (count($pending) > 0)
 					
 					<h1 class="page-header text-center text-warning">Tus Tareas Pendientes</h1>
-					<table class="table table-condensed table-hover">
+					<table class="table table-condensed table-hover animated fadeInUp">
 						<thead>
 							<tr>
 								<th>Tarea:</th>
@@ -55,7 +55,7 @@
 				@if (count($completed) > 0)
 					<hr>
 					<h1 class="page-header text-center text-info">Tareas Completadas</h1>
-					<table class="table table-condensed table-hover">
+					<table class="table table-condensed table-hover animated fadeInDown">
 						<thead>
 							<tr>
 								<th>Tarea:</th>
@@ -86,7 +86,7 @@
 			</div>
 			{!! $todos->render() !!}
 		</div>	
-		<div class="col-sm-4 col-sm-pull-8">
+		<div class="col-sm-4 col-sm-pull-8 animated rotateInUpLeft">
 			@include('todos.create')
 		</div>	
 

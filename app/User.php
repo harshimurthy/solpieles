@@ -83,11 +83,20 @@ class User extends Model implements AuthenticatableContract,
      * ====================================================================
      * Methods
      */
+    
+    /**
+     * Get a list of the roles available
+     * @return collection List of Roles
+     */
     public function getRolesListAttribute()
     {
         return \App\Role::lists('role', 'id');
     }
 
+    /**
+     * return a count of the todos created by the current user
+     * @return [type] [description]
+     */
     public function todosCount()
     {
         return $this->todos()->whereDone(0)->count();
@@ -109,5 +118,10 @@ class User extends Model implements AuthenticatableContract,
         };
 
         return $this->role->role;
+    }
+
+    public function owns($related)
+    {
+        return $this->id == $related->user_id;
     }
 }
