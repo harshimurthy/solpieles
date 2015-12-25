@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="row">
 		            <div class="col-md-4 ">
-		            	<span class="text-centers">            		
+		            	<span class="center-block">            		
 			                <img class="img-responsive img-centered" src="{{ asset('images/solpieles.png') }}" alt="">
 		            	</span>
 		            </div>

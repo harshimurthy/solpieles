@@ -5,7 +5,7 @@
 		<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
 			<div class="row">
 				<div class="well">
-					<h1 class="page-header text-center">Listado de Mensajes
+					<h1 class="page-header text-center animated rollIn">Listado de Mensajes
 					</h1>
 					{!! Form::open(['route'=>['admin.messages.search'], 'method'=>'GET', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off"]) !!}		
 						<div class="form-group {{ $errors->has('search') ? 'has-error' : null }}">
@@ -32,11 +32,10 @@
 
 					<div class="navbar">
 						<a class="navbar-brand" href="{{ route('admin.messages.index') }}">Default</a>
-						<ul class="nav navbar-nav">
-							<li class="active">
-						<li><a href="?status=all">View all</a></li>
-						<li><a href="?status=pending">View Pending</a></li>
-						<li><a href="?status=viewed">View Viewed</a></li>
+							<ul class="nav navbar-nav">
+							<li><a href="?status=all" class="animated bounceIn">View all</a></li>
+							<li><a href="?status=pending" class="animated bounceIn">View Pending</a></li>
+							<li><a href="?status=viewed" class="animated bounceIn">View Viewed</a></li>
 						</ul>
 					</div>
 					
@@ -44,7 +43,7 @@
 						<div class="table-responsive">
 							<table class="table table-hover table-condensed">
 								<thead>
-									<tr>
+									<tr class="animated rotateIn">
 										<th>Name:</th>
 										<th>Subject:</th>
 										<th>Phone:</th>
@@ -54,7 +53,7 @@
 								</thead>
 								<tbody>
 									@foreach ($messages as $message)
-										<tr>
+										<tr class="animated bounceIn">
 											<td>
 												<a href="{{ route('admin.messages.edit', $message->id) }}">{{ $message->name }}</a>
 											</td>

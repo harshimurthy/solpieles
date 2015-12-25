@@ -1,38 +1,24 @@
-<style type="text/css">
-	.profile-header {
-		background-color: #2ecc71;
-		padding: 50px 0;
-	}
-
-	.profile-name {
-		font-size: 52px;
-		font-weight: 900;
-	}
-
-	.profile-bio p{
-		padding: 20px;
-	}
-
-	.profile-img {
-		border: solid 10px #ffffff;
-	}
-</style>
 @extends('layouts.admin')
 
 @section('content')
 	<div class="profile-header">
-		<div class="">			
+		<div class="text-center">			
 			<div class="center-block ">	
 				@if (file_exists($profile->photo))				
-					<img src="{{ asset($profile->photo) }}" height="150px" class="img-responsive img-circle center-block profile-img animated rotateIn" alt="Image">
+					<img src="{{ asset($profile->photo) }}" height="150px" class="img-responsive img-circle center-block profile-img animated rotateIn box-shadow" alt="Image">
 				@else				
-					<img src="http://placehold.it/150x150" height="150px" class="img-responsive img-circle center-block profile-img animated rotateIn" alt="Image">
+					<img src="http://placehold.it/150x150" height="150px" class="img-responsive img-circle center-block profile-img animated rotateIn box-shadow" alt="Image">
 				@endif			
 			</div>
 			<h1 class="text-center profile-name animated rotateInDownRight">
 				{{ strtoupper($profile->user->name) }}
 				 <i class="fa fa-{{ $profile->gender }}"></i>
 			</h1>
+
+
+			<a href="mailto:{{ $profile->user->email }}" target="_new"><i class="fa fa-envelope"></i> {{ $profile->user->email }}</a> <br>
+			<p> <i class="fa fa-phone"></i>	{{ $profile->phone }}</p>
+
 			<h5 class="text-center animated rotateInUpLeft">
 				@if (auth()->user()->id == $profile->user_id)
 					<a class="btn btn-warning" href="{{ route('admin.profiles.edit', $profile->id) }}"><i class="fa fa-pencil"></i> Edit Your Profile</a>

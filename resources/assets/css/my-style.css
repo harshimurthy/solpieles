@@ -1,3 +1,44 @@
+/*/Map*/
+#section-map {
+	padding: 30px 10px;
+}
+/*/. Map*/
 .huge-text {
 	font-size: 72px;
 }
+
+.minibox h1{
+	font-size: 59px;
+}
+
+
+.blur {	
+    min-height: inherit;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * Profile styling
+ */
+.profile-header {
+	background-color: #2ecc71;
+	padding: 50px 0;
+}
+
+.profile-name {
+	font-size: 52px;
+	font-weight: 900;
+}
+
+.profile-bio p{
+	padding: 20px;
+}
+
+.profile-img {
+	border: solid 10px #ffffff;
+	box-shadow: 4px 9px 29px 0px rgba(0,0,0,0.41);
+}
+.box-shadow {
+	box-shadow: 5px, 3px, 0, 0;
+}
+/*/. Profile*/

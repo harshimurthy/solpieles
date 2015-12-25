@@ -14,8 +14,10 @@
     </a>
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
-        <li><a href="{{ route('site.route') }}">Ir al sitio web</a></li>
-
+        <li><a href="{{ route('site.route') }}"><i class="fa fa-home"> </i> Go to Web Site</a></li>
+        @if (auth()->check())
+          <li><a href="{{ url('auth/logout') }}"><i class="fa fa-home"> </i> Log Out</a></li>
+        @endif
 
       </ul>
     </div>
