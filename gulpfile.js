@@ -32,9 +32,9 @@ var elixir = require('laravel-elixir');
 //     	'resources/assets/css');
 // });
 // 
-elixir(function(mix){
-	mix.less('agency.less', 'resources/assets/css')
-});
+// elixir(function(mix){
+// 	mix.less('agency.less', 'resources/assets/css')
+// });
 
 elixir(function(mix) {
     mix.styles([
