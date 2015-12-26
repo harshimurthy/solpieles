@@ -43,8 +43,8 @@ elixir(function(mix) {
         '_all-skins.css',
         'my-style.css',
         'animate.css',
-        'font-awesome.css',
-        'toastr.css'
+        // 'font-awesome.css',
+        // 'toastr.css'
     ], 'public/assets/css/admin');
 });
 
@@ -56,8 +56,8 @@ elixir(function(mix) {
         'agency.css',
         'my-style.css',
         'animate.css',
-        'font-awesome.css',
-        'toastr.css'
+        // 'font-awesome.css',
+        // 'toastr.css'
     ], 'public/assets/css');
 });
 
