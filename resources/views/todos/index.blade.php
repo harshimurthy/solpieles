@@ -18,8 +18,8 @@
 				}
 			 ?>
 		<div class="col-sm-8 col-sm-push-4">
-			<div class="table-responsive">
-				@if (count($pending) > 0)
+			@if (count($pending) > 0)
+				<div class="table-responsive">
 					
 					<h1 class="page-header text-center text-warning">Tus Tareas Pendientes</h1>
 					<table class="table table-condensed table-hover animated fadeInUp">
@@ -49,11 +49,11 @@
 							@endforeach
 						</tbody>
 					</table>					
-				@endif
-				
-				{{-- Completed --}}
-				@if (count($completed) > 0)
-					<hr>
+				</div>
+			@endif
+			{{-- Completed --}}
+			@if (count($completed) > 0)
+				<div class="table-responsive">
 					<h1 class="page-header text-center text-info">Tareas Completadas</h1>
 					<table class="table table-condensed table-hover animated fadeInDown">
 						<thead>
@@ -82,8 +82,9 @@
 							@endforeach
 						</tbody>
 					</table>	
-				@endif
-			</div>
+					
+				</div>
+			@endif
 			{!! $todos->render() !!}
 		</div>	
 		<div class="col-sm-4 col-sm-pull-8 animated rotateInUpLeft">
