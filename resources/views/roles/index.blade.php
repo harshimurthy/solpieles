@@ -19,18 +19,18 @@
 							<div class="form-group {{ $errors->has('search') ? 'has-error' : null }}">
 								{{-- {!! Form::label('search', 'Buscar:', ['class'=>'']) !!} --}}
 								<div class="input-group">
-
-									{!! Form::input('search', 'search', null, ['class'=>'form-control', 'placeholder'=>'Search User']) !!}
 									<div class="input-group-btn">
 										<button type="submit" class="btn btn-default">
-											<i class="fa fa-search"> </i>
+											<i class="fa fa-search"></i>
 										</button>
 									</div>
+									{!! Form::input('search', 'search', null, ['class'=>'form-control', 'placeholder'=>'Search Role']) !!}
 									<div class="input-group-btn">
 										<a href="{{ route('admin.roles.index') }}" class="btn btn-default">Reset</a>
 									</div>
 
 								</div>	
+
 
 							    <p class="help-block">Puede buscar por cualquier valor</p>
 
