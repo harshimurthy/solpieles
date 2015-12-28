@@ -18,6 +18,7 @@ class HomeController extends Controller
 
         $user->usersCount = $user->all()->count();
         $user->rolesCount = $roles->all()->count();
+        $user->contactsCount = $user->contacts()->count();
         $user->todosCount = $user->todos()->whereDone(0)->count();
         $user->messagesCount = $messages->whereViewed(0)->count();
 

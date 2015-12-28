@@ -43,6 +43,14 @@
 				'routeText'   => 'View Messages'
 			])
 
+			@include('dashboard._minibox', [
+				'title'       => $user->contactsCount,
+				'description' => 'Contacts created by yourself',
+				'class'       => 'animated fadeInLeft',
+				'route'       => 'admin.contacts.index',
+				'routeText'   => 'View Contacts'
+			])
+
 			@if ( $user->role )
 				@include('dashboard._minibox', [
 					'title'       => ucwords($user->role->role),
