@@ -13,25 +13,44 @@ class Authorization
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $role1 = null)
+    public function handle($request, Closure $next, $roles = null)
     {
+        /**
+         * Reject Unauthenticated Users
+         */
+        if (auth()->guest()) {
+            if ($requesat->ajax()) {
+                return response('Unauthorized.', 401);
+            } else {
+                return redirect()->guest('auth/login');
+            }
+        }
+
+
+        $roles = explode('|', trim($roles));
         /**
          * Admin Users are free to do whatever they like.
          */
-        if (auth()->check() && auth()->user()->hasRole('admin')) {
+        if (auth()->user()->hasRole('admin')) {
             return $next($request);
         }
 
         /**
          * If an array of roles is passed we check each one of them
          */
-        if (!auth()->check() || !auth()->user()->hasRole($role1)) {
-            $role = ucwords($role1);
-            return redirect()->route('admin.home')
-                ->withDanger("Only $role users can access this file.");
+        foreach ($roles as $key => $role) {
+            if (auth()->user()->hasRole($role)) {
+                return $next($request);
+            }
         }
+
+        /**
+         * Reject, Unauthorized
+         */
+        return redirect()->back()
+            ->withDanger("Sorry, you are not authorized to view this page! Contact Admin for this.");
+        
                 
-        return $next($request);
 
     }
 

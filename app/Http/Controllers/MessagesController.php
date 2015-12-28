@@ -14,7 +14,7 @@ class MessagesController extends Controller
 {
 
     public function __construct() {
-        $this->middleware("authorization:staff", ['except'=>['store']]);
+        $this->middleware("authorization:staff|admin", ['except'=>['store']]);
     }
     /**
      * Display a listing of the resource.
