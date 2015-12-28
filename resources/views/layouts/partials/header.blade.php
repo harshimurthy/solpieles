@@ -6,7 +6,8 @@
 
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <meta name="description" content="Sol Pieles SRL">
+        <meta name="description" content="We provide <b>Salted Raw Hides</b> and <b>Wet Blue hides</b> for the leather and tanning industry. We deliver on time, great quality guaranteed!">
+        <meta name="keywords" content="wet blue hides, salted raw hides, wet blue dominican republic, wet blue republica dominicana">
         <meta name="author" content="Yismen Jorge">
         <meta name="csrf_token" content="{{ csrf_token() }}">
         
