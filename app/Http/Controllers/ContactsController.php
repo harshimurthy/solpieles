@@ -148,7 +148,7 @@ class ContactsController extends Controller
     public function postImage(Request $request, Contact $contact, $id)
     {
         $this->validate($request, [
-            'photo' => 'required|image|max:4000',
+            'photo' => 'required|image|max:8000',
         ]);
         
         $contact = $contact->find($id);
