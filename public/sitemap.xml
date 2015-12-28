@@ -26,4 +26,21 @@
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://solpieles.com/services</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+</urlset>
+<url>
+  <loc>https://www.solpieles.com</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+</urlset>
+<url>
+  <loc>https://www.solpieles.com/services</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
 </urlset>

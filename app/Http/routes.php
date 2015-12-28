@@ -29,6 +29,9 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
+/**
+ * Site URLs
+ */
 Route::get('/', ['as'=>'site.route', function () {
     return view('website.home');
 }]);
@@ -36,6 +39,9 @@ Route::get('/home', ['as'=>'site.route', function () {
     return view('website.home');
 }]);
 
+Route::get('services', ['as'=>'services', function(){
+	return view('website.services');
+}]);
 // Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
 	
 Route::group(['prefix'=>'admin'], function(){
