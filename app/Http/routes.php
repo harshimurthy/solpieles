@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('googled1904d74b3908e04.html', function(){
+	return view('googled1904d74b3908e04');
+});
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
