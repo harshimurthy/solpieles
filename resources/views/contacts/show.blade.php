@@ -5,47 +5,37 @@
 		<div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
 			<div class="well">
 				<div class="row">
-					<h3 class="page-header text-center">Detalles del Contacto [{{ $contact->name }}]</h3>
-					
 					<div class="col-sm-6">
 						<img src="{{ asset($contact->photo) }}" class="img-responsive" alt="Image">
 					</div>
 
 					<div class="col-sm-6">
+						<div class="panel panel-default">
+							  <div class="panel-heading">
+									<h3 class="panel-title">{{ strtoupper($contact->name) }}</h3>
+							  </div>
+							  <div class="panel-body">
+									<i class="fa fa-phone"></i>	{{ $contact->mobile }} <br><br>
 
-						<strong>Celular</strong>
-						<div class="col-xs-offset-1">
-							{{ $contact->mobile }}
+									<i class="fa fa-phone"></i>	{{ $contact->secondary }} <br><br>
+
+									<a href="mailto:$contact->email"><i class="fa fa-envelope"></i> {{ $contact->email }}</a><br><br>									
+
+									<i class="fa fa-birthday-cake"></i>	{{ date("M, d", strtotime($contact->dob)) }} <br><br>
+
+									<hr>
+
+									<h4>Address:</h4>
+									{{ $contact->address }}
+
+
+
+							  </div>
 						</div>
-
-						<strong>Tel. Secundario</strong>
-						<div class="col-xs-offset-1">
-							{{ $contact->secondary }}
-						</div>
-
-						<strong>Email</strong>
-						<div class="col-xs-offset-1">
-							{{ $contact->email }}
-						</div>
-
-						<strong>Dirección</strong>
-						<div class="col-xs-offset-1">
-							{{ $contact->address }}
-						</div>
-
-						<strong>Tel. Secundario</strong>
-						<div class="col-xs-offset-1">
-							{{ $contact->secondary }}
-						</div>
-
-						<strong>Fecha Cumpleaños</strong>
-						<div class="col-xs-offset-1">
-							{{ $contact->dob }}
-						</div>
-
 					</div>
-						{{-- {{ $contact }} --}}
-					<hr>
+				</div>
+
+				<div class="row">				
 
 					<div class="col-sm-8 col-sm-offset-2">
 						<a href="{{ URL::previous() }}" class="pull-left"><i class="fa fa-arrow-circle-left"></i> Regresar </a>
@@ -53,6 +43,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 @endsection
