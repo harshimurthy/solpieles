@@ -19,7 +19,7 @@
 
 									<i class="fa fa-phone"></i>	{{ $contact->secondary }} <br><br>
 
-									<a href="mailto:$contact->email"><i class="fa fa-envelope"></i> {{ $contact->email }}</a><br><br>									
+									<a href="mailto:{{ $contact->email }}" target="_new"><i class="fa fa-envelope"></i> {{ $contact->email }}</a><br><br>									
 
 									<i class="fa fa-birthday-cake"></i>	{{ date("M, d", strtotime($contact->dob)) }} <br><br>
 

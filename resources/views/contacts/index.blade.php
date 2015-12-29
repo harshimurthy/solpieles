@@ -38,7 +38,7 @@
 						@if ($contacts->count() > 0)
 
 							@foreach ($contacts as $contact)
-								<div class="col-sm-4">
+								<div class="col-sm-6 col-md-4">
 									<div class="panel panel-default">
 										  <div class="panel-heading">
 												<h3 class="panel-title">
@@ -57,7 +57,7 @@
 
 												<i class="fa fa-phone"></i>	{{ $contact->secondary }} <br><br>
 
-												<a href="mailto:$contact->email"><i class="fa fa-envelope"></i> {{ $contact->email }}</a><br><br>									
+												<a href="mailto:{{ $contact->email }}" target="_new"><i class="fa fa-envelope"></i> {{ $contact->email }}</a><br><br>									
 
 												<i class="fa fa-birthday-cake"></i>	{{ date("M, d", strtotime($contact->dob)) }} <br><br>
 
