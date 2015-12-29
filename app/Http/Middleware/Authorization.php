@@ -19,7 +19,7 @@ class Authorization
          * Reject Unauthenticated Users
          */
         if (auth()->guest()) {
-            if ($requesat->ajax()) {
+            if ($request->ajax()) {
                 return response('Unauthorized.', 401);
             } else {
                 return redirect()->guest('auth/login');
