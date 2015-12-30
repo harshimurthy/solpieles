@@ -51,7 +51,7 @@
 										  <div class="panel-body">
 
 												<a href="{{ asset($contact->photo) }}" target="_new">
-													<img src="{{ asset($contact->photo) }}" class="img-responsive" alt="Image" height="50">
+													<img src="{{ asset($contact->photo) }}" class="img-responsives" alt="Image" height="50">
 												</a> <br>
 												<i class="fa fa-phone"></i>	{{ $contact->mobile }} <br><br>
 

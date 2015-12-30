@@ -7,6 +7,7 @@
 						<h3 class="section-subheading text-muted">Personalized services, satisfaction guaranteed.</h3>
 					</div>
 				</div>
+				
 				<div class="row text-center">
 					<div class="col-md-4">
 						<span class="fa-stack fa-4x">
@@ -14,8 +15,8 @@
 							<i class="fa fa-plane fa-stack-1x fa-inverse"></i>
 						</span>
 						<h4 class="service-heading">Imports</h4>
-						<p class="text-muted">We help you handle raw hides and blue hides imports from basically any country to the Dominican Republic.</p>
-						{{-- <p class="text center"><a href="" class="btn btn-primary">Details</a></p> --}}
+						<p class="text-muted">We help you handle <a class="page-scroll" href="#portfolio">Wet Blue Hides</a> and <a class="page-scroll" href="#portfolio">Raw Salted Hides</a> imports from basically any country to the Dominican Republic.</p>
+						{{-- <p class="text center"><a class="page-scroll" href="" class="btn btn-primary">Details</a></p> --}}
 					</div>
 					<div class="col-md-4">
 						<span class="fa-stack fa-4x">
@@ -23,8 +24,8 @@
 							<i class="fa fa-ship fa-stack-1x fa-inverse"></i>
 						</span>
 						<h4 class="service-heading">Exports</h4>
-						<p class="text-muted">We deliver our products to any country in a timely record, with no complications.</p>
-						{{-- <p class="text center"><a href="" class="btn btn-primary">Details</a></p> --}}
+						<p class="text-muted">We deliver our <a class="page-scroll" href="#portfolio">Wet Blue Hides</a> and <a class="page-scroll" href="#portfolio">Raw Salted Hides</a> to any country in a timely record, with no complications.</p>
+						{{-- <p class="text center"><a class="page-scroll" href="" class="btn btn-primary">Details</a></p> --}}
 					</div>
 					<div class="col-md-4">
 						<span class="fa-stack fa-4x">
@@ -32,9 +33,13 @@
 							<i class="fa fa-truck fa-stack-1x fa-inverse"></i>
 						</span>
 						<h4 class="service-heading">Delivery</h4>
-						<p class="text-muted">We deliver our products to any city or company located in Dominican Republic. Just give us a call.</p>
-						{{-- <p class="text center"><a href="" class="btn btn-primary">Details</a></p> --}}
+						<p class="text-muted">We deliver our <a class="page-scroll" href="#portfolio">Wet Blue Hides</a> and <a class="page-scroll" href="#portfolio">Raw Salted Hides</a> to any city or company located in Dominican Republic. Just give us a call.</p>
+						{{-- <p class="text center"><a class="page-scroll" href="" class="btn btn-primary">Details</a></p> --}}
 					</div>
+				</div>
+
+				<div class="row text-center">
+					<a href="{{ route('services') }}" class="btn btn-primary">More About Services</a>
 				</div>
 
 				<hr>
