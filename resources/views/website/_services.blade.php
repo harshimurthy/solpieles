@@ -15,7 +15,7 @@
 							<i class="fa fa-plane fa-stack-1x fa-inverse"></i>
 						</span>
 						<h4 class="service-heading">Imports</h4>
-						<p class="text-muted">We help you handle <a class="page-scroll" href="#portfolio">Wet Blue Hides</a> and <a class="page-scroll" href="#portfolio">Raw Salted Hides</a> imports from basically any country to the Dominican Republic.</p>
+						<p class="text-muted">We help you handle <a class="page-scroll" href="#portfolio">Wet Blue Hides</a> and <a class="page-scroll" href="#portfolio">Raw Salted Hides</a> imports from basically any country to the <b>Dominican Republic</b>.</p>
 						{{-- <p class="text center"><a class="page-scroll" href="" class="btn btn-primary">Details</a></p> --}}
 					</div>
 					<div class="col-md-4">

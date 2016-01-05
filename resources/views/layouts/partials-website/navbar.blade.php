@@ -42,6 +42,13 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    <li>
+                        @if (auth()->check())
+                            <a class="" href="{{ route('admin.home') }}">Admin</a>
+                        @else
+                            <a class="" href="{{ url('auth/login') }}">Sign In</a>
+                        @endif
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

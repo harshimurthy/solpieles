@@ -13,11 +13,11 @@
 		                
 		                <p>We supply the Tanning Industry with high quality products and services, all around the world. We offer Reliability, Honesty and Excellent Dealing Conditions and Facilities as the result of over 15 years of experience in <b>WET BLUE</b> and <b>RAW HIDES</b> Business.</p>
 		                
-		                <p class="text-muted">What are our mission and vision? Keywords: <i>Raw Hides and Wet Blue</i></p>
+		                <p class="text-muted">What are our mission and vision? Keywords: <i>Raw Hides and Wet Blue, Dominican Republic</i></p>
 		                
-		                <p class="text-muted">Whats Our main streng? Keywords: <u>Raw Hides and Wet Blue</u></p>
+		                <p class="text-muted">Whats Our main streng? Keywords: <u>Raw Hides and Wet Blue, Dominican Republic</u></p>
 		                
-		                <p class="text-muted">Whats our target market? <h3>Raw Hides and Wet Blue</h3></p>
+		                <p class="text-muted">Whats our target market? <h3>Raw Hides and Wet Blue, Dominican Republic</h3></p>
 		                
 		            </div>
 		        </div>
