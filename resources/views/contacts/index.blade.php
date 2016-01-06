@@ -42,7 +42,9 @@
 									<div class="panel panel-default">
 										  <div class="panel-heading">
 												<h3 class="panel-title">
-													<a href="{{ route('admin.contacts.show', $contact->id) }}">
+													<a href="{{ route('admin.contacts.show', $contact->id) }}" 
+														title="View Contact Details"
+													>
 														{{ $contact->name }} 
 														<span class="fa fa-eye"></span>				
 													</a>
@@ -59,7 +61,21 @@
 
 												<a href="mailto:{{ $contact->email }}" target="_new"><i class="fa fa-envelope"></i> {{ $contact->email }}</a><br><br>									
 
-												<i class="fa fa-birthday-cake"></i>	{{ date("M, d", strtotime($contact->dob)) }} <br><br>
+												<i class="fa fa-birthday-cake"></i>	{{ date("M, d", strtotime($contact->dob)) }} 
+												<hr>
+												<div class="form-group">
+													<a href="{{ route('admin.contacts.show', $contact->id) }}" class="pull-left" title="View Contact">
+														<i class="fa fa-eye"></i>
+													</a>
+													<a href="{{ route('admin.contacts.edit', $contact->id) }}" 
+														class="pull-right" 
+														data-toggle="tooltip"
+														data-placement="left"
+														title="Edit Contact"
+													>
+														<i class="text-warning fa fa-pencil"></i>
+													</a>
+												</div>
 
 										  </div>
 									</div>

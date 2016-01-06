@@ -30,6 +30,7 @@ function delete_button($route, $parameter = null, $options = [])
 	$options = array_merge($settings, $options);
 
 	if (trim($options['class']) == 'btn btn-link') {
+		$options['icon'] = '';
 		$settings['style'] = 'padding: 0px';
 	}
 	
