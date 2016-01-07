@@ -19,7 +19,13 @@
     <!-- Site Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
 
-    <title>Sol Pieles SRL | Wet Salted and Wet Blue Raw Hides | rawhide and wet blue leather | raw hides wet blue</title>
+    <title>
+        @if (Session::get('lang') == 'es')
+            Sol Pieles SRL | Cueros Salados Crudos y Cueros Wet Blue | Pieles Salados Crudos y Pieles Wet Blue 
+        @else
+            Sol Pieles SRL | Wet Salted and Wet Blue Raw Hides | rawhide and wet blue leather | raw hides wet blue
+        @endif
+    </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/css/all.css') }}" rel="stylesheet">

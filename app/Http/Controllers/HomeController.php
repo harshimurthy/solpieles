@@ -28,8 +28,15 @@ class HomeController extends Controller
     }
 
     public function site(Request $request)
-    {
-    	if ( $request->session()->get('lang') == 'es' || $request->is('es') ) {
+    {   
+
+        if ($request->is('es')) {
+
+            $request->session()->put('lang', 'es');
+
+        }
+
+    	if ( $request->session()->get('lang') == 'es' ) {
     		return view('website.home-es');
     	} 
 
@@ -49,6 +56,6 @@ class HomeController extends Controller
 
     	$request->session()->put('lang', $request->input('lang'));
 
-    	return redirect()->back();
+    	return redirect()->route('site.route');
     }
 }
