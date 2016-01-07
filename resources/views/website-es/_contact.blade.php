@@ -45,7 +45,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<textarea class="form-control" placeholder="Mensage *" name="message" id="message" required data-validation-required-message="Introduzca su mensaje." rows="16"></textarea>
-										{{-- <p class="help-block text-danger"></p> --}}
+										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
