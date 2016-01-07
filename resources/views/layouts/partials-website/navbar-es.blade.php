@@ -28,25 +28,25 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Servicios</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Products</a>
+                        <a class="page-scroll" href="#portfolio">Productos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Nosotros</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" href="#team">Equipo</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contacto</a>
                     </li>
                     <li>
                         @if (auth()->check())
                             <a class="" href="{{ route('admin.home') }}">Admin</a>
                         @else
-                            <a class="" href="{{ url('auth/login') }}">Sign In</a>
+                            <a class="" href="{{ url('auth/login') }}">Entrar</a>
                         @endif
                     </li>
                     <li>

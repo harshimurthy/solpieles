@@ -3,7 +3,12 @@
 <!-- /. Header -->
 <body id="page-top">   
     {{-- @include('layouts.partials.messages') --}}
-    @include('layouts.partials-website.navbar')
+    @if (\Session::get('lang') == 'es')		
+    	@include('layouts.partials-website.navbar-es')
+	@else
+    	@include('layouts.partials-website.navbar')
+    @endif
+
     @yield('content')
 
 

@@ -32,17 +32,18 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 /**
  * Site URLs
  */
-Route::get('/', ['as'=>'site.route', function () {
-    return view('website.home');
-}]);
-Route::get('/home', ['as'=>'site.route', function () {
-    return view('website.home');
-}]);
+Route::get('/', ['as'=>'site.route', 'uses'=>'HomeController@site']);
+Route::get('/home', ['as'=>'site.route', 'uses'=>'HomeController@site']);
 
 Route::get('services', ['as'=>'services', function(){
 	return view('website.services');
 }]);
 // Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
+
+/**
+ * Change the site language...
+ */
+Route::post('/language', ['as'=>'site.language', 'uses'=>'HomeController@setLanguage']);
 	
 Route::group(['prefix'=>'admin'], function(){
 	
@@ -132,5 +133,4 @@ Route::group(['prefix'=>'admin'], function(){
 
 	});
 });
-
 		

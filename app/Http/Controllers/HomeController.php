@@ -10,10 +10,12 @@ use App\Http\Controllers\Controller;
 use App\Role;
 use App\User;
 use App\Message;
+// use Symfony\Component\HttpFoundation\Session as Session;
 
 class HomeController extends Controller
 {
-    public function dashboard(Request $reuest, User $user, Role $roles, Message $messages){
+	
+    public function dashboard(Request $request, User $user, Role $roles, Message $messages){
     	$user = auth()->user();
 
         $user->usersCount = $user->all()->count();
@@ -23,5 +25,31 @@ class HomeController extends Controller
         $user->messagesCount = $messages->whereViewed(0)->count();
 
     	return view('dashboard.index', compact('user'));
+    }
+
+    public function site(Request $request)
+    {
+
+    	if ($request->session()->get('lang') == 'es') {
+    		return view('website.home-es');
+    	} 
+
+		return view('website.home');
+    	
+    }
+
+    /**
+     * Set the language for main page
+     * @param Request $request form data
+     */
+    public function setLanguage(Request $request)
+    {
+    	$this->validate($request, [
+    		'lang'=>'required'
+    	]);
+
+    	$request->session()->put('lang', $request->input('lang'));
+
+    	return redirect()->back();
     }
 }
