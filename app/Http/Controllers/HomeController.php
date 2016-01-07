@@ -29,8 +29,7 @@ class HomeController extends Controller
 
     public function site(Request $request)
     {
-
-    	if ($request->session()->get('lang') == 'es') {
+    	if ( $request->session()->get('lang') == 'es' || $request->is('es') ) {
     		return view('website.home-es');
     	} 
 
