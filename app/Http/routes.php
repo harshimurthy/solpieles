@@ -32,12 +32,12 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 /**
  * Site URLs
  */
-Route::get('/', ['as'=>'site.route', 'uses'=>'HomeController@site']);
-Route::get('/home', ['as'=>'site.route', 'uses'=>'HomeController@site']);
+Route::get('', ['as'=>'site.route', 'uses'=>'HomeController@site']);
+Route::get('home', ['as'=>'site.route', 'uses'=>'HomeController@site']);
 
 Route::group(['prefix'=>'es'], function(){
-	Route::get('/', ['as'=>'site.route', 'uses'=>'HomeController@site']);
-	Route::get('/home', ['as'=>'site.route', 'uses'=>'HomeController@site']);
+	Route::get('/', ['as'=>'es.site.route', 'uses'=>'HomeController@site']);
+	Route::get('/home', ['as'=>'es.site.route', 'uses'=>'HomeController@site']);
 });
 
 Route::get('services', ['as'=>'services', function(){
