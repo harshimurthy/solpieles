@@ -30,15 +30,19 @@ class HomeController extends Controller
     public function site(Request $request)
     {   
 
+
         if ($request->segment(1) == 'es') {
+            
+            if ($request->session()->get('lang') != 'es' ) {
+                return view('website.home');
+
+            };
 
             $request->session()->put('lang', 'es');
 
-        }
+            return view('website.home-es');
 
-    	if ( $request->session()->get('lang') == 'es' ) {
-    		return view('website.home-es');
-    	} 
+        }
 
 		return view('website.home');
     	
@@ -55,9 +59,7 @@ class HomeController extends Controller
     	]);
 
     	$request->session()->put('lang', $request->input('lang'));
-
-        // return $request->session()->get('lang');
-
-    	return redirect()->route('site.route');
+        
+        return redirect()->back();
     }
 }
