@@ -34,17 +34,18 @@ class HomeController extends Controller
         if ($request->segment(1) == 'es') {
             
             if ($request->session()->get('lang') != 'es' ) {
-                return view('website.home');
+                // return view('home.home');
+                return redirect()->route('site.route');
 
             };
 
             $request->session()->put('lang', 'es');
 
-            return view('website.home-es');
+            // return view('home.home-es');
 
         }
 
-		return view('website.home');
+		return view('home.home');
     	
     }
 
