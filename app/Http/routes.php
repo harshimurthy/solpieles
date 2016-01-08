@@ -41,7 +41,12 @@ Route::group(['prefix'=>'es'], function(){
 });
 
 Route::get('services', ['as'=>'services', function(){
-	return view('website.services');
+	if ( \Session::get('lang') == 'es' ) {
+		return view('home.website-es.services');
+	} else {
+		return view('home.website.services');
+	}
+	
 }]);
 // Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
 

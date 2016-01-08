@@ -6,7 +6,7 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<h2 class="section-heading">Our Services</h2>
+				<h2 class="section-heading">Nuestros Servicios</h2>
 				<ol class="breadcrumb">
 					<li>
 						<a href="{{ route('site.route') }}">Home</a>
