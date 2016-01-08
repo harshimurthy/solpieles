@@ -18,6 +18,7 @@
 
     <!-- Site Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
+    <meta name="msvalidate.01" content="FF0D79C53170EBEB62609685F3D5A21C" />
 
     <title>
         @if (Session::get('lang') == 'es')
