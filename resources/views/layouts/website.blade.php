@@ -9,7 +9,13 @@
     	@include('layouts.partials-website.navbar')
     @endif
 
-    @yield('content')
+
+    {{-- {!! Toastr::render() !!}  --}} 
+    <div class="{{ isset($shrink) ? 'margin-top' : '' }}">
+      @include('layouts.partials.messages')   
+
+      @yield('content')
+    </div>
 
 
    <!-- /Footer -->

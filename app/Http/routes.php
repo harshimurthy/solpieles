@@ -48,13 +48,27 @@ Route::get('services', ['as'=>'services', function(){
 	}
 	
 }]);
+
+
 // Route::post('leave_message', ['as'=>'messages.send', 'uses'=>'MailsController@sendEmail']);
 
 /**
  * Change the site language...
  */
 Route::post('/language', ['as'=>'site.language', 'uses'=>'HomeController@setLanguage']);
-	
+
+/**
+ * ==================================================================
+ * Products routes
+ */
+
+Route::get('products', ['as'=>'products.index', 'uses'=>'ProductsController@index']);
+Route::get('products/{product}', ['as'=>'products.show', 'uses'=>'ProductsController@show']);
+
+
+/**
+ * Admin Routes
+ */
 Route::group(['prefix'=>'admin'], function(){
 	
 	/**
@@ -91,6 +105,17 @@ Route::group(['prefix'=>'admin'], function(){
 		});
 
 		Route::resource('contacts', 'ContactsController', []);
+		/**
+		 * ========================================================
+		 * Products
+		 */
+		
+		// Route::get('products/search', ['as'=>'products.search', 'uses'=>'ProductsController@search']);
+
+		// Route::bind('products', function($slug){
+		// 	return App\Product::whereSlug($slug)->first();
+		// });
+		// Route::resource('products', 'ProductsController');
 
 		/**
 		 * ===========================================================

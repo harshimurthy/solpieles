@@ -144,6 +144,7 @@ return [
         nilsenj\Toastr\ToastrServiceProvider::class,
 
         JeroenG\Packager\PackagerServiceProvider::class,
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
 
         /*
          * Application Service Providers...

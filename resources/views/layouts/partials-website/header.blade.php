@@ -29,7 +29,8 @@
     </title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('assets/css/all.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ elixir('assets/css/all.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/all.css') }}"> --}}
 
     <!-- Custom Fonts -->
   {{--   <link href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"> --}}

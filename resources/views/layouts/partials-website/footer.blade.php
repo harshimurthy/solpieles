@@ -2,7 +2,8 @@
     {{-- <script src="{{ asset('assets/plugins/jQuery/jquery.min.js') }}"></script> --}}
 
     {{-- Ajax config file --}}
-    <script src="{{ asset('assets/js/all.js') }}"></script>
+    <script src="{{ elixir('assets/js/all.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/all.js') }}"></script> --}}
     {{-- <script src="{{ asset('assets/js/ajax_config.js') }}"></script> --}}
 
     <!-- Bootstrap Core JavaScript -->

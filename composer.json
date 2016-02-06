@@ -11,7 +11,8 @@
         "jeroen-g/laravel-packager": "^1.3",
         "Jorge/todospackage": "v0.1.*",
         "intervention/image": "^2.3",
-        "nilsenj/toastr-5.1-laravel": "dev-master"
+        "nilsenj/toastr-5.1-laravel": "dev-master",
+        "cviebrock/eloquent-sluggable": "^3.1"
     },
     "repositories" : [
         {

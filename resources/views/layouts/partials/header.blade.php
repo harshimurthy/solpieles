@@ -19,7 +19,8 @@
     
 
         {{-- <link rel="stylesheet" href="{{ asset('../node_modules/bootstrap/dist/css/bootstrap.min.css') }}"> --}}
-        <link rel="stylesheet" href="{{ asset('assets/css/admin/all.css') }}">
+        <link rel="stylesheet" href="{{ elixir('assets/css/admin/all.css') }}">
+        {{-- <link rel="stylesheet" href="{{ asset('assets/css/admin/all.css') }}"> --}}
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"> --}}
        
         <!-- Font Awesome -->

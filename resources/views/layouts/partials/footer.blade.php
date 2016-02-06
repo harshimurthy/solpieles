@@ -9,7 +9,8 @@
 
     {{-- Ajax config file --}}
     {{-- <script src="{{ asset('assets/js/ajax_config.js') }}"></script> --}}
-    <script src="{{ asset('assets/js/admin/all.js') }}"></script>
+    <script src="{{ elixir('assets/js/admin/all.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/admin/all.js') }}"></script> --}}
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     

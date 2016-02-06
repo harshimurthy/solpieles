@@ -10,40 +10,31 @@ var elixir = require('laravel-elixir');
  | file for our application, as well as publishing vendor resources.
  |
  */
-// Move Bootstrap
-// elixir(function(mix) {
-//     mix.copy('resources/assets/plugins/bootstrap/dist/css/bootstrap.css', 
-//     	'resources/assets/css/bootstrap.css');
-// });
 
-// elixir(function(mix) {
-//     mix.copy('resources/assets/plugins/admin-lte/dist/css/AdminLTE.min.css', 
-//     	'resources/assets/css/admin-lte.css');
-// });
-
-// elixir(function(mix) {
-//     mix.copy('resources/assets/plugins/admin-lte/dist/css/skins/_all-skins.min.css', 
-//     	'resources/assets/css/_all-skins.css');
-// });
+/**
+ * Routes:
+ *
+ * ../../../bower_components ----> Bower
+ * ../../../node_modules ----> Node
+ */
 
 
-// elixir(function(mix) {
-//     mix.copy('resources/assets/plugins/startrap-agency/less/agency.css', 
-//     	'resources/assets/css');
-// });
-// 
-    // elixir(function(mix){
-    // 	mix.less('agency.less', 'resources/assets/css')
-    // });
+
+elixir(function(mix){
+    mix.less('../plugins/startrap-agency/less/agency.less', 'resources/assets/plugins/startrap-agency/css')
+	// mix.less('../plugins/font-awesome-4.5.0/less/font-awesome.less', 'resources/assets/plugins/font-awesome-4.5.0/css')
+});
 
 elixir(function(mix) {
     mix.styles([
-        'bootstrap.css',
-        'admin-lte.css',
-        '_all-skins.css',
+        '../plugins/bootstrap/css/bootstrap.css',
+        '../plugins/admin-lte/dist/css/AdminLTE.css',
+        '../plugins/admin-lte/dist/css/skins/_all-skins.css',
+        // '../plugins/font-awesome-4.5.0/css/font-awesome.css',
+        '../../../bower_components/summernote/dist/summernote.css',
+        // '../plugins/summernote/dist/summernote.css',
+        '../plugins/animate-css/animate.css',
         'my-style.css',
-        'animate.css',
-        // 'font-awesome.css',
         // 'toastr.css'
     ], 'public/assets/css/admin');
 });
@@ -52,45 +43,57 @@ elixir(function(mix) {
 
 elixir(function(mix) {
     mix.styles([
-        'bootstrap.css',
-        'agency.css',
+        '../plugins/bootstrap/css/bootstrap.css',
+        '../plugins/startrap-agency/css/agency.css',
+        // '../plugins/font-awesome-4.5.0/css/font-awesome.css',
+        '../plugins/animate-css/animate.css',
+        '../../../bower_components/summernote/dist/summernote.css',
+        // '../plugins/summernote/dist/summernote.css',
         'my-style.css',
-        'animate.css',
-        // 'font-awesome.css',
         // 'toastr.css'
     ], 'public/assets/css');
 });
 
 // JS
 
-// elixir(function(mix) {
-//     mix.scripts([
-//         'jquery.js',
-//         'jquery-ui.js',
-//         'bootstrap.js',
-//         'ajax_config.js',
-//         'app.js',
-//         'message_hidder.js',
-//         'destroy-confirmation.js',
-//         'toastr.js'
-//         // 'bootbox.js',
-//     ], 'public/assets/js/admin');
-// });
+elixir(function(mix) {
+    mix.scripts([
+        '../../../bower_components/jquery/dist/jquery.js',
+        '../plugins/jquery-ui/jquery-ui.js',
+        '../plugins/bootstrap/js/bootstrap.js',
+        '../plugins/admin-lte/dist/js/app.js',
+        '../../../bower_components/summernote/dist/summernote.js',   
+        '../plugins/bootbox/bootbox.js',
+        'ajax_config.js',
+        'destroy-confirmation.js',
+        'message_hidder.js',
+    ], 'public/assets/js/admin');
+});
 
-// elixir(function(mix) {
-//     mix.scripts([
-//         'jquery.js',
-//         'jquery-ui.js',
-//         'bootstrap.js',
-//         'ajax_config.js',
-//         'classie.js',
-//         'cbpAnimatedHeader.js',
-//         'jqBootstrapValidation.js',
-//         'contact_me.js',
-//         'agency.js',
-//         'bootbox.js',
-//         'message_hidder.js',
-//         'destroy-confirmation.js',
-//         'toastr.js'
-//     ], 'public/assets/js');
-// });
+elixir(function(mix) {
+    mix.scripts([
+        '../../../bower_components/jquery/dist/jquery.js',
+        '../plugins/jquery-ui/jquery-ui.js',
+        '../plugins/bootstrap/js/bootstrap.js',
+        '../plugins/bootbox/bootbox.js',
+        '../plugins/startrap-agency/js/classie.js',
+        '../plugins/startrap-agency/js/cbpAnimatedHeader.js',
+        '../plugins/startrap-agency/js/jqBootstrapValidation.js',
+        '../../../bower_components/summernote/dist/summernote.js',
+        // '../plugins/summernote/dist/summernote.js',  
+        '../plugins/startrap-agency/js/contact_me.js',
+        '../plugins/startrap-agency/js/agency.js',
+        'message_hidder.js',
+        'ajax_config.js',
+        'destroy-confirmation.js',
+    ], 'public/assets/js');
+});
+
+/**
+ * Versioning files
+ * ==============================================================================================
+ */
+
+elixir(function(mix) {
+    mix.version(['assets/css/all.css', 'assets/css/admin/all.css', 'assets/js/admin/all.js', 'assets/js/all.js']);
+});
