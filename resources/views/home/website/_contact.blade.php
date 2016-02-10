@@ -1,6 +1,5 @@
-
+{{--@inject('lang', 'App\Lang') some hidden comment --}}
 <?php 
-	$lang = \Session::get('lang', 'en');
 	$messages = (object)[
 		'name'=>(object)[
 			'en'=>'Please enter your name.',
@@ -8,17 +7,19 @@
 		],
 		'email'=>(object)[
 			'en'=>'Please enter your email address.',
-			'en'=>'Por favor digite si email',
+			'es'=>'Por favor digite si email',
 		],
 		'phone'=>(object)[
 			'en'=>'Please enter your phone number.',
-			'en'=>'Por favor digite si teléfono',
+			'es'=>'Por favor digite si teléfono',
 		],
 		'message'=>(object)[
 			'en'=>'Please enter a message.',
-			'en'=>'Por favor digite su mensaje.',
+			'es'=>'Por favor digite su mensaje.',
 		]
 	];
+
+	$lang = $lang->getLang();
  ?>
 		<section id="contact">
 			<div class="container">

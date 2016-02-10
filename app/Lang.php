@@ -16,8 +16,10 @@ class Lang
         }
 
         if (!Session::has('lang')) {
-            Session::put('lang', $this->lang);
+            return Session::put('lang', $this->lang);
         };
+
+       return $this->lang = Session::get('lang');
 
     }
 

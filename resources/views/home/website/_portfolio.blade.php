@@ -93,6 +93,19 @@
 							<p class="text-muted">Wet blue cut from the belly</p>
 						</div>
 					</div>
+
+					<div class="row">
+						<div class="text-center">
+							<a href="{{ route('products.index') }}" class="btn btn-primary">
+								@if ($lang->lang == 'en')
+									More About Our Products 
+								@else
+									Más Sobre Nuestros Productos
+								@endif 
+								<i class="fa fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
 					
 				</div>
 			</div>

@@ -11,6 +11,10 @@
 |
 */
 
+// view()->composer('lang', function($view){
+// 	$view->with('lang', app('App\Lang'));
+// });
+
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
