@@ -3,8 +3,20 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<h2 class="section-heading">Be Part of Our Team</h2>
-						<h3 class="section-subheading text-muted">Our clients are our partners. </h3>
+						<h2 class="section-heading">
+							@if ($lang == 'en')
+								Be Part of Our Team
+							@else
+								Nuestro Grandioso Equipo 
+							@endif 
+						</h2>
+						<h3 class="section-subheading text-muted">
+							@if ($lang == 'en')
+								Our clients are our partners. 
+							@else
+								Tú eres parte de nosotros.  
+							@endif 
+						</h3>
 					</div>
 				</div>
 				<div class="row">
@@ -41,7 +53,13 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2 text-center">
-						<p class="large text-muted">We are goald oriented team, focused on your satisfaction, providing products and services that will help your business to succeed.</p>
+						<p class="large text-muted">
+							@if ($lang == 'en')
+								We are goald oriented team, focused on your satisfaction, providing products and services that will help your business to succeed.
+							@else
+								Ofrecemos un equipo altamente orientados al logro de objetivos, enfoncados en la satisfacción y éxitos de nuestros clientes, a través de un servicio personalizado a cualquier hora, cualquier día. 
+							@endif 
+						</p>
 					</div>
 				</div>
 			</div>

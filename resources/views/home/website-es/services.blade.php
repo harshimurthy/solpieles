@@ -1,6 +1,5 @@
 @extends('layouts.website')
 
-<?php $shrink = 'navbar-shrink' ?>
 @section('content')
 	
 	<section>

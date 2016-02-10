@@ -14,7 +14,8 @@ use App\Message;
 
 class HomeController extends Controller
 {
-	
+
+
     public function dashboard(Request $request, User $user, Role $roles, Message $messages){
     	$user = auth()->user();
 

@@ -1,3 +1,4 @@
+@inject('lang', 'App\Lang')
 @extends('layouts.website')
 
 @section('content')

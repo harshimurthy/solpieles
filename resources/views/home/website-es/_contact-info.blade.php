@@ -1,6 +1,6 @@
 <h3>Sol Pieles, SRL</h3>
 <p>
-    Calle # 3, Residential Lily, Apt. 4-C<br>Santiago, República Dominicana<br>
+    Calle # 3, Residencial Lily, Apt. 4-C<br>Santiago, República Dominicana<br>
 </p>
 <p><i class="fa fa-phone"></i> 
     <abbr title="Phone">P</abbr>: 1+(809) 867 9170</p>

@@ -1,8 +1,9 @@
-
+@inject('lang', 'App\Lang')
 @extends('layouts.website')
 
 @section('content')
 	<div class="container margin-top">
+		{{ var_dump($lang) }}
 		<div class="col-sm-4 col-sm-push-8">
 			@include('products.partials.list', ['products'=>$products])			
 		</div>

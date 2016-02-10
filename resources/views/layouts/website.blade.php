@@ -1,13 +1,11 @@
+@inject('lang', 'App\Lang')
 @include('layouts.partials-website.header')
 
 <!-- /. Header -->
 <body id="page-top">   
     {{-- @include('layouts.partials.messages') --}}
-    @if (\Session::get('lang') == 'es')		
-    	@include('layouts.partials-website.navbar-es')
-	@else
-    	@include('layouts.partials-website.navbar')
-    @endif
+  
+  @include('layouts.partials-website.navbar')
 
 
     {{-- {!! Toastr::render() !!}  --}} 

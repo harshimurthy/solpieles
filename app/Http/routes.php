@@ -41,12 +41,7 @@ Route::group(['prefix'=>'es'], function(){
 });
 
 Route::get('services', ['as'=>'services', function(){
-	if ( \Session::get('lang') == 'es' ) {
-		return view('home.website-es.services');
-	} else {
-		return view('home.website.services');
-	}
-	
+	return view('home.website.services', ['shrink'=>'navbar-shrink']);	
 }]);
 
 
@@ -55,7 +50,13 @@ Route::get('services', ['as'=>'services', function(){
 /**
  * Change the site language...
  */
-Route::post('/language', ['as'=>'site.language', 'uses'=>'HomeController@setLanguage']);
+Route::post('/language', ['as'=>'site.language', function(App\Lang $lang){
+	$newLang = Request::has('lang') ? Request::input('lang') : App\Lang::lang;
+
+	$lang->setLang($newLang);
+    
+    return redirect()->back();
+}]);
 
 /**
  * ==================================================================

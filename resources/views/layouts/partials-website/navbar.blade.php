@@ -1,3 +1,57 @@
+    <?php 
+
+        $lang = \Session::get('lang', 'en');
+        $config = (object)[
+            'services' => (object)[
+                'es'=>'Servicios',
+                'en'=>'Services'
+            ],
+            'about' => (object)[
+                'es'=>'Sobre Nosotros',
+                'en'=>'About Us'
+            ],
+            'products' => (object)[
+                'es'=>'Productos',
+                'en'=>'Products'
+            ],
+            'team' => (object)[
+                'es'=>'Equipo',
+                'en'=>'Team'
+            ],
+            'contact' => (object)[
+                'es'=>'Contactos',
+                'en'=>'Contact'
+            ],
+        ];
+
+        /**
+         * Determines if the currect page should be rendered as
+         * single page or should have live links.
+         * @var Boolean
+         */
+        function singlePage() 
+        {
+            /**
+             * Routes to be rendered as single page app.
+             * @var Array
+             */
+            $singlepageRoutes = [
+                '/' => '/', 
+                'home' => 'home', 
+                'es' => 'es', 
+                'en' => 'en'
+            ];
+
+            if (!Request::segment(1)) {
+                return true;
+            }
+
+            return array_has($singlepageRoutes, Request::segment(1));
+        };
+
+        $singlePage = singlePage();
+
+     ?>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top {{ isset($shrink) ? 'navbar-shrink' : '' }}">
     {{-- <nav class="navbar navbar-default navbar-fixed-top"> --}}
@@ -11,7 +65,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 {{-- <a class="navbar-brand page-scroll" href="#page-top">Sol Pieles</a> --}}
-                <a class="navbar-brand page-scroll animated  tada" href="#page-top">
+                <a class="navbar-brand page-scroll animated  tada" href={{ $singlePage ? "#page-top" : url('/')}}>
                     <img src="{{ asset('images/solpieles.png') }}" class="img-responsives pull-left" height="30px" alt="Image">
                      <span class="pull-right">
                         Sol Pieles - 
@@ -28,19 +82,29 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href={{ $singlePage ? "#services" : route('services')}}>
+                            {{ $config->services->$lang  }}
+                        </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Products</a>
+                        <a class="page-scroll" href={{ $singlePage ? "#portfolio" : route('products.index')}}>
+                            {{ $config->products->$lang  }}
+                        </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href={{ $singlePage ? "#about" : url('/#about')}}>
+                            {{ $config->about->$lang }}
+                        </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" href={{ $singlePage ? "#team" : url('/#team')}}>
+                            {{ $config->team->$lang }}
+                        </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href={{ $singlePage ? "#contact" : url('/#contact')}}>
+                            {{ $config->contact->$lang }}
+                        </a>
                     </li>
                     <li>
                         @if (auth()->check())
@@ -53,7 +117,7 @@
                         {!! Form::open(['route'=>['site.language'], 'class'=>'navbar-form', 'role'=>'form', 'autocomplete'=>"off", 'id'=>'langForm']) !!}   
 
 
-                            {!! Form::select('lang', ['en'=>'English', 'es'=>'Español'], \Session::get('lang'), ['class'=>'form-control input-sm', 'id'=>'inputLang']) !!} 
+                            {!! Form::select('lang', ['en'=>'English', 'es'=>'Español'], $lang, ['class'=>'form-control input-sm', 'id'=>'inputLang']) !!} 
 
                         {!! Form::close() !!}
                     </li>
