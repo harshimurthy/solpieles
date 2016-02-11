@@ -6,11 +6,11 @@
 				</div>
 				<div class="col-md-4">
 					<ul class="list-inline social-buttons">
-						<li><a href="#"><i class="fa fa-twitter"></i></a>
+						<li>@include('layouts.partials-website.social-links.twitter')
 						</li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a>
+						<li>@include('layouts.partials-website.social-links.facebook')
 						</li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a>
+						<li>@include('layouts.partials-website.social-links.email')
 						</li>
 					</ul>
 				</div>

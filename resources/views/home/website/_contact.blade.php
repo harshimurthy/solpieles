@@ -19,21 +19,21 @@
 		]
 	];
 
-	$lang = $lang->getLang();
+	$currentLang = $lang->lang;
  ?>
 		<section id="contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
 						<h2 class="section-heading">
-							@if ($lang == 'en')
+							@if ($lang->lang == 'en')
 								Contact Us
 							@else
 								Contáctenos  
 							@endif 
 						</h2>
 						<h3 class="section-subheading text-muted">
-							@if ($lang == 'en')
+							@if ($lang->lang == 'en')
 								Get in contact with us. We will respond.
 							@else
 								 Déjenos un mensaje o contáctenos a través de otras vías. 
@@ -54,28 +54,28 @@
 									<div class="form-group">
 										<select name="subject" id="subject" class="form-control" required="required">
 											<option value="your products">
-												@if ($lang == 'en')
+												@if ($lang->lang == 'en')
 													Your Products
 												@else
 													Sus Productos 
 												@endif 
 											</option>
 											<option value="your services">
-												@if ($lang == 'en')
+												@if ($lang->lang == 'en')
 													Your Services
 												@else
 													Sus Servicios 
 												@endif 
 											</option>
 											<option value="your business">
-												@if ($lang == 'en')
+												@if ($lang->lang == 'en')
 													Doing Business
 												@else
 													Hacer Negocios 
 												@endif 
 											</option>
 											<option value="general topics">
-												@if ($lang == 'en')
+												@if ($lang->lang == 'en')
 													General Topics
 												@else
 													Otros Temas 
@@ -84,21 +84,21 @@
 										</select>
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Your Name *" name="name" id="name" required data-validation-required-message="{{ $messages->name->$lang }}">
+										<input type="text" class="form-control" placeholder="Your Name *" name="name" id="name" required data-validation-required-message="{{ $messages->name->$currentLang }}">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="{{ $messages->email->$lang }}">
+										<input type="email" class="form-control" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="{{ $messages->email->$currentLang }}">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input type="tel" class="form-control" placeholder="Your Phone *" name="phone" id="phone" required data-validation-required-message="{{ $messages->phone->$lang }}">
+										<input type="tel" class="form-control" placeholder="Your Phone *" name="phone" id="phone" required data-validation-required-message="{{ $messages->phone->$currentLang }}">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<textarea class="form-control" placeholder="Your Message *" name="message" id="message" required data-validation-required-message="{{ $messages->message->$lang }}" rows="16"></textarea>
+										<textarea class="form-control" placeholder="Your Message *" name="message" id="message" required data-validation-required-message="{{ $messages->message->$currentLang }}" rows="16"></textarea>
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -106,7 +106,7 @@
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
 									<button type="submit" class="btn btn-xl">
-										@if ($lang == 'en')
+										@if ($lang->lang == 'en')
 											Send Message
 										@else
 											 Enviar Mensaje

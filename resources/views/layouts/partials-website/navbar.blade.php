@@ -1,5 +1,5 @@
     <?php 
-        $lang = $lang->lang;
+        $currLang = $lang->lang;
         $config = (object)[
             'services' => (object)[
                 'es'=>'Servicios',
@@ -59,27 +59,27 @@
                     </li>
                     <li>
                         <a class="page-scroll" href={{ $singlePage ? "#services" : route('services')}}>
-                            {{ $config->services->$lang  }}
+                            {{ $config->services->$currLang  }}
                         </a>
                     </li>
                     <li>
                         <a class="page-scroll" href={{ $singlePage ? "#portfolio" : route('products.index')}}>
-                            {{ $config->products->$lang  }}
+                            {{ $config->products->$currLang  }}
                         </a>
                     </li>
                     <li>
                         <a class="page-scroll" href={{ $singlePage ? "#about" : url('/#about')}}>
-                            {{ $config->about->$lang }}
+                            {{ $config->about->$currLang }}
                         </a>
                     </li>
                     <li>
                         <a class="page-scroll" href={{ $singlePage ? "#team" : url('/#team')}}>
-                            {{ $config->team->$lang }}
+                            {{ $config->team->$currLang }}
                         </a>
                     </li>
                     <li>
                         <a class="page-scroll" href={{ $singlePage ? "#contact" : url('/#contact')}}>
-                            {{ $config->contact->$lang }}
+                            {{ $config->contact->$currLang }}
                         </a>
                     </li>
                     <li>
@@ -87,7 +87,7 @@
                             <a class="" href="{{ route('admin.home') }}">Admin</a>
                         @else
                             <a class="" href="{{ url('auth/login') }}">
-                                @if ($lang == 'en')
+                                @if ($lang->lang == 'en')
                                     Sign In
                                 @else
                                     Entrar 
@@ -99,7 +99,7 @@
                         {!! Form::open(['route'=>['site.language'], 'class'=>'navbar-form', 'role'=>'form', 'autocomplete'=>"off", 'id'=>'langForm']) !!}   
 
 
-                            {!! Form::select('lang', ['en'=>'English', 'es'=>'Español'], $lang, ['class'=>'form-control input-sm', 'id'=>'inputLang']) !!} 
+                            {!! Form::select('lang', ['en'=>'English', 'es'=>'Español'], $lang->lang, ['class'=>'form-control input-sm', 'id'=>'inputLang']) !!} 
 
                         {!! Form::close() !!}
                     </li>
