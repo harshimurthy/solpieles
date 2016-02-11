@@ -6,36 +6,36 @@
 	{{-- Main Wrapper --}}
 	<div class="wrapper">
 
-				@include('home.website._head')
+				@include('home.partials._head')
 
 				<!-- Services Section -->
-				@include('home.website._services')
+				@include('home.partials._services')
 
 				<!-- Portfolio Grid Section -->
-				@include('home.website._portfolio')
+				@include('home.partials._portfolio')
 
 
 				<!-- About Section -->
-				@include('home.website._timeline')
+				@include('home.partials._timeline')
 
-				@include('home.website._about')
+				@include('home.partials._about')
 
 				<!-- Team Section -->
-				@include('home.website._team')
+				@include('home.partials._team')
 
 				<!-- Clients Aside -->
-				@include('home.website._clients')
+				@include('home.partials._clients')
 				
 				<!-- Contact Section -->
-				@include('home.website._contact')
+				@include('home.partials._contact')
 
 				{{-- Gogle Map Section --}}
-				@include('home.website._map')
+				@include('home.partials._map')
 
 
 				<!-- Portfolio Modals -->
 				<!-- Use the modals below to showcase details about your portfolio projects! -->
-				@include('home.website._modals')
+				@include('home.partials._modals')
 
 
 	</div>

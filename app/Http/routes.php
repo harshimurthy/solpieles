@@ -45,7 +45,7 @@ Route::group(['prefix'=>'es'], function(){
 });
 
 Route::get('services', ['as'=>'services', function(){
-	return view('home.website.services', ['shrink'=>'navbar-shrink']);	
+	return view('home.partials.services', ['shrink'=>'navbar-shrink']);	
 }]);
 
 

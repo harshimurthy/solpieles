@@ -43,7 +43,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-md-push-8 well">
-					    @include('home.website._contact-info')
+					    @include('home.partials._contact-info')
 					</div>
 					<div class="col-md-8 col-md-pull-4">
 						{!! Form::open(['route'=>['admin.messages.store'], 'method'=>'POST', 'class'=>'', 'role'=>'form', 'autocomplete'=>"off", 'novalidate'=>'novalidate', 'id'=>'contactForm']) !!}		
@@ -111,6 +111,7 @@
 										@else
 											 Enviar Mensaje
 										@endif 
+										<i class="fa fa-paper-plane"></i>
 									</button>
 								</div>
 							</div>
