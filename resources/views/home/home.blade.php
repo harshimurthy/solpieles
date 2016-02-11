@@ -1,4 +1,5 @@
 @inject('lang', 'App\Lang')
+@inject('singlePage', 'App\Layout')
 @extends('layouts.website')
 
 @section('content')

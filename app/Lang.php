@@ -7,25 +7,20 @@ use Illuminate\Support\Facades\Session;
 
 class Lang
 {
-    public $lang = 'en'; // default app language
+    public $lang;
+    private $default = 'es'; // default = en. Optional: en|es
 
-    function __construct($lang = null) 
+    function __construct() 
     {
-        if ($lang) {
-            $this->lang = $lang;
-        }
 
-        if (!Session::has('lang')) {
-            return Session::put('lang', $this->lang);
-        };
-
-       return $this->lang = Session::get('lang');
+       return $this->lang = Session::get('lang', $this->default);
 
     }
 
     public function getLang()
     {
-    	return $this->lang = Session::get('lang', 'en');
+        return $this->lang;
+    	// return $this->lang = Session::get('lang', 'en');
     }
 
     public function setLang($lang)

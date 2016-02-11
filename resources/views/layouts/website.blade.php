@@ -1,4 +1,5 @@
 @inject('lang', 'App\Lang')
+@inject('singlePage', 'App\Layout')
 @include('layouts.partials-website.header')
 
 <!-- /. Header -->

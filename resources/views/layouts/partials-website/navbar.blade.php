@@ -1,6 +1,5 @@
     <?php 
-
-        $lang = \Session::get('lang', 'en');
+        $lang = $lang->lang;
         $config = (object)[
             'services' => (object)[
                 'es'=>'Servicios',
@@ -24,32 +23,9 @@
             ],
         ];
 
-        /**
-         * Determines if the currect page should be rendered as
-         * single page or should have live links.
-         * @var Boolean
-         */
-        function singlePage() 
-        {
-            /**
-             * Routes to be rendered as single page app.
-             * @var Array
-             */
-            $singlepageRoutes = [
-                '/' => '/', 
-                'home' => 'home', 
-                'es' => 'es', 
-                'en' => 'en'
-            ];
+        
 
-            if (!Request::segment(1)) {
-                return true;
-            }
-
-            return array_has($singlepageRoutes, Request::segment(1));
-        };
-
-        $singlePage = singlePage();
+        $singlePage = $singlePage->singlePage();
 
      ?>
     <!-- Navigation -->
@@ -65,7 +41,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 {{-- <a class="navbar-brand page-scroll" href="#page-top">Sol Pieles</a> --}}
-                <a class="navbar-brand page-scroll animated  tada" href={{ $singlePage ? "#page-top" : url('/')}}>
+                <a class="navbar-brand page-scroll animated  tada" href={{ $singlePage ? "#page-top" : url('/') }}>
                     <img src="{{ asset('images/solpieles.png') }}" class="img-responsives pull-left" height="30px" alt="Image">
                      <span class="pull-right">
                         Sol Pieles - 
@@ -110,7 +86,13 @@
                         @if (auth()->check())
                             <a class="" href="{{ route('admin.home') }}">Admin</a>
                         @else
-                            <a class="" href="{{ url('auth/login') }}">Sign In</a>
+                            <a class="" href="{{ url('auth/login') }}">
+                                @if ($lang == 'en')
+                                    Sign In
+                                @else
+                                    Entrar 
+                                @endif 
+                            </a>
                         @endif
                     </li>
                     <li>
