@@ -20,6 +20,16 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Todo::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->numberBetween(1,2),
+        'name' => $faker->sentence,
+        'done' => $faker->numberBetween(0,1),
+        'description' => $faker->paragraph,
+        'due' => $faker->date,
+    ];
+});
+
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
     return [
         'lang' => $faker->randomElement(['en', 'es']),

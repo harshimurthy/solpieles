@@ -21,7 +21,7 @@ class TodosController extends Controller
     {
         $singleTodo = new $todos; // new instance of todos in order to get the date
 
-        $todos = $todos->whereUserId(auth()->user()->id)->orderBy("due", "ASC")->paginate(10);
+        $todos = $todos->forUser()->orderBy("due", "ASC")->paginate(10);
 
 
         return view('todos.index', compact('todos', 'singleTodo'));
@@ -93,6 +93,11 @@ class TodosController extends Controller
      */
     public function destroy(Todo $todo)
     {
+        if (!auth()->user()->owns($todo)) {
+            return redirect()->back()
+                ->withDanger("Usted no es dueño de la tarea $todo->name. No se le permitirá borrarla.");
+        }
+
         $todo->delete();
 
         return redirect()->back()

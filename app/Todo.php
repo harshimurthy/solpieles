@@ -25,7 +25,21 @@ class Todo extends Model
      * ====================================================================
      * Scopes
      */
+    
+    public function scopeDone($query)
+    {
+        return $query->whereDone(1);
+    }
 
+    public function scopePending($query)
+    {
+        return $query->whereDone(0);
+    }
+
+    public function scopeForUser($query)
+    {
+        return $query->whereUserId(auth()->user()->id);
+    }
     /**
      * ====================================================================
      * Accessors
@@ -39,10 +53,6 @@ class Todo extends Model
      * ====================================================================
      * Mutators
      */
-    public function setUserIdAttribute($userId)
-    {
-        return $this->attributes['user_id'] = \Auth::user()->id;
-    }
 
     public function setDueAttribute($time)
     {   

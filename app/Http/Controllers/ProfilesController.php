@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Profile;
 use Image;
+use Gate;
 use App\User;
+use App\Profile;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -113,7 +114,7 @@ class ProfilesController extends Controller
     public function edit(Profile $profile)
     {
 
-        if ($profile->user_id != auth()->user()->id) {
+        if (auth()->user()->owns($profile)) {
             return redirect()->route('admin.profiles.index')
                 ->withWarning("Forbidden. You can only update your own profile!?");
         }

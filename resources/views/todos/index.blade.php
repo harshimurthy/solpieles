@@ -66,8 +66,8 @@
 						<tbody>
 							@foreach ($completed as $todo)
 								<tr class="{{ $todo->done ? 'success' : '' }}">
-									<td><a href="{{ route('admin.todos.show', $todo->id) }}">{{ $todo->name }}</a></td>
-									<td class="col-xs-3">{{ $todo->due }}</td>
+									<td><a href="{{ route('admin.todos.show', $todo->id) }}"><s>{{ $todo->name }}</s></a></td>
+									<td class="col-xs-3"><s>{{ $todo->due }}</s></td>
 									<td class="col-xs-1">
 										@if ($todo->done)
 											<a href="{{ route('admin.todos.incompletar', $todo->id) }}" class="text-success"><i class="fa fa-check-circle-o"></i></a>

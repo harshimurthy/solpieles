@@ -102,6 +102,11 @@ class User extends Model implements AuthenticatableContract,
         return $this->todos()->whereDone(0)->count();
     }
 
+    /**
+     * Checks if the user is assigned with the passed role
+     * @param  'string'  $role :role name
+     * @return boolean       
+     */
     public function hasRole($role = null)
     {
         if( $role ) {
@@ -111,6 +116,11 @@ class User extends Model implements AuthenticatableContract,
         return !! $this->role;
     }
 
+    /**
+     * Returns the role assigned to the current user
+     * @return object :role model|False if the user does not
+     * have a role assigned
+     */
     public function getRole()
     {
         if (!isset($this->role->role)) {
@@ -120,8 +130,37 @@ class User extends Model implements AuthenticatableContract,
         return $this->role->role;
     }
 
+    /**
+     * Current user is the creator of the related model.
+     * Returns true if the user is the creator of the model
+     * @param  object $related :the related model being passed
+     * @return bolean          true|false
+     */
     public function owns($related)
     {
         return $this->id == $related->user_id;
     }
+
+    // /**
+    //  * Current user is the creator of the related model.
+    //  * Returns true if the user is the creator of the model
+    //  * @param  object $related :the related model being passed
+    //  * @return bolean          true|false
+    //  */
+    // public function can($related)
+    // {
+    //     return $this->id == $related->user_id;
+    // }
+
+
+    // /**
+    //  * Current user is the creator of the related model
+    //  * Returns true if the user is NOT the creator of the model
+    //  * @param  object $related :the related model being passed
+    //  * @return bolean          true|false
+    //  */
+    // public function cannot($related)
+    // {
+    //     return $this->id != $related->user_id;
+    // }
 }

@@ -20,8 +20,14 @@
 
 						<strong>Role:</strong>
 						<div class="col-xs-offset-1">
-							{{ ucwords($user->role->role) }}
+							@if ($user->role)
+								{{ ucwords($user->role->role) }}
+							@else
+
+								<div class="alert alert-info" role="alert">{{ $user->name }} does not have a role assigned!</div>
+							@endif
 						</div>
+							
 
 					</div>
 						{{-- {{ $user }} --}}

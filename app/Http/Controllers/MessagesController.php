@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 // use App\Http\Requests;
 use Mail;
+use Gate;
 use App\Message;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -85,6 +86,7 @@ class MessagesController extends Controller
      */
     public function edit(Message $message)
     {
+
         return view('messages.edit', compact('message'));
     }
 
