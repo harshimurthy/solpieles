@@ -17,11 +17,8 @@
         <!-- Sit Favicon -->
         <link rel="shortcut icon" href="{{ asset('images/solpieles.ico') }}">
     
-
-        {{-- <link rel="stylesheet" href="{{ asset('../node_modules/bootstrap/dist/css/bootstrap.min.css') }}"> --}}
+        
         <link rel="stylesheet" href="{{ elixir('assets/css/admin/all.css') }}">
-        {{-- <link rel="stylesheet" href="{{ asset('assets/css/admin/all.css') }}"> --}}
-        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"> --}}
        
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

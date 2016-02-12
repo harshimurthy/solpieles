@@ -30,12 +30,9 @@ elixir(function(mix) {
         '../plugins/bootstrap/css/bootstrap.css',
         '../plugins/admin-lte/dist/css/AdminLTE.css',
         '../plugins/admin-lte/dist/css/skins/_all-skins.css',
-        // '../plugins/font-awesome-4.5.0/css/font-awesome.css',
         '../../../bower_components/summernote/dist/summernote.css',
-        // '../plugins/summernote/dist/summernote.css',
         '../plugins/animate-css/animate.css',
         'my-style.css',
-        // 'toastr.css'
     ], 'public/assets/css/admin');
 });
 
@@ -45,12 +42,9 @@ elixir(function(mix) {
     mix.styles([
         '../plugins/bootstrap/css/bootstrap.css',
         '../plugins/startrap-agency/css/agency.css',
-        // '../plugins/font-awesome-4.5.0/css/font-awesome.css',
         '../plugins/animate-css/animate.css',
         '../../../bower_components/summernote/dist/summernote.css',
-        // '../plugins/summernote/dist/summernote.css',
         'my-style.css',
-        // 'toastr.css'
     ], 'public/assets/css');
 });
 
@@ -80,7 +74,6 @@ elixir(function(mix) {
         '../plugins/startrap-agency/js/cbpAnimatedHeader.js',
         '../plugins/startrap-agency/js/jqBootstrapValidation.js',
         '../../../bower_components/summernote/dist/summernote.js',
-        // '../plugins/summernote/dist/summernote.js',  
         '../plugins/startrap-agency/js/contact_me.js',
         '../plugins/startrap-agency/js/agency.js',
         'message_hidder.js',

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\TodosRequest;
-// use Toastr;
 use App\Http\Controllers\Controller;
 
 use App\Todo;

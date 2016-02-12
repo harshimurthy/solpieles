@@ -8,7 +8,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    {{-- {!! Toastr::render() !!}  --}}
     @include('layouts.partials.messages')     
    @yield('content')
   </div><!-- /.content-wrapper -->
