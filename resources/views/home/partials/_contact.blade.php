@@ -105,13 +105,18 @@
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
-									<button type="submit" class="btn btn-xl">
+
+									<button type="submit" id="contact_submit" class="btn btn-xl">
 										@if ($lang->lang == 'en')
 											Send Message
 										@else
 											 Enviar Mensaje
 										@endif 
 										<i class="fa fa-paper-plane"></i>
+									</button>
+
+									<button type="submit" id="contact_loading" class="btn btn-xl" style="display: none;" disabled="disabled">
+										<i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
 									</button>
 								</div>
 							</div>
