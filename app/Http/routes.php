@@ -55,9 +55,8 @@ Route::get('services', ['as'=>'services', function(){
  * Change the site language...
  */
 Route::post('/language', ['as'=>'site.language', function(App\Lang $lang){
-	$newLang = Request::has('lang') ? Request::input('lang') : App\Lang::lang;
 
-	$lang->setLang($newLang);
+	$lang->setLang(Request::input('lang'));
     
     return redirect()->back();
 }]);

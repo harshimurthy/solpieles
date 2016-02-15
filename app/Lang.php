@@ -10,9 +10,12 @@ class Lang
     public $lang;
     private $default = 'es'; // default = en. Optional: en|es
 
-    function __construct() 
+    function __construct($lang = null) 
     {
-
+    	if ($lang) {
+    		$this->setLang($lang);
+    	}
+    	
        return $this->lang = Session::get('lang', $this->default);
 
     }
