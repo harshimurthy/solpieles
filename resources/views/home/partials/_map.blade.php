@@ -3,7 +3,7 @@
 		<div class="col-sm-9">
 			
 				<div id="map">
-					<iframe src="https://www.google.com/maps/d/embed?mid=zN5RxWZp6IA4.kW2mxCq8YvOc" frameborder="0" style="pointer-events: nonex; border:0" width="100%" height="400"></iframe>
+					<iframe src="https://www.google.com/maps/d/embed?mid=zN5RxWZp6IA4.kW2mxCq8YvOc" width="100%" height="480"></iframe>
 				</div>
 		</div>
 

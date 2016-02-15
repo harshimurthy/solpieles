@@ -11,6 +11,7 @@
 	<strong>Name:</strong> {{ ucwords($data['name']) }}<br>
 	<strong>Email:</strong> {{ $data['email'] }}<br>
 	<strong>Phone:</strong> {{ $data['phone'] }}<br>
+	<strong>Subject:</strong> {{ $data['subject'] }}<br>
 
 	<?php
 		$messages = nl2br($data['message']);
