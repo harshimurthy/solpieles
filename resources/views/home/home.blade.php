@@ -42,4 +42,4 @@
 	{{-- / Wrapper --}}
 
 	
-@endsection
+@stop

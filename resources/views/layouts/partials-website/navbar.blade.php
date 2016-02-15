@@ -109,22 +109,3 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-    @section('scripts')
-        <script>
-            jQuery(document).ready(function($) {
-                $(document).on('change', $('select#inputLang'), function(event){
-
-                    console.log(event);
-
-                    event.stopPropagation();
-
-                    var form = $('#langForm');
-                    var formData = form.serializeArray;
-
-                    return form.submit();
-
-                });
-            });
-        </script>
-    @stop
