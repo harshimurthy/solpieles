@@ -32,7 +32,7 @@ elixir(function(mix) {
         '../plugins/bootstrap/css/bootstrap.css',
         '../plugins/admin-lte/dist/css/AdminLTE.css',
         '../plugins/admin-lte/dist/css/skins/_all-skins.css',
-        bowerComponents+'/summernote/dist/summernote.css',
+        nodeModules+'/summernote/dist/summernote.css',
         '../plugins/animate-css/animate.css',
         'my-style.css',
     ], 'public/assets/css/admin');
@@ -45,7 +45,7 @@ elixir(function(mix) {
         '../plugins/bootstrap/css/bootstrap.css',
         '../plugins/startrap-agency/css/agency.css',
         '../plugins/animate-css/animate.css',
-        bowerComponents + '/summernote/dist/summernote.css',
+        nodeModules + '/summernote/dist/summernote.css',
         'my-style.css',
     ], 'public/assets/css');
 });
@@ -54,12 +54,12 @@ elixir(function(mix) {
 
 elixir(function(mix) {
     mix.scripts([
-        bowerComponents + '/jquery/dist/jquery.js',
+        nodeModules + '/jquery/dist/jquery.js',
+        nodeModules + '/bootbox/bootbox.js',
         '../plugins/jquery-ui/jquery-ui.js',
         '../plugins/bootstrap/js/bootstrap.js',
         '../plugins/admin-lte/dist/js/app.js',
-        '../plugins/bootbox/bootbox.js',
-        bowerComponents + '/summernote/dist/summernote.js',   
+        nodeModules + '/summernote/dist/summernote.js',   
         'ajax_config.js',
         'destroy-confirmation.js',
         'message_hidder.js',
@@ -68,16 +68,16 @@ elixir(function(mix) {
 
 elixir(function(mix) {
     mix.scripts([
-        bowerComponents+'/jquery/dist/jquery.js',
+        nodeModules+'/jquery/dist/jquery.js',
         '../plugins/jquery-ui/jquery-ui.js',
+        nodeModules + '/bootbox/bootbox.js',
         '../plugins/bootstrap/js/bootstrap.js',
-        '../plugins/bootbox/bootbox.js',
         '../plugins/startrap-agency/js/classie.js',
         '../plugins/startrap-agency/js/cbpAnimatedHeader.js',
         '../plugins/startrap-agency/js/agency.js',
-        bowerComponents + '/summernote/dist/summernote.js',
-        'contact_me.js',
+        nodeModules + '/summernote/dist/summernote.js',
         'jqBootstrapValidation.js',
+        'contact_me.js',
         'message_hidder.js',
         'ajax_config.js',
         'lang.js',

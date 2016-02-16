@@ -4,24 +4,25 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
+
+class Product extends Model implements SluggableInterface
 {
-    public $products = [
-    	[
-    		'name' => 'asdfad',
-    		'slug' => null,
-    		'lang' => 'es',
-    	],
-    ];
+	/**
+	 * Slug configuration
+	 */
+	use SluggableTrait;
 
-    public function productToObject()
-    {
-    	$products = (object)$this->products;
+	protected $sluggable = [
+		'build_from' => 'name',
+		'save_to'    => 'slug',
+	];
 
-    	foreach ($products as $product) {
-    		# code...
-    	}
+	/**
+	 * mass assignable
+	 */
+	protected $fillable = ['name', 'lang'];
 
 
-    }
 }

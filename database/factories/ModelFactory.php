@@ -33,10 +33,7 @@ $factory->define(App\Todo::class, function (Faker\Generator $faker) {
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
     return [
         'lang' => $faker->randomElement(['en', 'es']),
-        'slug' => $faker->sentence,
-        'name' => $faker->sentence,
-        'summary' => $faker->sentence(20),
-        'description' => $faker->text(800)
+        'name' => $faker->sentence
     ];
         
 });

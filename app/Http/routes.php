@@ -66,8 +66,12 @@ Route::post('/language', ['as'=>'site.language', function(App\Lang $lang){
  * Products routes
  */
 
-Route::get('products', ['as'=>'products.index', 'uses'=>'ProductsController@index']);
-Route::get('products/{product}', ['as'=>'products.show', 'uses'=>'ProductsController@show']);
+Route::bind('products', function($slug){
+	return App\Product::whereSlug($slug)
+			->firstOrFail();
+});
+
+Route::resource('products', 'ProductsController');
 
 
 /**

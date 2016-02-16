@@ -5,7 +5,15 @@
     "gulp-util": "^3.0.7"
   },
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-messages": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bootbox": "^4.4.0",
+    "bootstrap-sass": "^3.0.0",
+    "icheck": "^1.0.2",
+    "jquery": "^2.2.0",
     "laravel-elixir": "^3.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "moment": "^2.11.2",
+    "summernote": "^0.8.1"
   }
 }

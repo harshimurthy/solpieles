@@ -4,17 +4,17 @@
  * @return {[type]}   [submit the form]
  */
 (function($){
-	$(function(){
-        $('select#inputLang').on('change', function (event) {
-            console.log(event);
+	$(document).ready(function() {
+		$('select#inputLang').on('change', function (event) {
+	        console.log(event);
 
-            event.stopPropagation();
+	        event.stopPropagation();
 
-            var form = $('#langForm');
-            // var formData = form.serializeArray;
+	        var form = $('#langForm');
+	        // var formData = form.serializeArray;
 
-            return form.submit();
-            
-        });
-    });
+	        return form.submit();
+	        
+	    });
+	});
 })(jQuery);

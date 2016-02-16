@@ -3,7 +3,7 @@
  * Contact me plugin
  * @type {Object}
  */
-$(function() {
+(function($) {
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
@@ -104,9 +104,10 @@ $(function() {
         e.preventDefault();
         $(this).tab("show");
     });
-});
+})(jQuery);
 
 /*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
+
+ $('#name').focus(function() {
     $('#success').html('');
 });
