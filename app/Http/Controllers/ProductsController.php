@@ -26,7 +26,7 @@ class ProductsController extends Controller
         
     public function index(Product $products, Lang $lang)
     { 
-        $products = $products->paginate(15);
+        $products = $products->paginate(10);
 
         return view('products.admin.index', ['products'=>$products]);
     }
@@ -50,11 +50,14 @@ class ProductsController extends Controller
     public function store(Product $product, Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|min:5|unique:products.name',
+            'name' => 'required|min:5|unique:products',
             'lang' => 'required',
         ]);
 
-        return $product;
+        $product->create($request->all());
+
+        return redirect()->route('admin.products.index')
+            ->withSuccess("Product $product->name has been created!");
         
     }
 

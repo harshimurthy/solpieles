@@ -13,7 +13,7 @@
 								</legend>
 							</div>
 
-							@include('products._form')
+							@include('products.admin._form')
 
 							<div class="form-group">							
 								<button type="submit" class="btn btn-primary col-xs-6 col-xs-offset-1">Crate</button>
@@ -27,12 +27,3 @@
 		</div>
 	</div>
 @endsection
-
-@section('scripts')
-	<script>
-	$(document).ready(function() {
-		$('#summary').summernote();
-		$('#description').summernote();
-	});
-	</script>
-@stop
