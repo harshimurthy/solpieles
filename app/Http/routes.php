@@ -44,6 +44,20 @@ Route::group(['prefix'=>'es'], function(){
 	Route::get('/home', ['as'=>'es.site.route', 'uses'=>'HomeController@site']);
 });
 
+
+/**
+ * ==================================================================
+ * Products routes
+ *
+ * These routes are open for public to use them
+ */
+Route::get('products', ['uses'=>'ProductsController@showProducts', 'as'=>'products.index']);
+Route::get('products/{slug}', ['uses'=>'ProductsController@showProduct', 'as'=>'products.show']);
+
+/**
+ * Services
+ */
+
 Route::get('services', ['as'=>'services', function(){
 	return view('home.partials.services', ['shrink'=>'navbar-shrink']);	
 }]);
@@ -60,18 +74,6 @@ Route::post('/language', ['as'=>'site.language', function(App\Lang $lang){
     
     return redirect()->back();
 }]);
-
-/**
- * ==================================================================
- * Products routes
- */
-
-Route::bind('products', function($slug){
-	return App\Product::whereSlug($slug)
-			->firstOrFail();
-});
-
-Route::resource('products', 'ProductsController');
 
 
 /**
@@ -118,12 +120,12 @@ Route::group(['prefix'=>'admin'], function(){
 		 * Products
 		 */
 		
-		// Route::get('products/search', ['as'=>'products.search', 'uses'=>'ProductsController@search']);
-
-		// Route::bind('products', function($slug){
-		// 	return App\Product::whereSlug($slug)->first();
-		// });
-		// Route::resource('products', 'ProductsController');
+		Route::get('products/search', ['as'=>'products.search', 'uses'=>'ProductsController@search']);
+		Route::bind('products', function($slug){
+			return App\Product::whereSlug($slug)->firstOrFail();
+		});
+		Route::resource('products', 'ProductsController');
+		
 
 		/**
 		 * ===========================================================
