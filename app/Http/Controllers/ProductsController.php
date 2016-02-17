@@ -15,7 +15,7 @@ class ProductsController extends Controller
 
 
     public function __construct() {
-        $this->middleware("authorization:staff");
+        $this->middleware("authorization:staff", ['except'=>['showProducts', 'showProduct']]);
     }
 
     /**

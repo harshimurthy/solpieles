@@ -32,7 +32,7 @@ elixir(function(mix) {
         '../plugins/bootstrap/css/bootstrap.css',
         '../plugins/admin-lte/dist/css/AdminLTE.css',
         '../plugins/admin-lte/dist/css/skins/_all-skins.css',
-        nodeModules+'/summernote/dist/summernote.css',
+        // nodeModules+'/summernote/dist/summernote.css',
         '../plugins/animate-css/animate.css',
         'my-style.css',
     ], 'public/assets/css/admin');
@@ -45,7 +45,7 @@ elixir(function(mix) {
         '../plugins/bootstrap/css/bootstrap.css',
         '../plugins/startrap-agency/css/agency.css',
         '../plugins/animate-css/animate.css',
-        nodeModules + '/summernote/dist/summernote.css',
+        // nodeModules + '/summernote/dist/summernote.css',
         'my-style.css',
     ], 'public/assets/css');
 });

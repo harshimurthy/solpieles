@@ -13,27 +13,30 @@
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-        'password' => bcrypt(str_random(10)),
+        'name'           => $faker->name,
+        'email'          => $faker->email,
+        'password'       => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
     ];
 });
 
 $factory->define(App\Todo::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => $faker->numberBetween(1,2),
-        'name' => $faker->sentence,
-        'done' => $faker->numberBetween(0,1),
+        'user_id'     => $faker->numberBetween(1,2),
+        'name'        => $faker->sentence,
+        'done'        => $faker->numberBetween(0,1),
         'description' => $faker->paragraph,
-        'due' => $faker->date,
+        'due'         => $faker->date,
     ];
 });
 
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
     return [
-        'lang' => $faker->randomElement(['en', 'es']),
-        'name' => $faker->sentence
+        'lang'        => $faker->randomElement(['en', 'es']),
+        'name'        => $faker->sentence,
+        'short_name'  => $faker->sentence,
+        'description' => $faker->paragraph,
+        'specs'       => $faker->paragraph,
     ];
         
 });

@@ -47,8 +47,8 @@
 @section('scripts')
 	<script>
 	$(document).ready(function() {
-		$('#summary').summernote();
-		$('#description').summernote();
+		$('textarea#specs').summernote();
+		$('textarea#description').summernote();
 	});
 	</script>
 @stop

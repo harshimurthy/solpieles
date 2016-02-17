@@ -6,12 +6,21 @@
 			<div class="well">
 				<h4 class="page-header text-center">
 					Product {{ $product->name }}
-				</h4>
-				<ul class="list-group">
+
+				</h4>				<ul class="list-group">
 					<li class="list-group-item">
 						<h5><strong>Name: </strong>{{ $product->name }}</h5>
 						<h5><strong>Slug: </strong>{{ $product->slug }}</h5>
 						<h5><strong>Language: </strong>{{ $product->lang }}</h5>
+						<div class="row">
+							<div class="col-sm-12">
+							<h5>Description: </h5>
+								<p>{!! $product->description !!}</p>
+							<h5>Specs: </h5>
+								<p>{!! $product->specs !!}</p>
+							</div>	
+						</div>
+
 						<div class="row">
 							<div class="col-sm-6 col-sm-offset-3">
 								<a href="{{ route('admin.products.index') }}" class="pull-left"><i class="fa fa-list"></i></a>

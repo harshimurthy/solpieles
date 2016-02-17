@@ -23,7 +23,7 @@ class Product extends Model implements SluggableInterface
 	/**
 	 * mass assignable
 	 */
-	protected $fillable = ['name', 'lang'];
+	protected $fillable = ['name', 'lang', 'short_name', 'description', 'specs'];
 
 	/**
 	 * ===============================================

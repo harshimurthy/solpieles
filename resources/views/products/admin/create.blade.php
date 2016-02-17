@@ -27,3 +27,12 @@
 		</div>
 	</div>
 @endsection
+
+@section('scripts')
+	<script>
+	$(document).ready(function() {
+		$('textarea#specs').summernote();
+		$('textarea#description').summernote();
+	});
+	</script>
+@stop
