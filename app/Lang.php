@@ -9,6 +9,7 @@ class Lang
 {
     public $lang;
     private $default = 'es'; // default = en. Optional: en|es
+    public $lang_list = ['es'=>'es', 'en'=>'en'];
 
     function __construct($lang = null) 
     {
