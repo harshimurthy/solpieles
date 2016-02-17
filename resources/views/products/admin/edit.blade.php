@@ -17,7 +17,7 @@
 									
 							</div>				
 
-							@include('products._form')
+							@include('products.admin._form')
 			
 							<div class="col-xs-12">	
 								<div class="form-group">
@@ -30,7 +30,7 @@
 							
 						<div class="col-xs-12">
 							<div class="form-group">
-								{!! delete_button('admin.products.destroy', $product->id, ['class'=>'btn btn-danger ', 'label'=>'Remove Role']) !!}
+								{!! delete_button('admin.products.destroy', $product->slug, ['class'=>'btn btn-danger ', 'label'=>'Remove Product']) !!}
 							</div>
 						</div>
 					</div>

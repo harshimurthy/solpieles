@@ -31,6 +31,7 @@
               <li class=""><a href="{{ route('admin.contacts.index') }}"><i class="fa fa-circle-o"></i> Contacts</a></li>
               <li class=""><a href="{{ route('admin.messages.index') }}"><i class="fa fa-circle-o"></i> Menssages</a></li>
               <li class=""><a href="{{ route('admin.profiles.index') }}"><i class="fa fa-circle-o"></i> Profile</a></li>
+              <li class=""><a href="{{ route('admin.products.index') }}"><i class="fa fa-circle-o"></i> Products</a></li>
               <li class=""><a href="{{ route('admin.todos.index') }}"><i class="fa fa-circle-o"></i> Tasks</a></li>
             </ul>
           </li>
