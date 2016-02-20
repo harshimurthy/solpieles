@@ -9,7 +9,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     @include('layouts.partials.messages')     
-   @yield('content')
+    @yield('content')
   </div><!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">

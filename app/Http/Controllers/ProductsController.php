@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-use App\Product;
+use App\Image;
 use App\Lang;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -24,9 +25,13 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
         
-    public function index(Product $products, Lang $lang)
+    public function index(Product $products, Lang $lang, Request $request)
     { 
-        $products = $products->paginate(10);
+        $products = $products->with('images')->paginate(10);
+
+        if ($request->input('lang')) {
+            $products = $products->appends(['lang'=>$request->input('lang')]);
+        }        
 
         return view('products.admin.index', ['products'=>$products]);
     }
@@ -153,6 +158,25 @@ class ProductsController extends Controller
         $products = $this->products($product, $lang);
 
         return view('products.show',  ['product'=>$product->slug, 'products'=>$products, 'lang' =>$lang, 'shrink'=>true]);
+    }
+
+    public function editImages($slug, Product $product, Image $images)
+    {
+        $product = $product->whereSlug($slug)->with('images')->firstOrFail();
+
+        $images = $images->get();
+
+        return view('products.admin.edit_images', compact('product', 'images'));
+    }
+
+    public function updateImages($slug, Product $product, Image $images, Request $request)
+    {
+        $product = $product->whereSlug($slug)->with('images')->firstOrFail();
+
+        $product->images()->sync($request->input('images_list'));
+
+        return redirect()->back()
+            ->withSuccess("Images for product $product->name has been updated!");
     }
 
  

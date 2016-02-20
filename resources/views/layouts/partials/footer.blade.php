@@ -9,6 +9,9 @@
     <script>
       $.widget.bridge('uibutton', $.ui.button);
     </script>
+    
+
+@yield('scripts')
 
     {{-- iChecks --}}
     {{-- <script src="{{ asset('assets/plugins/icheck-1.x/iCheck.min.js') }}"></script> --}}

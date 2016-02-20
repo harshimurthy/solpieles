@@ -82,22 +82,25 @@ Route::post('/language', ['as'=>'site.language', function(App\Lang $lang){
 Route::group(['prefix'=>'admin'], function(){
 	
 	/**
+	 * =====================================================================================
 	 * Messages Routes
 	 */
 	Route::get('messages/search', ['as'=>'admin.messages.search', 'uses'=>'MessagesController@search']);
-
 	Route::bind('messages', function($id){
 		return App\Message::findOrFail($id);
 	});
-
 	Route::resource('messages', 'MessagesController', ['except'=>['create', 'destroy']]);
+
 	/**
+	 * ===================================================================================
 	 * This routes will require the user to be authenticated in order
 	 * to be able to access them. Otherwise will be redirected to 
 	 * the login page
 	 */
 	Route::group(['middleware' => 'auth'], function(){
+
 		/**
+		 * ===================================================================
 		 * Admin Home Page
 		 */
 		Route::get('/', ['as'=>'admin.home', 'uses'=>'HomeController@dashboard']);
@@ -113,19 +116,31 @@ Route::group(['prefix'=>'admin'], function(){
 				// whereUserId(auth()->user()->id)
 				findOrFail($id);
 		});
-
 		Route::resource('contacts', 'ContactsController', []);
+
+		/**
+		 * ========================================================
+		 * Images
+		 */
+		
+		Route::get('images/search', ['as'=>'images.search', 'uses'=>'ImagesController@search']);
+		Route::bind('images', function($id){
+			return App\Image::with('products')->findOrFail($id);
+		});
+		Route::resource('images', 'ImagesController');
+
 		/**
 		 * ========================================================
 		 * Products
 		 */
 		
-		Route::get('products/search', ['as'=>'products.search', 'uses'=>'ProductsController@search']);
+		Route::get('products/search', ['as'=>'admin.products.search', 'uses'=>'ProductsController@search']);
+		Route::get('products/{slug}/images', ['as'=>'admin.products.edit_images', 'uses'=>'ProductsController@editImages']);
+		Route::post('products/{slug}/images', ['as'=>'admin.products.update_images', 'uses'=>'ProductsController@updateImages']);
 		Route::bind('products', function($slug){
-			return App\Product::whereSlug($slug)->firstOrFail();
+			return App\Product::whereSlug($slug)->with('images')->firstOrFail();
 		});
-		Route::resource('products', 'ProductsController');
-		
+		Route::resource('products', 'ProductsController');		
 
 		/**
 		 * ===========================================================
@@ -137,44 +152,40 @@ Route::group(['prefix'=>'admin'], function(){
 				// whereUserId(auth()->user()->id)
 				findOrFail($id);
 		});
-
-		Route::resource('profiles', 'ProfilesController', ['except' => 'destroy']);		
+		Route::resource('profiles', 'ProfilesController', ['except' => 'destroy']);
 
 		/**
+		 * =================================================================================
+		 * Roles
+		 */
+		Route::get('roles/detatch_user/{user}/role/{role}', ['as'=>'admin.roles.detatch_user', 'uses'=>'RolesController@detatchUser']);		
+		Route::get('roles/search', ['as'=>'admin.roles.search', 'uses'=>'RolesController@search']);
+		Route::bind('roles', function($id){
+			return App\Role::with('users')->findOrFail($id);
+		});
+		Route::resource('roles', 'RolesController');		
+
+		/**
+		 * =============================================================
 		 * Todos
 		 */
-
 		Route::get('todos/completar/{id}', ['as'=>'admin.todos.completar', 'uses'=>'TodosController@completar']);
 		Route::get('todos/incompletar/{id}', ['as'=>'admin.todos.incompletar', 'uses'=>'TodosController@incompletar']);
-		Route::delete('todos/remove_done_tasks', ['as'=>'admin.todos.remove_done_tasks', 'uses'=>'TodosController@removeDoneTasks']);
-		
+		Route::delete('todos/remove_done_tasks', ['as'=>'admin.todos.remove_done_tasks', 'uses'=>'TodosController@removeDoneTasks']);		
 		Route::bind("todos", function($id){
 			return \App\Todo::whereUserId(Auth::user()->id)->findOrFail($id);
-		});
-		
+		});		
 		Route::resource('todos', 'TodosController', []);
 
 		/**
+		 * ==============================================================
 		 * Users Management
 		 */
 		Route::get('users/search', ['as'=>'admin.users.search', 'uses'=>'UsersController@search']);
 		Route::bind('users', function($id){
 			return App\User::with('role')->findOrFail($id);
 		});
-
 		Route::resource('users', 'UsersController');
-
-		/**
-		 * Roles
-		 */
-		Route::get('roles/detatch_user/{user}/role/{role}', ['as'=>'admin.roles.detatch_user', 'uses'=>'RolesController@detatchUser']);
-		
-		Route::get('roles/search', ['as'=>'admin.roles.search', 'uses'=>'RolesController@search']);
-		Route::bind('roles', function($id){
-			return App\Role::with('users')->findOrFail($id);
-		});
-
-		Route::resource('roles', 'RolesController');
 
 	});
 });

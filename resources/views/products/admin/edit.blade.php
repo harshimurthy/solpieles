@@ -38,7 +38,7 @@
 				</div>
 
 				<hr>
-				<a href="{{ route('admin.products.index') }}">Back to Products List <i class="fa fa-arrow-circle-left"></i></a>
+				<a href="{{ route('admin.products.show', $product->slug) }}">Back to Product Details <i class="fa fa-arrow-circle-left"></i></a>
 			</div>
 		</div>
 	</div>

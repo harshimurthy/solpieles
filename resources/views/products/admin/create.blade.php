@@ -30,9 +30,11 @@
 
 @section('scripts')
 	<script>
-	$(document).ready(function() {
-		$('textarea#specs').summernote();
-		$('textarea#description').summernote();
-	});
+		(function($){
+			$(document).ready(function() {
+				$('textarea#specs').summernote();
+				$('textarea#description').summernote();
+			});
+		})(jQuery);
 	</script>
 @stop

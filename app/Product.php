@@ -26,6 +26,20 @@ class Product extends Model implements SluggableInterface
 	protected $fillable = ['name', 'lang', 'short_name', 'description', 'specs'];
 
 	/**
+	 * =======================================================
+	 * Relationships
+	 */
+	
+	/**
+	 * many to many relationship with images
+	 * @return [type] 
+	 */
+	public function images()
+	{
+		return $this->belongsToMany(Image::class);
+	}
+
+	/**
 	 * ===============================================
 	 * Accessors (get)
 	 */
@@ -37,6 +51,11 @@ class Product extends Model implements SluggableInterface
 		return $lang->lang_list;
 	}
 
+	public function getImagesListAttribute()
+	{
+		return $this->images->lists('id', 'id');
+	}
+
 	/**
 	 * ==================================================
 	 * Mutators
@@ -46,5 +65,7 @@ class Product extends Model implements SluggableInterface
 	{
 		$this->attributes['name'] = ucwords($name);
 	}
+
+
 
 }

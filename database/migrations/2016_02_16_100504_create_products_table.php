@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('description', 500);
             $table->string('specs', 1500);
             $table->string('slug', 300);
-            $table->enum('lang', ['en', 'es']);
+            $table->enum('lang', ['en', 'es']); 
             $table->timestamps();
         });
     }
