@@ -47,7 +47,7 @@ class ImagesController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'image' => 'required|image|max:4000',
+            'image' => 'required|image|max:60000',
             'tags' => 'required'
         ]);
 
@@ -106,13 +106,13 @@ class ImagesController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            // 'image' => 'required|image|max:4000',
+            // 'image' => 'required|image|max:60000',
             'tags' => 'required'
         ]);
 
         if ($request->hasFile('image')) {
             $this->validate($request, [
-                'image' => 'required|image|max:4000',
+                'image' => 'required|image|max:60000',
             ]);
 
             $extendedName = $this->storeImage($request);
