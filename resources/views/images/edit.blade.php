@@ -27,8 +27,7 @@
 									<h4>Image Preview: </h4>
 									<img src="{{ asset($image->path) }}" class="img-responsive" alt="Image">
 								</div>
-							</div>
-							
+							</div>				
 	
 						{!! Form::close() !!}
 
