@@ -79,7 +79,17 @@ class Product extends Model implements SluggableInterface
 	
 	public function setNameAttribute($name)
 	{
-		$this->attributes['name'] = ucwords($name);
+		return $this->attributes['name'] = ucwords($name);
+	}
+
+	public function setShortNameAttribute($shortName)
+	{
+		return $this->attributes['short_name'] = ucfirst($shortName);
+	}
+
+	public function setDescriptionAttribute($description)
+	{
+		return $this->attributes['description'] = ucfirst($description);
 	}
 
 

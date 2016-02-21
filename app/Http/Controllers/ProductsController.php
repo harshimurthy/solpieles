@@ -27,7 +27,7 @@ class ProductsController extends Controller
         
     public function index(Product $products, Lang $lang, Request $request)
     { 
-        $products = $products->with('images')->paginate(10);
+        $products = $products->latest('updated_at')->with('images')->paginate(10);
 
         if ($request->input('lang')) {
             $products = $products->appends(['lang'=>$request->input('lang')]);
@@ -102,7 +102,7 @@ class ProductsController extends Controller
 
         $product->update($request->all());
 
-        return redirect()->route('admin.products.index')
+        return redirect()->route('admin.products.show', $product->slug)
             ->withSuccess("Product $product->name has been updated!");
 
     }
