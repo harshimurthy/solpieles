@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Storage;
 
 class ImagesController extends Controller
 {
+    private $localPath = 'images/products/'; // local folder where the file will be loaded to
+
     public function __construct() {
         $this->middleware("authorization:staff", ['except'=>[]]);
     }
@@ -144,6 +146,13 @@ class ImagesController extends Controller
      */
     public function destroy(Image $image)
     {
+        File::delete($image->path);
+        
+        $image->delete();
+
+
+        return redirect()->route('admin.images.index')
+            ->withWarning("You just removed image $image->name");
     }
 
     /**
@@ -154,7 +163,7 @@ class ImagesController extends Controller
     public function storeImage($request)
     {
         $file = $request->file('image');
-        $localPath = 'images/products/'; // local folder where the file will be loaded to
+        $localPath = $this->localPath; // local folder where the file will be loaded to
         $fileName = sha1($request->input('name')); // $fileName = str_random(40); //username sha1ed, so it is unique
         $extension = "." . $file->getClientOriginalExtension(); // $fileName = str_random(40); //username sha1ed, so it is unique
         $extendedName = $localPath . $fileName . $extension;
