@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use App\Role;
-use Auth;
-use App\User;
+use App\Http\Requests;
 use App\Message;
+use App\Product;
+use App\Role;
+use App\User;
+use Auth;
+use Illuminate\Http\Request;
 // use Symfony\Component\HttpFoundation\Session as Session;
 
 class HomeController extends Controller
@@ -29,7 +28,7 @@ class HomeController extends Controller
     	return view('dashboard.index', compact('user'));
     }
 
-    public function site(Request $request)
+    public function site(Request $request, Product $products)
     {   
            
         if ($request->segment(1) == 'es') {
@@ -41,7 +40,9 @@ class HomeController extends Controller
 
         }
 
-		return view('home.home');
+        $products = $products->latest('updated_at')->take(6)->forLang()->get();
+
+		return view('home.home', compact('products'));
     	
     }
 

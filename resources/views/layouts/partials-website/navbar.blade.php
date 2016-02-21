@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href={{ $singlePage ? "#portfolio" : route('products.index')}}>
+                        <a class="page-scroll" href={{ $singlePage ? "#products" : route('products.index')}}>
                             {{ $config->products->$currLang  }}
                         </a>
                     </li>

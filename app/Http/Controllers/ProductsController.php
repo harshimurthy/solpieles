@@ -122,7 +122,7 @@ class ProductsController extends Controller
 
     public function products($products, $lang)
     {
-        return $products->whereLang($lang->lang)->get();
+        return $products->whereLang($lang->lang)->paginate(5);
     }
 
     /**
@@ -146,6 +146,15 @@ class ProductsController extends Controller
      * @return view           products.show
      */
     public function showProduct($slug, Product $product, Lang $lang)
+    {
+        $product = $product->whereSlug($slug)->firstOrFail();
+
+        $products = $this->products($product, $lang);
+
+        return view('products.show',  ['product'=>$product, 'products'=>$products, 'lang' =>$lang, 'shrink'=>true]);
+    }
+
+    public function showProduct_Old($slug, Product $product, Lang $lang)
     {
         $product = $product->whereSlug($slug)->firstOrFail();
 
@@ -173,7 +182,7 @@ class ProductsController extends Controller
     {
         $product = $product->whereSlug($slug)->with('images')->firstOrFail();
 
-        $product->images()->sync($request->input('images_list'));
+        $product->images()->sync((array)$request->input('images_list'));
 
         return redirect()->back()
             ->withSuccess("Images for product $product->name has been updated!");

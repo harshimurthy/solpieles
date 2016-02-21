@@ -31,6 +31,22 @@ class Product extends Model implements SluggableInterface
 	 */
 	
 	/**
+	 * ==================================================
+	 * Scopes
+	 */
+	
+	public function scopeLimited($query, $amount)
+	{
+		return $query->latest('updated_at')->take($amount);
+	}
+
+	public function scopeForLang($query)
+	{
+		$lang = new Lang;
+
+		return $query->whereLang($lang->lang);
+	}
+	/**
 	 * many to many relationship with images
 	 * @return [type] 
 	 */

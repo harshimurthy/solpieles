@@ -1,7 +1,6 @@
 @inject('lang', 'App\Lang')
 @inject('singlePage', 'App\Layout')
 @include('layouts.partials-website.header')
-
 <!-- /. Header -->
 <body id="page-top">   
     {{-- @include('layouts.partials.messages') --}}
