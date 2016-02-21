@@ -14,11 +14,11 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 300);
-            $table->string('short_name', 50);
-            $table->string('description', 500);
-            $table->string('specs', 1500);
-            $table->string('slug', 300);
+            $table->string('name', 120);
+            $table->string('short_name', 200);
+            $table->string('description', 5000);
+            $table->string('specs', 5000);
+            $table->string('slug', 120);
             $table->enum('lang', ['en', 'es']); 
             $table->timestamps();
         });
