@@ -17,10 +17,10 @@
 		</div>				
 		<div class="col-sm-6 col-sm-pull-6">
 			<h4>Description</h4>
-			<div class="text-center">
-				<p>{!! $product->description !!}</p>
+			<p>{!! $product->description !!}</p>
 
-				<h4>Specs</h4>
+			<h4>Specs</h4>
+			<div class="text-center">
 				<strong>{{ $product->name }}</strong>
 				<p>{!! $product->specs !!}</p>
 			</div>
