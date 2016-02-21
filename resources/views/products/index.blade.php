@@ -12,7 +12,11 @@
 							Products List.
 						@else
 							Lista de Productos. 
-						@endif 						
+						@endif 		
+
+						<a href="{{ route('admin.products.create') }}" title="Create Product">
+							<i class="fa fa-plus"></i>
+						</a>				
 					</h2>
 					<ul class="list-group">
 						

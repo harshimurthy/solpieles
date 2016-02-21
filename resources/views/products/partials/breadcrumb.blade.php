@@ -34,6 +34,13 @@
 						 @endif
 					</a>
 				</li>
+				@if (Auth::check())
+					<li>
+						<a href="{{ route('admin.products.create') }}" title="Create Product">
+						<i class="fa fa-plus"></i>
+						</a>
+					</li>
+				@endif
 			</ul>
 		</div>
 	</div>

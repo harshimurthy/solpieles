@@ -41,6 +41,10 @@
 	        	@else
 	        		Lista de Productos 
 	        	@endif 
+
+	        	<a href="{{ route('admin.products.create') }}" title="Create Product">
+					<i class="fa fa-plus"></i>
+				</a>
 	        </h4>
 	      </div>
 	      <div class="modal-body">
