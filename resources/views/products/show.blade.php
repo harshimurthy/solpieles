@@ -4,7 +4,12 @@
 	<div class="container margin-top">	
 		@include('products.partials.breadcrumb')
 
-		<h2>{{ $product->name }}</h2>
+		<h2>
+			{{ $product->name }} 
+			@if (Auth::check())
+				<a href="{{ route('admin.products.edit', $product->slug) }}"><i class="fa fa-edit"></i></a>
+			@endif
+		</h2>
 		<p class="item-intro text-muted">{{ $product->short_name }}</p>
 		{{-- <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt=""> --}}		
 		<div class="col-sm-6 col-sm-push-6">
