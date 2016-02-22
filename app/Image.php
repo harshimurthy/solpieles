@@ -38,6 +38,16 @@ class Image extends Model
     }
 
     /**
+     * =======================================
+     * Mutatos
+     */
+    
+    public function setNameAttribute($name)
+    {
+        return $this->attributes['name'] = ucwords($name);
+    }
+
+    /**
      * ========================================
      * Methods
      */
