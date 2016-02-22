@@ -46,7 +46,9 @@
 							</div>
 						{!! Form::close() !!}
 					@else
-						{{-- false expr --}}
+						<h3 class="alert alert-info">
+							No images added so far. To associate images with products please load some images.
+						</h3>
 					@endif
 
 					<div class="row">
