@@ -34,8 +34,10 @@
 										 <br>	
 										 <a href="{{ route('admin.images.edit', $image->id) }}"><i class="fa fa-pencil"></i></a>
 									</div>
-									<div class="col-sm-4">
-										<img src="{{ asset($image->path) }}" class="img-responsive" alt="{{ $image->name }}">
+									<div class="col-sm-2">
+										<a targe="_blanc" href="{{ asset($image->path) }}">
+											<img src="{{ asset($image->path) }}" class="img-responsive" alt="{{ $image->name }}">
+										</a>
 									</div>	
 								</div>
 							</li>

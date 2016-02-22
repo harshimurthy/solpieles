@@ -68,7 +68,7 @@ class ImagesController extends Controller
 
         $image->save();
 
-        return redirect()->route('admin.images.index')
+        return redirect()->route('admin.images.show', $image->id)
             ->withSuccess("Image $image->name has been saved.");
             
 
@@ -134,7 +134,7 @@ class ImagesController extends Controller
         
         $image->save();
 
-        return redirect()->route('admin.images.index')
+        return redirect()->route('admin.images.show', $image->id)
             ->withSuccess("Image $image->name has been updated.");
     }
 

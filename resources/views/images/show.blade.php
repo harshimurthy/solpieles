@@ -7,17 +7,17 @@
 					<h1 class="page-header">Image {{ $image->name }}</h1>
 					
 					<div class="col-sm-4">
-						<img src="{{ $image->path }}" class="img-responsive" alt="{{ $image->name }}">
+						<img src="{{ asset($image->path) }}" class="img-responsive" alt="{{ $image->name }}">
 
 						<ul class="nav navbar-nav">
 							<li class="active">
 								<a href="{{ route('admin.images.index') }}">
-									<i class="fa fa-angle-double-left"></i>
+									<i class="fa fa-list"></i> List
 								</a>
 							</li>
 							<li>
 								<a href="{{ route('admin.images.edit', $image->id) }}">
-									<i class="fa fa-edit"></i>
+									<i class="fa fa-edit"></i> Edit
 								</a>
 							</li>
 						</ul>	

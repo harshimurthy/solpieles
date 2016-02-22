@@ -21,19 +21,20 @@
 								<button type="reset" class="btn btn-default col-xs-3 col-xs-offset-1">Cancel</button>
 							</div>
 	
-							<div class="col-sm-4">
-								<div class="form-group">
-										
-									<h4>Image Preview: </h4>
-									<img src="{{ asset($image->path) }}" class="img-responsive" alt="Image">
-								</div>
-							</div>
-	
 						{!! Form::close() !!}
 
+					</div>
+	
 						<div class="col-sm-4">
+
+								<div class="form-group">
+										
+									<h4>Current Image Preview: </h4>
+									<img src="{{ asset($image->path) }}" class="img-responsive" alt="Image">
+								</div>
 								
 								<div class="form-group">
+									
 									<form action="{{ route('admin.images.destroy', $image->id) }}" method="POST" class="" style="">
 									    {!! csrf_field() !!}
 									    {!! method_field('DELETE') !!}
@@ -44,9 +45,9 @@
 									       
 									    </button>
 									</form>
+
 								</div>
 							</div>
-					</div>
 
 						
 				</div>
