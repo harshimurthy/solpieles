@@ -39,8 +39,9 @@
 							</div>
 						</div>
 						<div class="row">
-
+							
 							@if (count($product->images) > 0)
+								<h3>Images associated to this product:</h3>
 								@foreach ($product->images as $image)
 									<div class="col-sm-4">
 										<img src="{{ asset($image->path) }}" class="img-responsive" alt="{{ $image->name }}">
@@ -51,17 +52,7 @@
 							@endif
 						</div>
 					</li>
-					<hr>
-					<h3 class="text-center">Product View</h3>
-					@if (view()->exists('products.partials.'.$product->slug))
-						@include('products.partials.'.$product->slug)
-					@else
-
-						<div class="alert alert-danger">
-							<!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
-							<h3> <strong>Missing View!</strong> Product {{ $product->name }} does not have a view created. Please create one.</h3>
-						</div>
-					@endif
+					
 				</ul>
 			</div>
 		</div>
