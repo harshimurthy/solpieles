@@ -5,7 +5,13 @@
 		<div class="col-sm-8 col-sm-offset-2">
 			<div class="row">
 				<div class="well">
-					<h2 class="page-header">Edit Images Associated to Products</h2>
+					<h2 class="page-header">
+						Edit Images Associated to Products
+						<a href="{{ route('admin.images.create') }}">
+							<i class="fa fa-plus"></i>
+							 Add Images
+						</a>
+					</h2>
 					<h4><strong>Product Name: </strong>{{ $product->name }}</h4>
 
 					@if (count($images) > 0)
