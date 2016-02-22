@@ -36,4 +36,16 @@ class Image extends Model
     {
     	return $this->lists('path', 'id');
     }
+
+    /**
+     * ========================================
+     * Methods
+     */
+    
+    public function getTagsObjectAttribute()
+    {
+        $tags = explode(',', $this->tags);
+
+        return (object)$tags;
+    }
 }
