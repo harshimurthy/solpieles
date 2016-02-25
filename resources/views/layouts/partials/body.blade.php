@@ -7,7 +7,7 @@
   @include('layouts.partials.left-navbar')
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper hold-transition">
     @include('layouts.partials.messages')     
     @yield('content')
   </div><!-- /.content-wrapper -->
