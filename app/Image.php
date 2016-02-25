@@ -30,6 +30,7 @@ class Image extends Model
     {
 
     	return explode(",", $this->tags);
+        
     }
 
     public function getImagesListAttribute()
