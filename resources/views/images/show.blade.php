@@ -31,7 +31,7 @@
 							<li><strong>Size: </strong>{{ $image->size }} bytes</li>
 							<li><strong>Tags: </strong>
 								@foreach ($image->tagsObject as $tag)
-									<a href=""><span class="label label-primary">{{ $tag }}</span></a>
+									<a href=""><span class="label label-primary">{{ trim($tag) }}</span></a>
 								@endforeach
 							</li>
 							<li><strong>Products: </strong>

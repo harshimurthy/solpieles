@@ -26,7 +26,7 @@ class ProfilesController extends Controller
         }
 
         $profile = auth()->user()->profile;
-        $profiles = $profiles->paginate(15);
+        $profiles = $profiles->with('user')->paginate(15);
 
         return view('profiles.show', compact('profile', 'profiles'));
     }
@@ -60,8 +60,13 @@ class ProfilesController extends Controller
         $this->validate($request, [
             'photo' => 'image|max:4000',
             'gender' => 'required',
-            'name' => 'required',
+            'name' => 'required|max:70',
             'bio' => 'max:4500',
+            'phone' => 'max:50',
+            'education' => 'max:150',
+            'skills' => 'max:90',
+            'work' => 'max:100',
+            'location' => 'max:100',
         ]);
         // update the user with the name given
         // store the data for the profile, associated to the current user
@@ -102,7 +107,9 @@ class ProfilesController extends Controller
      */
     public function show(Profile $profile)
     {
-        return view('profiles.show', compact('profile'));
+        $profiles = $profile->with('user')->paginate(15);
+
+        return view('profiles.show', compact('profile', 'profiles'));
     }
 
     /**
@@ -113,8 +120,7 @@ class ProfilesController extends Controller
      */
     public function edit(Profile $profile)
     {
-
-        if (auth()->user()->owns($profile)) {
+        if (!auth()->user()->owns($profile)) {
             return redirect()->route('admin.profiles.index')
                 ->withWarning("Forbidden. You can only update your own profile!?");
         }
@@ -136,8 +142,13 @@ class ProfilesController extends Controller
         $this->validate($request, [
             'photo' => 'image|max:4000',
             'gender' => 'required',
-            'name' => 'required',
+            'name' => 'required|max:70',
             'bio' => 'max:4500',
+            'phone' => 'max:50',
+            'education' => 'max:150',
+            'skills' => 'max:90',
+            'work' => 'max:100',
+            'location' => 'max:100',
         ]);
 
         $user = $profile->user;

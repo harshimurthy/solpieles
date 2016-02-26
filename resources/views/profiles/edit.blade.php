@@ -3,7 +3,7 @@
 @section('content')
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-			<div class="well">
+			<div class="box box-primary pad">
 
 				{!! Form::model($profile, ['route'=>['admin.profiles.update', $profile->id], 'method'=>'PUT',  'class'=>'', 'role'=>'form', 'autocomplete'=>"off", 'files' => true]) !!}		
 					<div class="form-group">
@@ -41,7 +41,7 @@
 						</a>
 					</div>
 				</div>
-				
+							
 			</div>
 		</div>
 	</div>

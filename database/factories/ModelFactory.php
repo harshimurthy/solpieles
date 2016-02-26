@@ -11,6 +11,9 @@
 |
 */
 
+/**
+ * User
+ */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name'           => $faker->name,
@@ -20,6 +23,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+/**
+ * Todos
+ */
 $factory->define(App\Todo::class, function (Faker\Generator $faker) {
     return [
         'user_id'     => $faker->numberBetween(1,2),
@@ -30,6 +36,26 @@ $factory->define(App\Todo::class, function (Faker\Generator $faker) {
     ];
 });
 
+/**
+ * Profiles
+ */
+$factory->define(App\Profile::class, function (Faker\Generator $faker) {
+    return [
+
+        'user_id'   => 1,
+        'gender'    => $faker->randomElement(['male', 'female']),
+        'bio'       => $faker->paragraph(75),
+        'phone'     => $faker->phoneNumber,
+        'education' => $faker->paragraph(75),
+        'skills'    => $faker->sentence,
+        'work'      => $faker->sentence,
+        'location'  => $faker->sentence,
+    ];
+});
+
+/**
+ * Products
+ */
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
     return [
         'lang'        => $faker->randomElement(['en', 'es']),
