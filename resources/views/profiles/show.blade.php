@@ -17,7 +17,7 @@
 				</div>
 
 				<h3>{{ $profile->user->name }}</h3>	
-				<h4>{{ $profile->work }}</h4>	
+				<h4>{!! $profile->work !!}</h4>	
 				<h5><a href="mailto:{{ $profile->user->email }}"></a>{{ $profile->user->email }}</h5>	
 				<h5>{{ $profile->phone }}</h5>	
 
@@ -47,7 +47,7 @@
 				
 				<hr>	
 				<h4><i class="fa fa-pencil"></i> Skills</h4>
-				
+
 					@foreach ($profile->skillsObject as $skill)
 						<span class="label label-info" style="margin: 0 3px;">
 							{{ trim($skill) }} 
@@ -70,7 +70,7 @@
 			<div class="box box-primary pad">		
 
 				<h3>More About Me</h3>
-				{{ $profile->bio }} 
+				{!! $profile->bio !!} 
 			</div>
 			
 		</div>
