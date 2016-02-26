@@ -46,8 +46,8 @@
 				<p>{!! $profile->education !!}</p>
 				
 				<hr>	
-				<h4><i class="fa fa-pencil"></i> Skills</h4>	
-		
+				<h4><i class="fa fa-pencil"></i> Skills</h4>
+				
 					@foreach ($profile->skillsObject as $skill)
 						<span class="label label-info" style="margin: 0 3px;">
 							{{ trim($skill) }} 
