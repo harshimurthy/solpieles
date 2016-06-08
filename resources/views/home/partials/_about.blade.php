@@ -22,7 +22,7 @@
 		                
 		                <p>
 		                	@if ($lang->lang == 'en')			                		
-			                	We supply the Tanning Industry with high quality products and services, all around the world. We offer Reliability, Honesty and Excellent Dealing Conditions and Facilities as the result of over 15 years of experience in <b>WET BLUE</b> and <b>RAW HIDES</b> Business.
+			                	We supply the Tanning Industry with high quality products and services, all around the world. We offer Reliability, Honesty and Excellent Dealing Conditions and Facilities as the result of over 15 years of experience in the <b>WET BLUE</b> and <b>RAW HIDES</b> Businesses.
 		                	@else
 		                		Suplimos la industria procesadora de pieles con productos y servicios de alta calidad en cualquier parte del mundo. Nuestros principales productos son la confiabilidad, honestidad y la excelencia en nuestros tratos, como resultado de más de 15 años de experiencia en el negocio de los <b>Cueros WET BLUE</b> y <b>CUEROS SALADOS CRUDOS</b>.
 		                	@endif 

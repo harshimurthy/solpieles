@@ -24,7 +24,7 @@
 			</h3>
 			<p>
 				@if ($lang->lang == 'en')
-					We are positioned in the greate city of <b>Santiago, Dominican Republic</b>, right at the center of the Caribbean, which give us access to a variety of markets. We can eassily supply from/to Argentina, Venezuela, Mexico, Canada, USA, India, China.
+					We are positioned in the great city of <b>Santiago, Dominican Republic</b>, right at the center of the Caribbean, which give us access to a variety of markets. We can eassily supply from/to Argentina, Venezuela, Mexico, Canada, USA, India, China.
 				@else
 					<p>Estamos posicionanos en la ciudad de <b>Santiago, República Dominicana</b>, justo en el centro del Caribe, lo cual nos da fácil acceso a una gran variedad de mercados. Podemos fácilmente suplir desde/hacia Argentina, Venezuela, Mexico, Canada, USA, India, China. 
 				@endif 
