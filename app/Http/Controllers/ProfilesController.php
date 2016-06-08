@@ -71,7 +71,7 @@ class ProfilesController extends Controller
         // update the user with the name given
         // store the data for the profile, associated to the current user
         // 
-        $user = $user->findOrFail(auth()->user()->id);
+        $user = auth()->user();
 
         //Update the User name with the new value passed
         $user->name = $request->input('name');

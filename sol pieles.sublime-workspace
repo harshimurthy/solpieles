@@ -520,50 +520,18 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/profiles/show.blade.php",
+			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 3137,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/images/show.blade.php",
-			"settings":
-			{
-				"buffer_size": 1717,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Image.php",
-			"settings":
-			{
-				"buffer_size": 1069,
+				"buffer_size": 6593,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Profile.php",
-			"settings":
-			{
-				"buffer_size": 749,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/css/my-style.css",
-			"settings":
-			{
-				"buffer_size": 1506,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "app/Http/Controllers/ProfilesController.php",
 			"settings":
 			{
-				"buffer_size": 6421,
+				"buffer_size": 6398,
 				"line_ending": "Unix"
 			}
 		}
@@ -591,8 +559,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 92.0,
-		"last_filter": "Snippet: mydiv",
+		"height": 272.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -1108,7 +1076,7 @@
 				"Snippet: bs3-sm-button-info"
 			]
 		],
-		"width": 510.0
+		"width": 838.0
 	},
 	"console":
 	{
@@ -1137,19 +1105,27 @@
 	"expanded_folders":
 	[
 		"/F/wamp/www/solpieles",
-		"/F/wamp/www/solpieles/node_modules",
 		"/F/wamp/www/solpieles/resources",
 		"/F/wamp/www/solpieles/resources/views",
 		"/F/wamp/www/solpieles/resources/views/layouts",
-		"/F/wamp/www/solpieles/resources/views/layouts/common"
+		"/F/wamp/www/solpieles/resources/views/layouts/partials"
 	],
 	"file_history":
 	[
-		"/F/wamp/www/solpieles/resources/views/profiles/_form.blade.php",
-		"/F/wamp/www/solpieles/resources/views/images/show.blade.php",
-		"/F/wamp/www/solpieles/resources/views/layouts/partials/body.blade.php",
-		"/F/wamp/www/solpieles/resources/views/profiles/edit.blade.php",
+		"/F/wamp/www/solpieles/app/Product.php",
+		"/F/wamp/www/solpieles/app/Http/Controllers/ProductsController.php",
+		"/F/wamp/www/solpieles/package.json",
+		"/F/wamp/www/solpieles/gulpfile.js",
 		"/F/wamp/www/solpieles/app/Profile.php",
+		"/F/wamp/www/solpieles/resources/views/profiles/edit.blade.php",
+		"/F/wamp/www/solpieles/resources/views/profiles/show.blade.php",
+		"/F/wamp/www/solpieles/resources/assets/css/my-style.css",
+		"/F/wamp/www/solpieles/app/Http/Controllers/ProfilesController.php",
+		"/F/wamp/www/solpieles/deploymenscript.php",
+		"/F/wamp/www/solpieles/app/Image.php",
+		"/F/wamp/www/solpieles/resources/views/images/show.blade.php",
+		"/F/wamp/www/solpieles/resources/views/profiles/_form.blade.php",
+		"/F/wamp/www/solpieles/resources/views/layouts/partials/body.blade.php",
 		"/F/wamp/www/solpieles/resources/views/profiles/show-old.blade.php",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Installed Packages/Laravel Blade Highlighter.sublime-package",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
@@ -1167,7 +1143,6 @@
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/Rails/Create-string-column.sublime-snippet",
 		"/F/wamp/www/solpieles/database/migrations/2016_02_25_135039_update_profiles_table.php",
 		"/F/wamp/www/solpieles/vendor/fzaninotto/faker/src/Faker/Generator.php",
-		"/F/wamp/www/solpieles/app/Http/Controllers/ProfilesController.php",
 		"/F/wamp/www/solpieles/database/factories/ModelFactory.php",
 		"/F/wamp/www/solpieles/database/migrations/2015_12_18_112133_create_profiles_table.php",
 		"/F/wamp/www/solpieles/composer.json",
@@ -1176,16 +1151,12 @@
 		"/F/wamp/www/solpieles/resources/views/images/_form.blade.php",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/snippets/helpers/My Larave Redirect Ajax.sublime-snippet",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/snippets/blade/My Laravel Model Mockup.sublime-snippet",
-		"/F/wamp/www/solpieles/app/Image.php",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/snippets/blade/My Return View.sublime-snippet",
 		"/F/wamp/www/solpieles/resources/views/products/admin/show.blade.php",
 		"/F/wamp/www/solpieles/resources/views/images/edit.blade.php",
 		"/F/wamp/www/solpieles/resources/views/images/index.blade.php",
 		"/F/wamp/www/solpieles/resources/views/products/admin/edit_images.blade.php",
-		"/F/wamp/www/solpieles/deploymenscript.php",
 		"/F/wamp/www/solpieles/resources/views/products/show.blade.php",
-		"/F/wamp/www/solpieles/app/Http/Controllers/ProductsController.php",
-		"/F/wamp/www/solpieles/app/Product.php",
 		"/F/wamp/www/solpieles/.gitignore",
 		"/F/wamp/www/solpieles/public/images/.gitignore",
 		"/F/wamp/www/solpieles/database/migrations/2016_02_16_100504_create_products_table.php",
@@ -1202,7 +1173,6 @@
 		"/F/wamp/www/solpieles/resources/views/layouts/partials-website/navbar.blade.php",
 		"/F/wamp/www/solpieles/resources/assets/less/agency.less",
 		"/F/wamp/www/solpieles/public/build/assets/css/all-e2b369b39c.css",
-		"/F/wamp/www/solpieles/gulpfile.js",
 		"/F/wamp/www/solpieles/resources/assets/plugins/startrap-agency/less/agency.less",
 		"/F/wamp/www/solpieles/resources/views/products/partials/breadcrumb.blad.php",
 		"/F/wamp/www/solpieles/resources/views/carousel.blade.php",
@@ -1234,7 +1204,6 @@
 		"/F/wamp/www/solpieles/app/Lang.php",
 		"/F/wamp/www/solpieles/resources/views/products/partials/list.blade.php",
 		"/F/wamp/www/solpieles/resources/views/todos/show.blade.php",
-		"/F/wamp/www/solpieles/package.json",
 		"/F/wamp/www/solpieles/resources/assets/js/contact_me.js",
 		"/F/wamp/www/solpieles/app/Http/helpers.php",
 		"/C/Users/Yismen/AppData/Roaming/Sublime Text 3/Packages/User/snippets/helpers/My Laravel Delete Form.sublime-snippet",
@@ -1270,9 +1239,7 @@
 		"/F/wamp/www/solpieles/vendor/nilsenj/src/nilsenj/Toastr/ToastrServiceProvider.php",
 		"/F/wamp/www/solpieles/app/Todo.php",
 		"/F/wamp/www/solpieles/resources/views/todos/index.blade.php",
-		"/F/wamp/www/solpieles/database/seeds/TodosTableSeeder.php",
-		"/F/wamp/www/solpieles/node_modules/laravel-elixir/Task.js",
-		"/F/wamp/www/solpieles/app/Policies/ProfilePolicy.php"
+		"/F/wamp/www/solpieles/database/seeds/TodosTableSeeder.php"
 	],
 	"find":
 	{
@@ -1478,179 +1445,53 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/profiles/show.blade.php",
+					"file": "app/Http/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3137,
+						"buffer_size": 6593,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2998,
-								2998
+								5153,
+								4742
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1440.0,
+						"translation.y": 2190.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "resources/views/images/show.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								939,
-								949
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 391.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Image.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1069,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1028,
-								1028
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 831.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/Profile.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 749,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								553,
-								553
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 240.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "resources/assets/css/my-style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1506,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								361,
-								375
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "app/Http/Controllers/ProfilesController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6421,
+						"buffer_size": 6398,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1763,
-								1763
-							],
-							[
-								4089,
-								4089
+								2047,
+								2047
 							]
 						],
 						"settings":
@@ -1661,10 +1502,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 611.0,
+						"translation.y": 1584.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1722,6 +1563,46 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"profi",
+				"app\\Http\\Controllers\\ProfilesController.php"
+			],
+			[
+				"routes",
+				"app\\Http\\routes.php"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"producco",
+				"app\\Http\\Controllers\\ProductsController.php"
+			],
+			[
+				"produc",
+				"app\\Product.php"
+			],
+			[
+				"product",
+				"app\\Product.php"
+			],
+			[
+				"deploymen",
+				"deploymenscript.php"
+			],
+			[
+				"profileshow",
+				"resources\\views\\profiles\\show.blade.php"
+			],
+			[
+				"profileform",
+				"resources\\views\\profiles\\_form.blade.php"
+			],
+			[
+				"profiedit",
+				"resources\\views\\profiles\\edit.blade.php"
+			],
 			[
 				"profi_for",
 				"resources\\views\\profiles\\_form.blade.php"
@@ -1819,20 +1700,12 @@
 				"database\\migrations\\2016_02_16_100504_create_products_table.php"
 			],
 			[
-				"product",
-				"app\\Product.php"
-			],
-			[
 				"prod",
 				"app\\Http\\Controllers\\ProductsController.php"
 			],
 			[
 				"user",
 				"app\\User.php"
-			],
-			[
-				"routes",
-				"app\\Http\\routes.php"
 			],
 			[
 				"home",
@@ -1849,10 +1722,6 @@
 			[
 				"gulpfi",
 				"gulpfile.js"
-			],
-			[
-				"produc",
-				"app\\Product.php"
 			],
 			[
 				"images",
@@ -1901,10 +1770,6 @@
 			[
 				"contaccon",
 				"app\\Http\\Controllers\\ContactsController.php"
-			],
-			[
-				"gulp",
-				"gulpfile.js"
 			],
 			[
 				"createima",
@@ -2209,30 +2074,6 @@
 			[
 				"rou",
 				"app\\Http\\routes.php"
-			],
-			[
-				"lay",
-				"app\\Layout.php"
-			],
-			[
-				"head.bla",
-				"resources\\views\\home\\website\\_head.blade.php"
-			],
-			[
-				"proshow",
-				"resources\\views\\profiles\\show.blade.php"
-			],
-			[
-				"prodshow",
-				"resources\\views\\products\\show.blade.php"
-			],
-			[
-				"gul",
-				"gulpfile.js"
-			],
-			[
-				"procrea",
-				"resources\\views\\products\\create.blade.php"
 			]
 		],
 		"width": 0.0
@@ -2262,7 +2103,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 395.0,
 	"status_bar_visible": true,
 	"template_settings":

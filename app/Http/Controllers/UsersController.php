@@ -94,7 +94,15 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        if( $this->sameAuthUser($user)) {
+            return redirect()->route('admin.users.edit', $user->id)
+                ->withDanger("Removing your own user is not allowed.");
+        }
+
+        $user->delete();
+
+        return redirect()->route('admin.users.index')
+            ->withWarning("The user $user->name has been removed.");
     }
 
 
@@ -114,5 +122,10 @@ class UsersController extends Controller
         
         $request->flash();
         return view('users.index', compact('users'));
+    }
+
+    private function sameAuthUser($user)
+    {
+        return auth()->user()->id == $user->id;
     }
 }
